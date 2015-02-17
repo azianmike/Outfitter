@@ -8,16 +8,30 @@
 
 import UIKit
 
-class ViewController: PFLogInViewController, PFLogInViewControllerDelegate {
+class ViewController: UIViewController, PFLogInViewControllerDelegate {
 
+    override func viewDidAppear(animated: Bool) {
+        super.viewDidAppear(false)
+        // Do any additional setup after loading the view, typically from a nib.
+        
+        var logInController = PFLogInViewController()
+        logInController.fields = (PFLogInFields.UsernameAndPassword | PFLogInFields.LogInButton | PFLogInFields.SignUpButton | PFLogInFields.Facebook)
+        let newLogo = UILabel()
+        newLogo.textColor = UIColor.blackColor()
+        newLogo.text = "Outfitter"
+        newLogo.sizeToFit()
+        logInController.logInView.logo=newLogo
+        self.presentViewController(logInController, animated:false, completion: nil)
+        
+        
+    }
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        var logInController = PFLogInViewController()
-        logInController.delegate = self
-        self.presentViewController(logInController, animated:true, completion: nil)
+
+
     }
 
     override func didReceiveMemoryWarning() {

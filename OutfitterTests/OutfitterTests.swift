@@ -9,6 +9,7 @@
 import UIKit
 import XCTest
 
+
 class OutfitterTests: XCTestCase {
     
     override func setUp() {
@@ -24,7 +25,9 @@ class OutfitterTests: XCTestCase {
     func testExample() {
         // This is an example of a functional test case.
         XCTAssert(true, "Pass")
+        //let logInController = ViewController()
     }
+    
     
     func testPerformanceExample() {
         // This is an example of a performance test case.
