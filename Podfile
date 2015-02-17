@@ -1,1 +1,2 @@
 pod 'Parse'
+pod 'ParseUI'
