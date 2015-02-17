@@ -11,5 +11,6 @@
 
 #import <Parse/Parse.h>
 #import <ParseUI/ParseUI.h>
+#import <ParseFacebookUtils/PFFacebookUtils.h>
 
 #endif
