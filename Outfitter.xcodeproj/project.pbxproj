@@ -28,7 +28,7 @@
 
 /* Begin PBXFileReference section */
 		0BEE8D65BB0A721D365B2DB0 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
-		20D1CCD01A93DC7100E072B8 /* Outfitter-Bridging-Header.h.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Outfitter-Bridging-Header.h.h"; sourceTree = "<group>"; };
+		20D1CCD01A93DC7100E072B8 /* Outfitter-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Outfitter-Bridging-Header.h"; sourceTree = "<group>"; };
 		453069873DB8EB6020AEB58F /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		4FFABC43CED10E9BAEAEDC5D /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		C19A09071A806CC00013997B /* Outfitter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Outfitter.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -103,7 +103,7 @@
 			isa = PBXGroup;
 			children = (
 				C19A090C1A806CC00013997B /* AppDelegate.swift */,
-				20D1CCD01A93DC7100E072B8 /* Outfitter-Bridging-Header.h.h */,
+				20D1CCD01A93DC7100E072B8 /* Outfitter-Bridging-Header.h */,
 				C19A090E1A806CC00013997B /* ViewController.swift */,
 				C19A09101A806CC00013997B /* Main.storyboard */,
 				C19A09131A806CC00013997B /* Images.xcassets */,

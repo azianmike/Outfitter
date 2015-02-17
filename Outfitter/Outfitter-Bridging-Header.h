@@ -10,5 +10,6 @@
 #define Outfitter_Outfitter_Bridging_Header_h_h
 
 #import <Parse/Parse.h>
+#import <ParseUI/ParseUI.h>
 
 #endif

@@ -7,12 +7,18 @@
 //
 
 import UIKit
+import Parse
+import ParseUI
+
 
 class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        var logInController = PFLogInViewController()
+        logInController.delegate = self
+        self.presentViewController(logInController, animated:true, completion: nil)
     }
 
     override func didReceiveMemoryWarning() {
