@@ -7,9 +7,6 @@
 //
 
 import UIKit
-import Parse
-import ParseUI
-
 
 class ViewController: UIViewController {
 
@@ -17,7 +14,7 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         var logInController = PFLogInViewController()
-        logInController.delegate = self
+        //logInController.delegate = self
         self.presentViewController(logInController, animated:true, completion: nil)
     }
 
