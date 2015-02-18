@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		0ED53F008DF4C6E613AC80A6 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4FFABC43CED10E9BAEAEDC5D /* libPods.a */; };
 		20D1CCD41A94062300E072B8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C19A090E1A806CC00013997B /* ViewController.swift */; };
+		3C347C1C1A95464F00B5B830 /* LoginUIAutomationTest.trace in Resources */ = {isa = PBXBuildFile; fileRef = 3C347C1B1A95464F00B5B830 /* LoginUIAutomationTest.trace */; };
 		C19A090D1A806CC00013997B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C19A090C1A806CC00013997B /* AppDelegate.swift */; };
 		C19A090F1A806CC00013997B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C19A090E1A806CC00013997B /* ViewController.swift */; };
 		C19A09121A806CC00013997B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C19A09101A806CC00013997B /* Main.storyboard */; };
@@ -31,6 +32,7 @@
 /* Begin PBXFileReference section */
 		0BEE8D65BB0A721D365B2DB0 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		20D1CCD11A93E2A500E072B8 /* Outfitter-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Outfitter-Bridging-Header.h"; sourceTree = "<group>"; };
+		3C347C1B1A95464F00B5B830 /* LoginUIAutomationTest.trace */ = {isa = PBXFileReference; lastKnownFileType = folder; path = LoginUIAutomationTest.trace; sourceTree = "<group>"; };
 		453069873DB8EB6020AEB58F /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		4FFABC43CED10E9BAEAEDC5D /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		C19A09071A806CC00013997B /* Outfitter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Outfitter.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -74,6 +76,14 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		3C347C1A1A95461500B5B830 /* UI Automation Tests */ = {
+			isa = PBXGroup;
+			children = (
+				3C347C1B1A95464F00B5B830 /* LoginUIAutomationTest.trace */,
+			);
+			name = "UI Automation Tests";
+			sourceTree = "<group>";
+		};
 		49AF011532B5DC08CE62A752 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -85,6 +95,7 @@
 		C19A08FE1A806CC00013997B = {
 			isa = PBXGroup;
 			children = (
+				3C347C1A1A95461500B5B830 /* UI Automation Tests */,
 				C19A09091A806CC00013997B /* Outfitter */,
 				C19A091F1A806CC00013997B /* OutfitterTests */,
 				C19A09081A806CC00013997B /* Products */,
@@ -225,6 +236,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3C347C1C1A95464F00B5B830 /* LoginUIAutomationTest.trace in Resources */,
 				C19A09121A806CC00013997B /* Main.storyboard in Resources */,
 				C19A09171A806CC00013997B /* LaunchScreen.xib in Resources */,
 				C19A09141A806CC00013997B /* Images.xcassets in Resources */,
