@@ -5,7 +5,7 @@
 	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
 	<false/>
 	<key>IDESourceControlProjectIdentifier</key>
-	<string>5C06A5DF-CE9B-4D4D-8660-6E9E19031840</string>
+	<string>04F66054-2E54-4FDA-9CDA-A7B36A0BB89F</string>
 	<key>IDESourceControlProjectName</key>
 	<string>Outfitter</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
@@ -14,11 +14,11 @@
 		<string>https://github.com/azianmike/Outfitter.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>Outfitter.xcworkspace</string>
+	<string>Outfitter.xcodeproj</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>06DFD4174B07414AAF70DE823E4957875FAC8BDA</key>
-		<string>..</string>
+		<string>../..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
 	<string>https://github.com/azianmike/Outfitter.git</string>
