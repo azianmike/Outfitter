@@ -102,14 +102,30 @@
 			<key>fileRef</key>
 			<string>E407421072E14191ADD68CEC</string>
 			<key>isa</key>
-			<string>PBXBuildFile</string>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>name</key>
+			<string>FBTimeSpentData.h</string>
+			<key>path</key>
+			<string>src/Insights/FBTimeSpentData.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
 		</dict>
 		<key>036135ADFD9EE193B0AAEB52</key>
 		<dict>
 			<key>fileRef</key>
 			<string>6DC4C8AB8C18138E17560BFE</string>
 			<key>isa</key>
-			<string>PBXBuildFile</string>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>name</key>
+			<string>FBGraphObjectPickerViewController.m</string>
+			<key>path</key>
+			<string>src/UI/FBGraphObjectPickerViewController.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
 		</dict>
 		<key>036A45E5FA0D585ADEF069F1</key>
 		<dict>
@@ -155,7 +171,7 @@
 			<key>isa</key>
 			<string>PBXFileReference</string>
 			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
+			<string>sourcecode.c.objc</string>
 			<key>name</key>
 			<string>FBLinkShareParams.h</string>
 			<key>path</key>
@@ -217,12 +233,24 @@
 		</dict>
 		<key>0567929F6E1A92196E9CEC17</key>
 		<dict>
+			<key>fileRef</key>
+			<string>410E0A83C01F3A0E760A5A59</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>COMPILER_FLAGS</key>
+				<string>-fno-objc-arc</string>
+			</dict>
+		</dict>
+		<key>03087C1443A2E40CA5C9ACCE</key>
+		<dict>
 			<key>includeInIndex</key>
 			<string>1</string>
 			<key>isa</key>
 			<string>PBXFileReference</string>
 			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
+			<string>sourcecode.c.objc</string>
 			<key>name</key>
 			<string>FBProfilePictureView.h</string>
 			<key>path</key>
@@ -332,7 +360,7 @@
 			<key>settings</key>
 			<dict>
 				<key>COMPILER_FLAGS</key>
-				<string>-fno-objc-arc</string>
+				<string>-DOS_OBJECT_USE_OBJC=0</string>
 			</dict>
 		</dict>
 		<key>07EA7073EF15BCCF21D96C0A</key>
@@ -340,7 +368,15 @@
 			<key>fileRef</key>
 			<string>C73D838A7F6B23B57D0BBE23</string>
 			<key>isa</key>
-			<string>PBXBuildFile</string>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>name</key>
+			<string>PFResources.m</string>
+			<key>path</key>
+			<string>ParseUI/Generated/PFResources.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
 		</dict>
 		<key>0866139C947A0DC4E500F114</key>
 		<dict>
@@ -626,7 +662,7 @@
 			<key>isa</key>
 			<string>PBXFileReference</string>
 			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
+			<string>sourcecode.c.h</string>
 			<key>name</key>
 			<string>FBViewController.m</string>
 			<key>path</key>
@@ -681,11 +717,6 @@
 			<string>F25A0B365AE11D7A9CAA119A</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
-			<key>settings</key>
-			<dict>
-				<key>COMPILER_FLAGS</key>
-				<string>-fno-objc-arc</string>
-			</dict>
 		</dict>
 		<key>11CDD048CA2CB127C82B3B00</key>
 		<dict>
@@ -842,6 +873,15 @@
 		<dict>
 			<key>includeInIndex</key>
 			<string>1</string>
+			<key>remoteGlobalIDString</key>
+			<string>0B17837A8900F8D36F4453F6</string>
+			<key>remoteInfo</key>
+			<string>Pods-Parse</string>
+		</dict>
+		<key>0CEE9529FE0CACCFF52E3425</key>
+		<dict>
+			<key>fileRef</key>
+			<string>9A57098C3565D8A2174F630F</string>
 			<key>isa</key>
 			<string>PBXFileReference</string>
 			<key>lastKnownFileType</key>
@@ -941,6 +981,56 @@
 			<string>&lt;group&gt;</string>
 		</dict>
 		<key>172B43CB1000D292B491A72F</key>
+		<dict>
+			<key>baseConfigurationReference</key>
+			<string>E0EEEC0535A9ACA4A1E49E23</string>
+			<key>buildSettings</key>
+			<dict>
+				<key>ALWAYS_SEARCH_USER_PATHS</key>
+				<string>NO</string>
+				<key>COPY_PHASE_STRIP</key>
+				<string>YES</string>
+				<key>DSTROOT</key>
+				<string>/tmp/xcodeproj.dst</string>
+				<key>GCC_PRECOMPILE_PREFIX_HEADER</key>
+				<string>YES</string>
+				<key>GCC_PREFIX_HEADER</key>
+				<string>Target Support Files/Pods-ParseUI/Pods-ParseUI-prefix.pch</string>
+				<key>INSTALL_PATH</key>
+				<string>$(BUILT_PRODUCTS_DIR)</string>
+				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
+				<string>8.1</string>
+				<key>OTHER_CFLAGS</key>
+				<array>
+					<string>-DNS_BLOCK_ASSERTIONS=1</string>
+					<string>$(inherited)</string>
+				</array>
+				<key>OTHER_CPLUSPLUSFLAGS</key>
+				<array>
+					<string>-DNS_BLOCK_ASSERTIONS=1</string>
+					<string>$(inherited)</string>
+				</array>
+				<key>OTHER_LDFLAGS</key>
+				<string></string>
+				<key>OTHER_LIBTOOLFLAGS</key>
+				<string></string>
+				<key>PRODUCT_NAME</key>
+				<string>$(TARGET_NAME)</string>
+				<key>PUBLIC_HEADERS_FOLDER_PATH</key>
+				<string>$(TARGET_NAME)</string>
+				<key>SDKROOT</key>
+				<string>iphoneos</string>
+				<key>SKIP_INSTALL</key>
+				<string>YES</string>
+				<key>VALIDATE_PRODUCT</key>
+				<string>YES</string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Release</string>
+		</dict>
+		<key>10522BC4C039C563FB8D764F</key>
 		<dict>
 			<key>includeInIndex</key>
 			<string>1</string>
@@ -1087,8 +1177,8 @@
 		</dict>
 		<key>19B5969ACFDE2A165E252F99</key>
 		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
+			<key>fileRef</key>
+			<string>EBD80539DA22945E744DA6A6</string>
 			<key>isa</key>
 			<string>PBXFileReference</string>
 			<key>lastKnownFileType</key>
@@ -1325,9 +1415,7 @@
 			<key>includeInIndex</key>
 			<string>1</string>
 			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
+			<string>PBXGroup</string>
 			<key>name</key>
 			<string>FBWebAppBridgeScheme.m</string>
 			<key>path</key>
@@ -1544,12 +1632,19 @@
 		</dict>
 		<key>259E63C11235BEA42B1B32CA</key>
 		<dict>
+			<key>fileRef</key>
+			<string>A0DBC51215BCC9CB5E334ABE</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>164649DA5B66947D9BB9D772</key>
+		<dict>
 			<key>includeInIndex</key>
 			<string>1</string>
 			<key>isa</key>
 			<string>PBXFileReference</string>
 			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
+			<string>sourcecode.c.h</string>
 			<key>name</key>
 			<string>FBSessionLoginStrategyParams.m</string>
 			<key>path</key>
@@ -1603,8 +1698,19 @@
 		</dict>
 		<key>2997BC190CD49DCB438A579F</key>
 		<dict>
-			<key>includeInIndex</key>
+			<key>containerPortal</key>
+			<string>7785D241831848126A85DCAF</string>
+			<key>isa</key>
+			<string>PBXContainerItemProxy</string>
+			<key>proxyType</key>
 			<string>1</string>
+			<key>remoteGlobalIDString</key>
+			<string>0B17837A8900F8D36F4453F6</string>
+			<key>remoteInfo</key>
+			<string>Pods-Parse</string>
+		</dict>
+		<key>187CCC0208F2C0FC24A72CBE</key>
+		<dict>
 			<key>isa</key>
 			<string>PBXFileReference</string>
 			<key>lastKnownFileType</key>
@@ -1638,7 +1744,7 @@
 			<key>isa</key>
 			<string>PBXFileReference</string>
 			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
+			<string>sourcecode.c.h</string>
 			<key>name</key>
 			<string>FBPlacePickerCacheDescriptor.m</string>
 			<key>path</key>
@@ -1665,7 +1771,7 @@
 			<key>isa</key>
 			<string>PBXFileReference</string>
 			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
+			<string>sourcecode.c.h</string>
 			<key>name</key>
 			<string>FBFriendPickerViewController.m</string>
 			<key>path</key>
@@ -1674,6 +1780,13 @@
 			<string>&lt;group&gt;</string>
 		</dict>
 		<key>2A316810321F11A01A06121C</key>
+		<dict>
+			<key>fileRef</key>
+			<string>ABCA4BD3EB87DFC029A597C3</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>1ABB55CDCDC869037B8B1628</key>
 		<dict>
 			<key>includeInIndex</key>
 			<string>1</string>
@@ -1781,7 +1894,7 @@
 			<key>isa</key>
 			<string>PBXFileReference</string>
 			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
+			<string>sourcecode.c.h</string>
 			<key>name</key>
 			<string>FBSessionFacebookAppWebLoginStategy.m</string>
 			<key>path</key>
@@ -1811,28 +1924,26 @@
 			<key>isa</key>
 			<string>PBXFileReference</string>
 			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
+			<string>wrapper.framework</string>
 			<key>name</key>
 			<string>FBDataDiskCache.h</string>
 			<key>path</key>
 			<string>src/Core/FBDataDiskCache.h</string>
 			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
+			<string>DEVELOPER_DIR</string>
 		</dict>
 		<key>2DAF80F1219B472CC5917E16</key>
 		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
 			<key>isa</key>
 			<string>PBXFileReference</string>
 			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
+			<string>wrapper.framework</string>
 			<key>name</key>
 			<string>FBURLConnection.h</string>
 			<key>path</key>
 			<string>src/Network/FBURLConnection.h</string>
 			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
+			<string>DEVELOPER_DIR</string>
 		</dict>
 		<key>2E2B7F50E7DFEF71C41BF9E9</key>
 		<dict>
@@ -2036,7 +2147,7 @@
 			<key>isa</key>
 			<string>PBXFileReference</string>
 			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
+			<string>sourcecode.c.h</string>
 			<key>name</key>
 			<string>FBProfilePictureViewBlankProfilePortraitPNG.m</string>
 			<key>path</key>
@@ -2045,6 +2156,13 @@
 			<string>&lt;group&gt;</string>
 		</dict>
 		<key>3354B031503CFD4CCEADDAFB</key>
+		<dict>
+			<key>fileRef</key>
+			<string>E4DAB4FB2B70183A162048E9</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>203A4DB4D464E80CD61CCDF4</key>
 		<dict>
 			<key>includeInIndex</key>
 			<string>1</string>
@@ -2066,7 +2184,7 @@
 			<key>isa</key>
 			<string>PBXFileReference</string>
 			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
+			<string>sourcecode.c.h</string>
 			<key>name</key>
 			<string>FBLikeBoxView.m</string>
 			<key>path</key>
@@ -2163,6 +2281,13 @@
 			<string>&lt;group&gt;</string>
 		</dict>
 		<key>383D4B491FB53555624DB0CB</key>
+		<dict>
+			<key>fileRef</key>
+			<string>D81392411C89081383EEF56B</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>236498B0B3FA9780FED8F16D</key>
 		<dict>
 			<key>includeInIndex</key>
 			<string>1</string>
@@ -2307,7 +2432,7 @@
 			<key>isa</key>
 			<string>PBXFileReference</string>
 			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
+			<string>sourcecode.c.objc</string>
 			<key>name</key>
 			<string>FBTooltipView.h</string>
 			<key>path</key>
@@ -2367,19 +2492,24 @@
 			<key>fileRef</key>
 			<string>BF62743D7EE0FA7D90656009</string>
 			<key>isa</key>
-			<string>PBXBuildFile</string>
-			<key>settings</key>
-			<dict>
-				<key>COMPILER_FLAGS</key>
-				<string>-fno-objc-arc</string>
-			</dict>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>name</key>
+			<string>FBSessionFacebookAppWebLoginStategy.m</string>
+			<key>path</key>
+			<string>src/Login/FBSessionFacebookAppWebLoginStategy.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
 		</dict>
 		<key>3BE2D1F16306A8D25F1399C8</key>
 		<dict>
 			<key>fileRef</key>
 			<string>B5E9F9D6C3DADFEEB60AC8F5</string>
 			<key>isa</key>
-			<string>PBXBuildFile</string>
+			<string>PBXGroup</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
 		</dict>
 		<key>3C4A3EE2105BF5F7D6B5FFFD</key>
 		<dict>
@@ -2388,7 +2518,7 @@
 			<key>isa</key>
 			<string>PBXFileReference</string>
 			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
+			<string>sourcecode.c.objc</string>
 			<key>name</key>
 			<string>PFResources.h</string>
 			<key>path</key>
@@ -2440,6 +2570,21 @@
 		</dict>
 		<key>3E19948762BA406B9AE9F693</key>
 		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>name</key>
+			<string>Bolts.h</string>
+			<key>path</key>
+			<string>Bolts/Common/Bolts.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>2A4C32E2605FD333745212F0</key>
+		<dict>
 			<key>fileRef</key>
 			<string>036A45E5FA0D585ADEF069F1</string>
 			<key>isa</key>
@@ -2490,6 +2635,25 @@
 		</dict>
 		<key>3F1EB37426C5EBF5E97ECD30</key>
 		<dict>
+			<key>fileRef</key>
+			<string>2A44795537AED2B637426AA3</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>2BD82A0A875CB3E07601B1A2</key>
+		<dict>
+			<key>fileRef</key>
+			<string>B26C8BB7FAEBE202E42CB19E</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>COMPILER_FLAGS</key>
+				<string>-fno-objc-arc</string>
+			</dict>
+		</dict>
+		<key>2D7329AFBFEA9E7D46591D3E</key>
+		<dict>
 			<key>includeInIndex</key>
 			<string>1</string>
 			<key>isa</key>
@@ -2517,7 +2681,7 @@
 			<key>isa</key>
 			<string>PBXFileReference</string>
 			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
+			<string>sourcecode.c.objc</string>
 			<key>name</key>
 			<string>FBLoginDialog.h</string>
 			<key>path</key>
@@ -2544,7 +2708,7 @@
 			<key>isa</key>
 			<string>PBXFileReference</string>
 			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
+			<string>sourcecode.c.h</string>
 			<key>name</key>
 			<string>FBDialogClosePNG.m</string>
 			<key>path</key>
@@ -2558,8 +2722,20 @@
 			<string>21038C71E16320854B94641D</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>COMPILER_FLAGS</key>
+				<string>-fno-objc-arc</string>
+			</dict>
 		</dict>
 		<key>40363A72EF8D799EC77F9499</key>
+		<dict>
+			<key>fileRef</key>
+			<string>ADCC83E55D9E33B6D52878E0</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>2EFEB58D257E5EB895BAD43B</key>
 		<dict>
 			<key>includeInIndex</key>
 			<string>1</string>
@@ -2639,6 +2815,13 @@
 			<string>PBXBuildFile</string>
 		</dict>
 		<key>42525327337FE831DEDB4E4E</key>
+		<dict>
+			<key>fileRef</key>
+			<string>743BC17C3EA98F40D6F5D72D</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>30143866973F464EA914BC43</key>
 		<dict>
 			<key>includeInIndex</key>
 			<string>1</string>
@@ -2746,7 +2929,15 @@
 			<key>defaultConfigurationName</key>
 			<string>Release</string>
 			<key>isa</key>
-			<string>XCConfigurationList</string>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>name</key>
+			<string>FBGraphObject.h</string>
+			<key>path</key>
+			<string>src/FBGraphObject.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
 		</dict>
 		<key>440A0FE162F4E1F3C124E164</key>
 		<dict>
@@ -2941,7 +3132,7 @@
 			<key>isa</key>
 			<string>PBXFileReference</string>
 			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
+			<string>sourcecode.c.h</string>
 			<key>name</key>
 			<string>FBRequestBody.m</string>
 			<key>path</key>
@@ -2951,8 +3142,8 @@
 		</dict>
 		<key>47987E7010C47E4491390C55</key>
 		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
+			<key>fileRef</key>
+			<string>AE1A9F0ED432385E6E012953</string>
 			<key>isa</key>
 			<string>PBXFileReference</string>
 			<key>lastKnownFileType</key>
@@ -3313,7 +3504,7 @@
 			<key>isa</key>
 			<string>PBXFileReference</string>
 			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
+			<string>sourcecode.c.objc</string>
 			<key>name</key>
 			<string>FBLoginView.h</string>
 			<key>path</key>
@@ -3329,6 +3520,13 @@
 			<string>PBXBuildFile</string>
 		</dict>
 		<key>4C6A0A6E33A9D72099BDAA0F</key>
+		<dict>
+			<key>fileRef</key>
+			<string>2331DA7EFF13087486801AA4</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>39A0C753EE5BCEEC831C7C93</key>
 		<dict>
 			<key>includeInIndex</key>
 			<string>1</string>
@@ -3359,6 +3557,20 @@
 		</dict>
 		<key>4CFA90737C8B41746269BEC3</key>
 		<dict>
+			<key>fileRef</key>
+			<string>F2BDD5CA7981B49894B7D95A</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>3ACB9128C0AD0B95B37378A7</key>
+		<dict>
+			<key>fileRef</key>
+			<string>995348FB47ED0DD27FA34681</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>3BFD5108B85BDF979BE43E77</key>
+		<dict>
 			<key>includeInIndex</key>
 			<string>1</string>
 			<key>isa</key>
@@ -3374,15 +3586,38 @@
 		</dict>
 		<key>4CFE93D7A9E9AC9B5D2A9642</key>
 		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>name</key>
+			<string>FBViewImpressionTracker.h</string>
+			<key>path</key>
+			<string>src/UI/FBViewImpressionTracker.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>3D30F8111582471766AB4F29</key>
+		<dict>
+			<key>explicitFileType</key>
+			<string>archive.ar</string>
+			<key>includeInIndex</key>
+			<string>0</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>path</key>
+			<string>libPods-Parse.a</string>
+			<key>sourceTree</key>
+			<string>BUILT_PRODUCTS_DIR</string>
+		</dict>
+		<key>3D5C94FF809E4218948E77BE</key>
+		<dict>
 			<key>fileRef</key>
 			<string>3E3DB6731EED6F0DC8C53FC9</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
-			<key>settings</key>
-			<dict>
-				<key>COMPILER_FLAGS</key>
-				<string>-fno-objc-arc</string>
-			</dict>
 		</dict>
 		<key>4D6F381FF9C0FDCBF4F75840</key>
 		<dict>
@@ -3504,6 +3739,13 @@
 		</dict>
 		<key>52361144E3F036F728EE0D07</key>
 		<dict>
+			<key>fileRef</key>
+			<string>4D96369A1EC84F98752BEFEC</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>410E0A83C01F3A0E760A5A59</key>
+		<dict>
 			<key>includeInIndex</key>
 			<string>1</string>
 			<key>isa</key>
@@ -3563,8 +3805,8 @@
 		</dict>
 		<key>535C1EADCB4BEC18D97EF436</key>
 		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
+			<key>fileRef</key>
+			<string>00F97E85AF3A7F62CF4E9D67</string>
 			<key>isa</key>
 			<string>PBXFileReference</string>
 			<key>lastKnownFileType</key>
@@ -3609,13 +3851,15 @@
 			<string>9B2132F20BE3AB3997B6F1EE</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
-			<key>settings</key>
-			<dict>
-				<key>COMPILER_FLAGS</key>
-				<string>-fno-objc-arc</string>
-			</dict>
 		</dict>
 		<key>5422CC52835349E1FC70F4B8</key>
+		<dict>
+			<key>fileRef</key>
+			<string>67C99D8102BCB9ACA106739D</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>447E3A3A57F5034184BD32DE</key>
 		<dict>
 			<key>includeInIndex</key>
 			<string>1</string>
@@ -3689,10 +3933,17 @@
 			<key>settings</key>
 			<dict>
 				<key>COMPILER_FLAGS</key>
-				<string>-fno-objc-arc</string>
+				<string>-DOS_OBJECT_USE_OBJC=0</string>
 			</dict>
 		</dict>
 		<key>55B183A174BC68C04786CFA2</key>
+		<dict>
+			<key>fileRef</key>
+			<string>1767C718BB4283BBB4C0577F</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>45810AAA993142A6C799C825</key>
 		<dict>
 			<key>includeInIndex</key>
 			<string>1</string>
@@ -3752,7 +4003,7 @@
 			<key>isa</key>
 			<string>PBXFileReference</string>
 			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
+			<string>sourcecode.c.h</string>
 			<key>name</key>
 			<string>FBTestSession.m</string>
 			<key>path</key>
@@ -3806,12 +4057,19 @@
 		</dict>
 		<key>5AAFB372B2201C629F373B76</key>
 		<dict>
+			<key>fileRef</key>
+			<string>B6EC8DD9118A2E699B3F570E</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>481E11FC43EC6AB58BF75274</key>
+		<dict>
 			<key>includeInIndex</key>
 			<string>1</string>
 			<key>isa</key>
 			<string>PBXFileReference</string>
 			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
+			<string>sourcecode.c.h</string>
 			<key>name</key>
 			<string>FBFrictionlessRecipientCache.m</string>
 			<key>path</key>
@@ -3872,6 +4130,11 @@
 			<string>F99D4F7D3E4C3D8D87FB20B6</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>COMPILER_FLAGS</key>
+				<string>-fno-objc-arc</string>
+			</dict>
 		</dict>
 		<key>5D2E78E7AAB3211B88110C1D</key>
 		<dict>
@@ -3930,7 +4193,7 @@
 			<key>isa</key>
 			<string>PBXFileReference</string>
 			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
+			<string>sourcecode.c.objc</string>
 			<key>name</key>
 			<string>BFTaskCompletionSource.h</string>
 			<key>path</key>
@@ -3983,7 +4246,7 @@
 			<key>isa</key>
 			<string>PBXFileReference</string>
 			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
+			<string>sourcecode.c.objc</string>
 			<key>name</key>
 			<string>FBSettings+Internal.h</string>
 			<key>path</key>
@@ -4037,6 +4300,53 @@
 		</dict>
 		<key>611F3D6F0FFEA833C26E2338</key>
 		<dict>
+			<key>baseConfigurationReference</key>
+			<string>08EE71E667C1F9EBA1A59D29</string>
+			<key>buildSettings</key>
+			<dict>
+				<key>ALWAYS_SEARCH_USER_PATHS</key>
+				<string>NO</string>
+				<key>COPY_PHASE_STRIP</key>
+				<string>NO</string>
+				<key>DSTROOT</key>
+				<string>/tmp/xcodeproj.dst</string>
+				<key>GCC_DYNAMIC_NO_PIC</key>
+				<string>NO</string>
+				<key>GCC_OPTIMIZATION_LEVEL</key>
+				<string>0</string>
+				<key>GCC_PRECOMPILE_PREFIX_HEADER</key>
+				<string>YES</string>
+				<key>GCC_PREPROCESSOR_DEFINITIONS</key>
+				<array>
+					<string>DEBUG=1</string>
+					<string>$(inherited)</string>
+				</array>
+				<key>GCC_SYMBOLS_PRIVATE_EXTERN</key>
+				<string>NO</string>
+				<key>INSTALL_PATH</key>
+				<string>$(BUILT_PRODUCTS_DIR)</string>
+				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
+				<string>8.1</string>
+				<key>OTHER_LDFLAGS</key>
+				<string></string>
+				<key>OTHER_LIBTOOLFLAGS</key>
+				<string></string>
+				<key>PRODUCT_NAME</key>
+				<string>$(TARGET_NAME)</string>
+				<key>PUBLIC_HEADERS_FOLDER_PATH</key>
+				<string>$(TARGET_NAME)</string>
+				<key>SDKROOT</key>
+				<string>iphoneos</string>
+				<key>SKIP_INSTALL</key>
+				<string>YES</string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Debug</string>
+		</dict>
+		<key>4CA248188B368F45A71C8F5C</key>
+		<dict>
 			<key>fileRef</key>
 			<string>0EC8C8105B8E11740A103108</string>
 			<key>isa</key>
@@ -4061,7 +4371,7 @@
 			<key>isa</key>
 			<string>PBXFileReference</string>
 			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
+			<string>sourcecode.c.h</string>
 			<key>name</key>
 			<string>FBAppBridgeScheme.m</string>
 			<key>path</key>
@@ -4073,6 +4383,13 @@
 		<dict>
 			<key>fileRef</key>
 			<string>58A125388A5139E2BD03AE2F</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>4D64BE9EE2285CAB9ABEF49F</key>
+		<dict>
+			<key>fileRef</key>
+			<string>AFF4EC0F94143DD7DCA9FE34</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 			<key>settings</key>
@@ -4102,6 +4419,11 @@
 			<string>71139D1ED382785D45385E94</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>COMPILER_FLAGS</key>
+				<string>-fno-objc-arc</string>
+			</dict>
 		</dict>
 		<key>62ABAB6F5646910D5BF3EFED</key>
 		<dict>
@@ -4111,6 +4433,13 @@
 			<string>PBXBuildFile</string>
 		</dict>
 		<key>62CD04217F13BAAD6EA5FD1E</key>
+		<dict>
+			<key>fileRef</key>
+			<string>04D59E5D2424E6254D9C7BAF</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>500FBFD452BD8829A44FDB7A</key>
 		<dict>
 			<key>includeInIndex</key>
 			<string>1</string>
@@ -4127,6 +4456,19 @@
 		</dict>
 		<key>63466043592EDA16EA452EC9</key>
 		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.xcconfig</string>
+			<key>path</key>
+			<string>Pods-ParseFacebookUtils.xcconfig</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>501C41247198F12767A22FE5</key>
+		<dict>
 			<key>fileRef</key>
 			<string>60AB444F7BF074FFD706C583</string>
 			<key>isa</key>
@@ -4138,6 +4480,128 @@
 			</dict>
 		</dict>
 		<key>6391D30170E8B7ABD4A2517A</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>4A75081DCB0DB46CF4AF3618</string>
+				<string>589F180DD8F91C646173C24E</string>
+				<string>FEA2F2F0C88BBF52757531E8</string>
+				<string>02EFD884AB7C3A0EAE998B4A</string>
+				<string>E43F4AB93D220B7EE0E9DE81</string>
+				<string>A6E4443BDE5525070B4DE144</string>
+				<string>10E364F2AE62C96215B45B84</string>
+				<string>DD864BA238D6013B9870AE48</string>
+				<string>4E28A7ED69EE6311D24424A8</string>
+				<string>BD12C3289208A3D72C918325</string>
+				<string>97B9E9A4554182712010B546</string>
+				<string>7E59F96A2253CC30500648A3</string>
+				<string>79A72C3E6904E3BA9524D531</string>
+				<string>135F7797211FB1AA5D87303C</string>
+				<string>26B3C3AD73ADD3EFB7117896</string>
+				<string>1E0BA9840DF0F8D9952D44EA</string>
+				<string>59B52021DB0D47B9349851F0</string>
+				<string>4DFA6C3588809819B9E763B0</string>
+				<string>C4B99F93DF12036C94E2D574</string>
+				<string>F67DA84693DB4E496B45DABC</string>
+				<string>4883DC9B815670C73391F40A</string>
+				<string>0FDB5AE46A6A55BB260C1E0D</string>
+				<string>15DD2707DC799AA4E9988234</string>
+				<string>BAEBDDF801AF4893F0F9827A</string>
+				<string>759A8E1E8D8B44BCD72561A1</string>
+				<string>64BAF639E00BA300751BA48C</string>
+				<string>D5CD3D7FC744467C88FCD3AA</string>
+				<string>D413B5325EACA95EEB13B192</string>
+				<string>CAC408CD28B210A6B97CBA3B</string>
+				<string>314408798C12C46013D409A8</string>
+				<string>F95B45F83AC9B86A57361676</string>
+				<string>575D6C12A05442CBF9CDF64D</string>
+				<string>8522545B6E26C28F40CF6432</string>
+				<string>2E96FCBECCFF82E751157860</string>
+				<string>B9D706AE15BBE51FE9685C00</string>
+				<string>DF7AF2AFBFFCB4E475419B25</string>
+				<string>8BDA083AF86BB99FD1DB5453</string>
+				<string>D61157E78C4ECEA1AE8CDADA</string>
+				<string>95E64802016EAE3D6D618E3C</string>
+				<string>4D64BE9EE2285CAB9ABEF49F</string>
+				<string>6E3D0F37E9A6025CC84F3306</string>
+				<string>CEE6E9387B8F9D2874AF38D2</string>
+				<string>437E73E9F4AE162048C47E38</string>
+				<string>15263075A572C76ECBAFEA10</string>
+				<string>6E77139E6B4E595CBBF0E6E0</string>
+				<string>26F66619E0ADD285FC8A6094</string>
+				<string>7D851201362919C03D1CF8E5</string>
+				<string>1233F91623AB1828DE614E75</string>
+				<string>493A13060C834C50B292A99B</string>
+				<string>C0FDCF1249B89AE537BA095F</string>
+				<string>2BD82A0A875CB3E07601B1A2</string>
+				<string>5A1B2B399D4BF8D6C4D472D7</string>
+				<string>792BA1993865B6ECC2F4A38F</string>
+				<string>3828B5848FBC6EA71DC1077F</string>
+				<string>AEAE50FD413B1CDAD8E1F487</string>
+				<string>DA315E3293388D15842C42FD</string>
+				<string>719658004A3C945BB1A05428</string>
+				<string>1C4C8ABE02FEF1650DD37DE1</string>
+				<string>356E26C8A89501B118090E97</string>
+				<string>0DC4D575C9A76AD590F463B4</string>
+				<string>8DF31FE125742A30EF5ECEEF</string>
+				<string>77CB7C662DD26704C1E59E9A</string>
+				<string>E919417C00EF2125935DFE6F</string>
+				<string>3FA5182BE2AD7DA537E3C73C</string>
+				<string>13212184E54409552B6AB17B</string>
+				<string>B5EE4D113C5A19574B86DF36</string>
+				<string>A8BD2B2C7A880F92C81E9C03</string>
+				<string>02D7BBA25F285FDA4FD9D2EB</string>
+				<string>3AA491E8E5F703A7824D0969</string>
+				<string>4B774BED8D83E95939323302</string>
+				<string>78F33E4E2346DED9D0D39E66</string>
+				<string>EB2378E736182449E18AD53A</string>
+				<string>C207C48106093AAB2DE5AABC</string>
+				<string>9E3E813F5EBD11D2E77890E3</string>
+				<string>FB5F9F474382166F31C871D6</string>
+				<string>87C2381AD3EF03D608D56066</string>
+				<string>35226C74F64FF302A3D667A2</string>
+				<string>ACA8FFDF2D3C725220A4533C</string>
+				<string>CD8A807452B2EDC4A7C94E71</string>
+				<string>1AE743A1452772134C1ABBF7</string>
+				<string>86341B76DE8640DD691B4874</string>
+				<string>1387EF78C93A203915E6559E</string>
+				<string>6785B84EC11268FDA2B11F46</string>
+				<string>8C7F1F2589F240ECE30DD77B</string>
+				<string>33E748C6B4D2E7CC2D5C2BF5</string>
+				<string>440BC97EDA9991083D0A83BC</string>
+				<string>9B6BE17834228ED44FBA8837</string>
+				<string>AE319324CD5511724F3D3BB7</string>
+				<string>5133A1B0228AD5DFAE0E5205</string>
+				<string>652A7B1ECB65A21A5804FF9C</string>
+				<string>7BF98DB0E66D0424D644E044</string>
+				<string>7201A421AB703D9A33ECBB16</string>
+				<string>55A1FA032947E3AB4DDB30D6</string>
+				<string>E3C2431CB55DB77B23CAD13D</string>
+				<string>578F6612B55D672E946E4496</string>
+				<string>3038E055C37D6D21D909085D</string>
+				<string>38173EF4EDC27B7CF457CC55</string>
+				<string>3F7517AD033D35EC4F76B6E5</string>
+				<string>9D1C72CBC0FD1C2465EF0089</string>
+				<string>3DF5E5ADC452F70267DCE4EA</string>
+				<string>A5638F73E50337D5E2D67A0E</string>
+				<string>E1EE3321DC00B4781E394608</string>
+				<string>72249A747C5E50AD1F44418D</string>
+				<string>5F6940EDF825F8B36B243733</string>
+				<string>6B2000AC04BA37D05D02BCBC</string>
+				<string>A53CD7BE96B52697B7C1FE7E</string>
+				<string>6A7F06CB678A3F3410B6675F</string>
+				<string>C0BA008E1561844B30D605AC</string>
+				<string>912F6F18C8B2608A469215E9</string>
+				<string>1091C96DB240CB3A982B7551</string>
+			</array>
+			<key>isa</key>
+			<string>PBXSourcesBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>51FF37B3900601EB3C5382FE</key>
 		<dict>
 			<key>fileRef</key>
 			<string>2997BC190CD49DCB438A579F</string>
@@ -4174,6 +4638,13 @@
 			<string>PBXBuildFile</string>
 		</dict>
 		<key>6554715D6A9ABD9F83035158</key>
+		<dict>
+			<key>fileRef</key>
+			<string>4726EB474DADA2A1662FDDAE</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>53BD65A1D2216ABF8B1C2839</key>
 		<dict>
 			<key>includeInIndex</key>
 			<string>1</string>
@@ -4268,6 +4739,20 @@
 		</dict>
 		<key>686271C23BF56C265F717BD3</key>
 		<dict>
+			<key>buildConfigurations</key>
+			<array>
+				<string>C0F9539341E507165EA2F454</string>
+				<string>60954AD398CB5EA604D97A63</string>
+			</array>
+			<key>defaultConfigurationIsVisible</key>
+			<string>0</string>
+			<key>defaultConfigurationName</key>
+			<string>Release</string>
+			<key>isa</key>
+			<string>XCConfigurationList</string>
+		</dict>
+		<key>5608851E78B7613355179045</key>
+		<dict>
 			<key>fileRef</key>
 			<string>D21DC65D49D68662F9C017C1</string>
 			<key>isa</key>
@@ -4343,12 +4828,51 @@
 		</dict>
 		<key>6A9836E5F82602397FBEAD8D</key>
 		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
+			<key>baseConfigurationReference</key>
+			<string>F451A7AB8D47C7F74931EA1E</string>
+			<key>buildSettings</key>
+			<dict>
+				<key>ALWAYS_SEARCH_USER_PATHS</key>
+				<string>NO</string>
+				<key>COPY_PHASE_STRIP</key>
+				<string>YES</string>
+				<key>DSTROOT</key>
+				<string>/tmp/xcodeproj.dst</string>
+				<key>GCC_PRECOMPILE_PREFIX_HEADER</key>
+				<string>YES</string>
+				<key>GCC_PREFIX_HEADER</key>
+				<string>Target Support Files/Pods-Bolts/Pods-Bolts-prefix.pch</string>
+				<key>INSTALL_PATH</key>
+				<string>$(BUILT_PRODUCTS_DIR)</string>
+				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
+				<string>8.1</string>
+				<key>OTHER_CFLAGS</key>
+				<array>
+					<string>-DNS_BLOCK_ASSERTIONS=1</string>
+					<string>$(inherited)</string>
+				</array>
+				<key>OTHER_CPLUSPLUSFLAGS</key>
+				<array>
+					<string>-DNS_BLOCK_ASSERTIONS=1</string>
+					<string>$(inherited)</string>
+				</array>
+				<key>OTHER_LDFLAGS</key>
+				<string></string>
+				<key>OTHER_LIBTOOLFLAGS</key>
+				<string></string>
+				<key>PRODUCT_NAME</key>
+				<string>$(TARGET_NAME)</string>
+				<key>PUBLIC_HEADERS_FOLDER_PATH</key>
+				<string>$(TARGET_NAME)</string>
+				<key>SDKROOT</key>
+				<string>iphoneos</string>
+				<key>SKIP_INSTALL</key>
+				<string>YES</string>
+				<key>VALIDATE_PRODUCT</key>
+				<string>YES</string>
+			</dict>
 			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
+			<string>XCBuildConfiguration</string>
 			<key>name</key>
 			<string>FBRequestMetadata.h</string>
 			<key>path</key>
@@ -4389,7 +4913,9 @@
 			<key>path</key>
 			<string>Pods-Facebook-iOS-SDK-prefix.pch</string>
 			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
+			<string>SOURCE_ROOT</string>
+			<key>xcLanguageSpecificationIdentifier</key>
+			<string>xcode.lang.ruby</string>
 		</dict>
 		<key>6B27F7FFBF69437F7406B296</key>
 		<dict>
@@ -4439,6 +4965,18 @@
 			<string>PBXBuildFile</string>
 		</dict>
 		<key>6C9BF89417A0D65B5AE808C7</key>
+		<dict>
+			<key>fileRef</key>
+			<string>BD10CC186AA895A32C3F11E2</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>COMPILER_FLAGS</key>
+				<string>-fno-objc-arc</string>
+			</dict>
+		</dict>
+		<key>5A08B4824AA0E1B6ED778543</key>
 		<dict>
 			<key>includeInIndex</key>
 			<string>1</string>
@@ -4494,6 +5032,13 @@
 		</dict>
 		<key>6DAC05D0AB6A38D082B560A1</key>
 		<dict>
+			<key>fileRef</key>
+			<string>F8BB1EADA35BC4930C76DCC9</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>5A59396F82DCF373D7E1F6D7</key>
+		<dict>
 			<key>includeInIndex</key>
 			<string>1</string>
 			<key>isa</key>
@@ -4509,12 +5054,71 @@
 		</dict>
 		<key>6DC4C8AB8C18138E17560BFE</key>
 		<dict>
+			<key>children</key>
+			<array>
+				<string>876388F30CACA82EB875B188</string>
+				<string>2237001DCB51CB7B83A9D29C</string>
+				<string>807CE1C05B2AF658E0CADA0D</string>
+				<string>5CFA8237CFCB743D994F9599</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Support Files</string>
+			<key>path</key>
+			<string>../Target Support Files/Pods-Facebook-iOS-SDK</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>5AC1D6B21B5E407AE53CAA62</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>2F89585EFD6088D4D7BDE3A0</string>
+			</array>
+			<key>isa</key>
+			<string>PBXFrameworksBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>5BFD90AE4A0C1DDA88AB9926</key>
+		<dict>
+			<key>fileRef</key>
+			<string>A276DCEF68D247A1DC790A31</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>5C56AB73BF79A5B02CFFD724</key>
+		<dict>
+			<key>fileRef</key>
+			<string>7D016F5F242FD9088BBFA29D</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>5C6B334DA8128F411E08F48C</key>
+		<dict>
+			<key>fileRef</key>
+			<string>30143866973F464EA914BC43</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>5CC8590846F4EF4944E668F2</key>
+		<dict>
+			<key>fileRef</key>
+			<string>743627B65789FC0CD97AD284</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>5CCCADBB57B1B0831C02CF23</key>
+		<dict>
 			<key>includeInIndex</key>
 			<string>1</string>
 			<key>isa</key>
 			<string>PBXFileReference</string>
 			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
+			<string>sourcecode.c.objc</string>
 			<key>name</key>
 			<string>FBLoginTooltipView.h</string>
 			<key>path</key>
@@ -4530,6 +5134,13 @@
 			<string>PBXBuildFile</string>
 		</dict>
 		<key>6E74587D3F3536472B42B085</key>
+		<dict>
+			<key>fileRef</key>
+			<string>1C8D5B5D75D45CC3C915189F</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>5D88A23D918BBB912A5A4DA7</key>
 		<dict>
 			<key>includeInIndex</key>
 			<string>1</string>
@@ -4575,6 +5186,18 @@
 			<string>&lt;group&gt;</string>
 		</dict>
 		<key>6EB005B5FCDE79AEF6A2790E</key>
+		<dict>
+			<key>fileRef</key>
+			<string>2A9D03CC04FE137A510E7DC0</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>COMPILER_FLAGS</key>
+				<string>-fno-objc-arc</string>
+			</dict>
+		</dict>
+		<key>5F83AB875B2583658A29B261</key>
 		<dict>
 			<key>includeInIndex</key>
 			<string>1</string>
@@ -4879,6 +5502,13 @@
 			<string>09A27C4A8FD9F3EBD5B1C734</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
+		</dict>
+		<key>64BAF639E00BA300751BA48C</key>
+		<dict>
+			<key>fileRef</key>
+			<string>D63446852D31B7F2351F8251</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
 			<key>settings</key>
 			<dict>
 				<key>COMPILER_FLAGS</key>
@@ -4886,6 +5516,21 @@
 			</dict>
 		</dict>
 		<key>71F8BAA3E9DDEEC984D3F8BD</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>name</key>
+			<string>BFAppLinkResolving.h</string>
+			<key>path</key>
+			<string>Bolts/iOS/BFAppLinkResolving.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>652A7B1ECB65A21A5804FF9C</key>
 		<dict>
 			<key>fileRef</key>
 			<string>145D36E4CD1F59864B214948</string>
@@ -4939,7 +5584,7 @@
 			<key>isa</key>
 			<string>PBXFileReference</string>
 			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
+			<string>sourcecode.c.objc</string>
 			<key>name</key>
 			<string>PFImageCache.h</string>
 			<key>path</key>
@@ -4970,7 +5615,7 @@
 			<key>settings</key>
 			<dict>
 				<key>COMPILER_FLAGS</key>
-				<string>-DOS_OBJECT_USE_OBJC=0</string>
+				<string>-fno-objc-arc</string>
 			</dict>
 		</dict>
 		<key>7590D58B4BE757CDF2B5F01C</key>
@@ -5035,7 +5680,9 @@
 			<key>fileRef</key>
 			<string>E9F039A9B075E62039A2A1FC</string>
 			<key>isa</key>
-			<string>PBXBuildFile</string>
+			<string>PBXFrameworksBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
 		</dict>
 		<key>7859099744CAC49F77535135</key>
 		<dict>
@@ -5070,7 +5717,7 @@
 			<key>isa</key>
 			<string>PBXFileReference</string>
 			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
+			<string>sourcecode.c.objc</string>
 			<key>name</key>
 			<string>FBBoltsMeasurementEventListener.h</string>
 			<key>path</key>
@@ -5129,7 +5776,7 @@
 			<key>isa</key>
 			<string>PBXFileReference</string>
 			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
+			<string>sourcecode.c.objc</string>
 			<key>name</key>
 			<string>FBAccessTokenData.h</string>
 			<key>path</key>
@@ -5176,12 +5823,15 @@
 		</dict>
 		<key>7C62EBADEFA8FEB7F3B5EA55</key>
 		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
+			<key>children</key>
+			<array>
+				<string>D2EF63946938D4244A2997F9</string>
+				<string>F799AB05F0FB174B618E0C88</string>
+				<string>67C99D8102BCB9ACA106739D</string>
+				<string>C5C5F22BDFC16665CDD60980</string>
+			</array>
 			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
+			<string>PBXGroup</string>
 			<key>name</key>
 			<string>FBViewController+Internal.h</string>
 			<key>path</key>
@@ -5338,9 +5988,13 @@
 				<string>YES</string>
 			</dict>
 			<key>isa</key>
-			<string>XCBuildConfiguration</string>
+			<string>PBXTargetDependency</string>
 			<key>name</key>
-			<string>Debug</string>
+			<string>Pods-Bolts</string>
+			<key>target</key>
+			<string>BE6D40D3022A25F76CA310B6</string>
+			<key>targetProxy</key>
+			<string>60E57F9D741525140B3FC215</string>
 		</dict>
 		<key>7DA001EFE26394ECCF3B3E96</key>
 		<dict>
@@ -5532,12 +6186,15 @@
 		</dict>
 		<key>8238E5B0AB8D267E516F3915</key>
 		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
+			<key>children</key>
+			<array>
+				<string>236498B0B3FA9780FED8F16D</string>
+				<string>F451A7AB8D47C7F74931EA1E</string>
+				<string>56F66F5158678576FFB4AB4D</string>
+				<string>45810AAA993142A6C799C825</string>
+			</array>
 			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
+			<string>PBXGroup</string>
 			<key>name</key>
 			<string>FBSessionTokenCachingStrategy.h</string>
 			<key>path</key>
@@ -5547,8 +6204,8 @@
 		</dict>
 		<key>82B13F68908AB29CF9639501</key>
 		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
+			<key>fileRef</key>
+			<string>DA4C28906751F50907C6D0CC</string>
 			<key>isa</key>
 			<string>PBXFileReference</string>
 			<key>lastKnownFileType</key>
@@ -5655,12 +6312,28 @@
 		</dict>
 		<key>84F92DE3DD610B5C7BA128AC</key>
 		<dict>
+			<key>buildConfigurations</key>
+			<array>
+				<string>B8FB8919C3D16042E9749F71</string>
+				<string>10271AC8FBCD9943573AF1FE</string>
+			</array>
+			<key>defaultConfigurationIsVisible</key>
+			<string>0</string>
+			<key>defaultConfigurationName</key>
+			<string>Release</string>
+			<key>isa</key>
+			<string>XCConfigurationList</string>
+		</dict>
+		<key>76EAB17A4CA3882A1D700579</key>
+		<dict>
 			<key>includeInIndex</key>
 			<string>1</string>
 			<key>isa</key>
 			<string>PBXFileReference</string>
 			<key>lastKnownFileType</key>
-			<string>text.xcconfig</string>
+			<string>sourcecode.c.objc</string>
+			<key>name</key>
+			<string>BFExecutor.m</string>
 			<key>path</key>
 			<string>Pods-ParseUI-Private.xcconfig</string>
 			<key>sourceTree</key>
@@ -5795,12 +6468,24 @@
 		</dict>
 		<key>87537E2112E81E9E2DEC2023</key>
 		<dict>
+			<key>fileRef</key>
+			<string>4855FEF17D1AED50839FD45F</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>COMPILER_FLAGS</key>
+				<string>-fno-objc-arc</string>
+			</dict>
+		</dict>
+		<key>79664FFCECA73F2E88E57159</key>
+		<dict>
 			<key>includeInIndex</key>
 			<string>1</string>
 			<key>isa</key>
 			<string>PBXFileReference</string>
 			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
+			<string>sourcecode.c.objc</string>
 			<key>name</key>
 			<string>FBColor.h</string>
 			<key>path</key>
@@ -5810,8 +6495,15 @@
 		</dict>
 		<key>87866D31AA3F68339789D480</key>
 		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
+			<key>children</key>
+			<array>
+				<string>FED76D1CFD467678D975CB21</string>
+				<string>CD2608B5C3C6A67C7AF413B3</string>
+				<string>DD945BFBF079E20A6712B58D</string>
+				<string>3D30F8111582471766AB4F29</string>
+				<string>D103819AE794DF4AD84A7FA6</string>
+				<string>FC118B0BF7AC60B618159489</string>
+			</array>
 			<key>isa</key>
 			<string>PBXFileReference</string>
 			<key>lastKnownFileType</key>
@@ -5824,6 +6516,18 @@
 			<string>&lt;group&gt;</string>
 		</dict>
 		<key>87E914C1C565BA6E98041A24</key>
+		<dict>
+			<key>fileRef</key>
+			<string>307E91CB15F1C1AAF19C2BEC</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>COMPILER_FLAGS</key>
+				<string>-fno-objc-arc</string>
+			</dict>
+		</dict>
+		<key>79F3594449CE5D4810042129</key>
 		<dict>
 			<key>includeInIndex</key>
 			<string>1</string>
@@ -5841,9 +6545,19 @@
 			<key>includeInIndex</key>
 			<string>1</string>
 			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>7B620C4AD5FD3554B3F60D8A</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>5019EF4046C2E13C1D468133</string>
+				<string>3788989C68B3B76CD9C65408</string>
+				<string>5FB065D0CC8156A7139353F7</string>
+				<string>1261D13C58D2B55E6B329EDF</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
 			<key>name</key>
 			<string>FBKeychainStoreDeprecated.h</string>
 			<key>path</key>
@@ -5941,6 +6655,11 @@
 			<string>9D68787103B1915623E14F2B</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>COMPILER_FLAGS</key>
+				<string>-fno-objc-arc</string>
+			</dict>
 		</dict>
 		<key>8B9C5DD85975DC3E62ADFF5C</key>
 		<dict>
@@ -6017,6 +6736,19 @@
 		</dict>
 		<key>8D723E0DA28B8076C10C53C8</key>
 		<dict>
+			<key>containerPortal</key>
+			<string>7785D241831848126A85DCAF</string>
+			<key>isa</key>
+			<string>PBXContainerItemProxy</string>
+			<key>proxyType</key>
+			<string>1</string>
+			<key>remoteGlobalIDString</key>
+			<string>EDEBCD1025139A40FEA5DBC1</string>
+			<key>remoteInfo</key>
+			<string>Pods-ParseFacebookUtils</string>
+		</dict>
+		<key>7F4FF1EE7F54E82CD977B8A8</key>
+		<dict>
 			<key>includeInIndex</key>
 			<string>1</string>
 			<key>isa</key>
@@ -6047,12 +6779,19 @@
 		</dict>
 		<key>8DE23D338070B9FB8F454084</key>
 		<dict>
+			<key>fileRef</key>
+			<string>17B711AB75C704056C49A5D8</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>7FFE1E9D551129C68B1377B1</key>
+		<dict>
 			<key>includeInIndex</key>
 			<string>1</string>
 			<key>isa</key>
 			<string>PBXFileReference</string>
 			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
+			<string>sourcecode.c.h</string>
 			<key>name</key>
 			<string>FBLoginView.m</string>
 			<key>path</key>
@@ -6088,11 +6827,6 @@
 			<string>6AF2A7DA8C5B0FD8EFCB8F9E</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
-			<key>settings</key>
-			<dict>
-				<key>COMPILER_FLAGS</key>
-				<string>-fno-objc-arc</string>
-			</dict>
 		</dict>
 		<key>8F2F412CE3188B298D38C94C</key>
 		<dict>
@@ -6209,11 +6943,6 @@
 			<string>7C972B5E00C507C41758C2AF</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
-			<key>settings</key>
-			<dict>
-				<key>COMPILER_FLAGS</key>
-				<string>-fno-objc-arc</string>
-			</dict>
 		</dict>
 		<key>91A8144900BCF95422F40C73</key>
 		<dict>
@@ -6339,7 +7068,7 @@
 			<key>isa</key>
 			<string>PBXFileReference</string>
 			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
+			<string>sourcecode.c.h</string>
 			<key>name</key>
 			<string>FBTaskCompletionSource.m</string>
 			<key>path</key>
@@ -6354,7 +7083,7 @@
 			<key>isa</key>
 			<string>PBXFileReference</string>
 			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
+			<string>sourcecode.c.objc</string>
 			<key>name</key>
 			<string>FBDialogsData.h</string>
 			<key>path</key>
@@ -6368,6 +7097,11 @@
 			<string>8A839B8A6D7799030F4E5754</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>COMPILER_FLAGS</key>
+				<string>-fno-objc-arc</string>
+			</dict>
 		</dict>
 		<key>958D9A4501853C3B151EAF8E</key>
 		<dict>
@@ -6429,7 +7163,7 @@
 			<key>isa</key>
 			<string>PBXFileReference</string>
 			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
+			<string>sourcecode.c.objc</string>
 			<key>name</key>
 			<string>FBAppEvents+Internal.h</string>
 			<key>path</key>
@@ -6465,11 +7199,6 @@
 			<string>87866D31AA3F68339789D480</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
-			<key>settings</key>
-			<dict>
-				<key>COMPILER_FLAGS</key>
-				<string>-fno-objc-arc</string>
-			</dict>
 		</dict>
 		<key>977E2E973004AD4C644A1521</key>
 		<dict>
@@ -6665,7 +7394,7 @@
 			<key>isa</key>
 			<string>PBXFileReference</string>
 			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
+			<string>sourcecode.c.h</string>
 			<key>name</key>
 			<string>FBCrypto.m</string>
 			<key>path</key>
@@ -6710,7 +7439,7 @@
 			<key>settings</key>
 			<dict>
 				<key>COMPILER_FLAGS</key>
-				<string>-fno-objc-arc</string>
+				<string>-DOS_OBJECT_USE_OBJC=0</string>
 			</dict>
 		</dict>
 		<key>9C03CEE5939DB71889492D35</key>
@@ -6871,11 +7600,6 @@
 			<string>42F87E3F48BFAE97AB893ABD</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
-			<key>settings</key>
-			<dict>
-				<key>COMPILER_FLAGS</key>
-				<string>-fno-objc-arc</string>
-			</dict>
 		</dict>
 		<key>9E8C75C8D90646B35884992D</key>
 		<dict>
@@ -6930,6 +7654,21 @@
 			<string>7859099744CAC49F77535135</string>
 		</dict>
 		<key>9F8861E623EE874C1AA37BB4</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>name</key>
+			<string>FBSessionUtility.h</string>
+			<key>path</key>
+			<string>src/Login/FBSessionUtility.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>995555B8FA1FBB5A2BA825F2</key>
 		<dict>
 			<key>fileRef</key>
 			<string>044E45AAA44EDB4E10179E47</string>
@@ -6994,6 +7733,11 @@
 			<string>C0ABD865163B63836A76C3A7</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>COMPILER_FLAGS</key>
+				<string>-DOS_OBJECT_USE_OBJC=0</string>
+			</dict>
 		</dict>
 		<key>A2D4C3091788DC62BDBCD93C</key>
 		<dict>
@@ -7026,15 +7770,25 @@
 		</dict>
 		<key>A392FE4F05395FE754D1B732</key>
 		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>name</key>
+			<string>FBSessionManualTokenCachingStrategy.m</string>
+			<key>path</key>
+			<string>src/Login/FBSessionManualTokenCachingStrategy.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>9CF75324F1BBE16D60D76E48</key>
+		<dict>
 			<key>fileRef</key>
 			<string>F7C27143E0E2277928063650</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
-			<key>settings</key>
-			<dict>
-				<key>COMPILER_FLAGS</key>
-				<string>-fno-objc-arc</string>
-			</dict>
 		</dict>
 		<key>A3ADB8F8550384C874091C1F</key>
 		<dict>
@@ -7081,7 +7835,7 @@
 			<key>isa</key>
 			<string>PBXFileReference</string>
 			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
+			<string>sourcecode.c.objc</string>
 			<key>name</key>
 			<string>FBOpenGraphActionShareDialogParams.h</string>
 			<key>path</key>
@@ -7095,6 +7849,11 @@
 			<string>383D4B491FB53555624DB0CB</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>COMPILER_FLAGS</key>
+				<string>-fno-objc-arc</string>
+			</dict>
 		</dict>
 		<key>A4E2BD65A6576C1291A17D96</key>
 		<dict>
@@ -7123,12 +7882,15 @@
 			<key>fileRef</key>
 			<string>1A54038832F6238754561241</string>
 			<key>isa</key>
-			<string>PBXBuildFile</string>
-			<key>settings</key>
-			<dict>
-				<key>COMPILER_FLAGS</key>
-				<string>-fno-objc-arc</string>
-			</dict>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>name</key>
+			<string>PFLogInView.h</string>
+			<key>path</key>
+			<string>ParseUI/Classes/LogInViewController/PFLogInView.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
 		</dict>
 		<key>A56BFF727DDE0CB81A556FB4</key>
 		<dict>
@@ -7469,7 +8231,7 @@
 			<key>fileRef</key>
 			<string>24FA6896B83C6B5B0A7DA798</string>
 			<key>isa</key>
-			<string>PBXBuildFile</string>
+			<string>XCConfigurationList</string>
 		</dict>
 		<key>AB601F283857D78A2419ECD6</key>
 		<dict>
@@ -7639,11 +8401,6 @@
 			<string>684817D745B29239D3DCED40</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
-			<key>settings</key>
-			<dict>
-				<key>COMPILER_FLAGS</key>
-				<string>-fno-objc-arc</string>
-			</dict>
 		</dict>
 		<key>B19BADA883E4905A56082ECF</key>
 		<dict>
@@ -7678,7 +8435,7 @@
 				<string>7F0E98A673AB9C8385468E85</string>
 			</array>
 			<key>isa</key>
-			<string>PBXFrameworksBuildPhase</string>
+			<string>PBXSourcesBuildPhase</string>
 			<key>runOnlyForDeploymentPostprocessing</key>
 			<string>0</string>
 		</dict>
@@ -7744,7 +8501,7 @@
 			<key>isa</key>
 			<string>PBXFileReference</string>
 			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
+			<string>sourcecode.c.objc</string>
 			<key>name</key>
 			<string>FBDialogsParams+Internal.h</string>
 			<key>path</key>
@@ -7965,6 +8722,13 @@
 		</dict>
 		<key>B749116D56DFB30C9CA5D639</key>
 		<dict>
+			<key>fileRef</key>
+			<string>D2667C7912D786E6AC208BC8</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>ACF447ED0C01BAFF5E05B02B</key>
+		<dict>
 			<key>includeInIndex</key>
 			<string>1</string>
 			<key>isa</key>
@@ -8002,13 +8766,9 @@
 				<key>ALWAYS_SEARCH_USER_PATHS</key>
 				<string>NO</string>
 				<key>COPY_PHASE_STRIP</key>
-				<string>NO</string>
+				<string>YES</string>
 				<key>DSTROOT</key>
 				<string>/tmp/xcodeproj.dst</string>
-				<key>GCC_DYNAMIC_NO_PIC</key>
-				<string>NO</string>
-				<key>GCC_OPTIMIZATION_LEVEL</key>
-				<string>0</string>
 				<key>GCC_PRECOMPILE_PREFIX_HEADER</key>
 				<string>YES</string>
 				<key>GCC_PREFIX_HEADER</key>
@@ -8024,6 +8784,16 @@
 				<string>$(BUILT_PRODUCTS_DIR)</string>
 				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
 				<string>8.1</string>
+				<key>OTHER_CFLAGS</key>
+				<array>
+					<string>-DNS_BLOCK_ASSERTIONS=1</string>
+					<string>$(inherited)</string>
+				</array>
+				<key>OTHER_CPLUSPLUSFLAGS</key>
+				<array>
+					<string>-DNS_BLOCK_ASSERTIONS=1</string>
+					<string>$(inherited)</string>
+				</array>
 				<key>OTHER_LDFLAGS</key>
 				<string></string>
 				<key>OTHER_LIBTOOLFLAGS</key>
@@ -8036,11 +8806,13 @@
 				<string>iphoneos</string>
 				<key>SKIP_INSTALL</key>
 				<string>YES</string>
+				<key>VALIDATE_PRODUCT</key>
+				<string>YES</string>
 			</dict>
 			<key>isa</key>
 			<string>XCBuildConfiguration</string>
 			<key>name</key>
-			<string>Debug</string>
+			<string>Release</string>
 		</dict>
 		<key>B80DC5B25CB355E1984C4E2A</key>
 		<dict>
@@ -8091,7 +8863,7 @@
 			<key>isa</key>
 			<string>PBXFileReference</string>
 			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
+			<string>sourcecode.c.h</string>
 			<key>name</key>
 			<string>FBColor.m</string>
 			<key>path</key>
@@ -8131,7 +8903,7 @@
 			<key>isa</key>
 			<string>PBXFileReference</string>
 			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
+			<string>sourcecode.c.h</string>
 			<key>name</key>
 			<string>FBRequestHandlerFactory.m</string>
 			<key>path</key>
@@ -8237,6 +9009,11 @@
 			<string>A6CCDFF10EA07F46B43785D5</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>COMPILER_FLAGS</key>
+				<string>-fno-objc-arc</string>
+			</dict>
 		</dict>
 		<key>BCAA6F347A7EE19A9F849D01</key>
 		<dict>
@@ -8338,7 +9115,7 @@
 			<key>isa</key>
 			<string>PBXFileReference</string>
 			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
+			<string>sourcecode.c.h</string>
 			<key>name</key>
 			<string>FBSession.m</string>
 			<key>path</key>
@@ -8348,8 +9125,13 @@
 		</dict>
 		<key>BEC081074E4460B16C84FFAB</key>
 		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
+			<key>children</key>
+			<array>
+				<string>881BBE0C9B76245C72C0759B</string>
+				<string>E0EEEC0535A9ACA4A1E49E23</string>
+				<string>7BF51C87E6F152969577D6AA</string>
+				<string>74772A6D1486FE2F021A279F</string>
+			</array>
 			<key>isa</key>
 			<string>PBXFileReference</string>
 			<key>lastKnownFileType</key>
@@ -8366,7 +9148,7 @@
 			<key>isa</key>
 			<string>PBXFileReference</string>
 			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
+			<string>sourcecode.c.h</string>
 			<key>name</key>
 			<string>BFAppLink.m</string>
 			<key>path</key>
@@ -8375,6 +9157,13 @@
 			<string>&lt;group&gt;</string>
 		</dict>
 		<key>BF62743D7EE0FA7D90656009</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>B26C8BB7FAEBE202E42CB19E</key>
 		<dict>
 			<key>includeInIndex</key>
 			<string>1</string>
@@ -8422,8 +9211,6 @@
 		</dict>
 		<key>C05BB6CAC5ABEFD66AEC8461</key>
 		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
 			<key>isa</key>
 			<string>PBXFileReference</string>
 			<key>lastKnownFileType</key>
@@ -8433,7 +9220,7 @@
 			<key>path</key>
 			<string>src/UI/FBPeoplePickerViewController.m</string>
 			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
+			<string>DEVELOPER_DIR</string>
 		</dict>
 		<key>C07629D111417BB463E89CC7</key>
 		<dict>
@@ -8642,7 +9429,7 @@
 			<key>isa</key>
 			<string>PBXFileReference</string>
 			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
+			<string>sourcecode.c.objc</string>
 			<key>name</key>
 			<string>FBImageResourceLoader.h</string>
 			<key>path</key>
@@ -8724,7 +9511,7 @@
 			<key>isa</key>
 			<string>PBXFileReference</string>
 			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
+			<string>sourcecode.c.h</string>
 			<key>name</key>
 			<string>FBTaggableFriendPickerViewController.m</string>
 			<key>path</key>
@@ -8961,7 +9748,13 @@
 			<key>fileRef</key>
 			<string>CE3FB4A1C902E53AF8B44E60</string>
 			<key>isa</key>
-			<string>PBXBuildFile</string>
+			<string>PBXTargetDependency</string>
+			<key>name</key>
+			<string>Pods-Facebook-iOS-SDK</string>
+			<key>target</key>
+			<string>87A781A57FFE513FDF904084</string>
+			<key>targetProxy</key>
+			<string>0FBE423B4A3746314672016E</string>
 		</dict>
 		<key>C78E47F6CB23516D856CABC7</key>
 		<dict>
@@ -8983,7 +9776,15 @@
 			<key>fileRef</key>
 			<string>B68CDC09B1B1407E468CF351</string>
 			<key>isa</key>
-			<string>PBXBuildFile</string>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>name</key>
+			<string>PFSignUpView.h</string>
+			<key>path</key>
+			<string>ParseUI/Classes/SignUpViewController/PFSignUpView.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
 		</dict>
 		<key>C81FDA81E8AD119E9F9E7B86</key>
 		<dict>
@@ -8991,11 +9792,6 @@
 			<string>0DC85421B5A9B101C07DD73F</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
-			<key>settings</key>
-			<dict>
-				<key>COMPILER_FLAGS</key>
-				<string>-fno-objc-arc</string>
-			</dict>
 		</dict>
 		<key>C8D6B37F1221B0AFE4A1AE7E</key>
 		<dict>
@@ -9033,8 +9829,8 @@
 		</dict>
 		<key>C916001F8FD13CDC46419504</key>
 		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
+			<key>fileRef</key>
+			<string>A1C0731D4A14D7BF2BF25800</string>
 			<key>isa</key>
 			<string>PBXFileReference</string>
 			<key>lastKnownFileType</key>
@@ -9100,6 +9896,11 @@
 			<string>E9E6FCD35D913D3DBD511691</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>COMPILER_FLAGS</key>
+				<string>-fno-objc-arc</string>
+			</dict>
 		</dict>
 		<key>CAC8CA45C1C4F0B1C2AE18D3</key>
 		<dict>
@@ -9122,7 +9923,7 @@
 			<key>isa</key>
 			<string>PBXFileReference</string>
 			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
+			<string>sourcecode.c.objc</string>
 			<key>name</key>
 			<string>FBAppBridgeTypeToJSONConverter.h</string>
 			<key>path</key>
@@ -9137,7 +9938,7 @@
 			<key>isa</key>
 			<string>PBXFileReference</string>
 			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
+			<string>sourcecode.c.objc</string>
 			<key>name</key>
 			<string>FBDialogs+Internal.h</string>
 			<key>path</key>
@@ -9181,8 +9982,39 @@
 		</dict>
 		<key>CBD60DDF1D899869C5AD8D6F</key>
 		<dict>
-			<key>includeInIndex</key>
+			<key>fileRef</key>
+			<string>7C096CF601A214625703DCC2</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>BDB02A48AF7B4A498AF2A2AA</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXTargetDependency</string>
+			<key>name</key>
+			<string>Pods-ParseFacebookUtils</string>
+			<key>target</key>
+			<string>EDEBCD1025139A40FEA5DBC1</string>
+			<key>targetProxy</key>
+			<string>7F2FC3BDC9CBAE426B73EC4E</string>
+		</dict>
+		<key>BDDB445C42213F2120072A09</key>
+		<dict>
+			<key>containerPortal</key>
+			<string>7785D241831848126A85DCAF</string>
+			<key>isa</key>
+			<string>PBXContainerItemProxy</string>
+			<key>proxyType</key>
 			<string>1</string>
+			<key>remoteGlobalIDString</key>
+			<string>E0AAF7545D3DF0C4EB021B52</string>
+			<key>remoteInfo</key>
+			<string>Pods-ParseUI</string>
+		</dict>
+		<key>BE1A4528EB7008A40BC42695</key>
+		<dict>
+			<key>fileRef</key>
+			<string>5CCCADBB57B1B0831C02CF23</string>
 			<key>isa</key>
 			<string>PBXFileReference</string>
 			<key>lastKnownFileType</key>
@@ -9195,6 +10027,13 @@
 			<string>&lt;group&gt;</string>
 		</dict>
 		<key>CBEB69A393EF1CE6C83C9489</key>
+		<dict>
+			<key>fileRef</key>
+			<string>B59264F3D5C18B28246AFA18</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>BF29B626A6E658592D3F39B8</key>
 		<dict>
 			<key>includeInIndex</key>
 			<string>1</string>
@@ -9363,6 +10202,18 @@
 		</dict>
 		<key>D1D28070F4DE625070AC2935</key>
 		<dict>
+			<key>fileRef</key>
+			<string>F2D6ED61428ED1EE178312C5</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>COMPILER_FLAGS</key>
+				<string>-fno-objc-arc</string>
+			</dict>
+		</dict>
+		<key>C1054222CCA5A3DD2D885466</key>
+		<dict>
 			<key>includeInIndex</key>
 			<string>1</string>
 			<key>isa</key>
@@ -9377,6 +10228,13 @@
 			<string>&lt;group&gt;</string>
 		</dict>
 		<key>D21DC65D49D68662F9C017C1</key>
+		<dict>
+			<key>fileRef</key>
+			<string>566AB71C9B54CB18D1F5667A</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>C15546BE150DAA0CC20A4D47</key>
 		<dict>
 			<key>includeInIndex</key>
 			<string>1</string>
@@ -9393,12 +10251,31 @@
 		</dict>
 		<key>D30F8FAA03A8833D40247A33</key>
 		<dict>
+			<key>fileRef</key>
+			<string>00434C5284D8783D06907E36</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>COMPILER_FLAGS</key>
+				<string>-fno-objc-arc</string>
+			</dict>
+		</dict>
+		<key>C274292ACBD5E1795F877334</key>
+		<dict>
+			<key>fileRef</key>
+			<string>7FDA09F73D618700D796C07D</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>C2D4BA76B04A88F42D58B8CF</key>
+		<dict>
 			<key>includeInIndex</key>
 			<string>1</string>
 			<key>isa</key>
 			<string>PBXFileReference</string>
 			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
+			<string>sourcecode.c.objc</string>
 			<key>name</key>
 			<string>BFAppLinkReturnToRefererController.h</string>
 			<key>path</key>
@@ -9413,7 +10290,7 @@
 			<key>isa</key>
 			<string>PBXFileReference</string>
 			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
+			<string>sourcecode.c.h</string>
 			<key>name</key>
 			<string>BFTaskCompletionSource.m</string>
 			<key>path</key>
@@ -9422,6 +10299,72 @@
 			<string>&lt;group&gt;</string>
 		</dict>
 		<key>D33161DA18202C268D96EE0A</key>
+		<dict>
+			<key>fileRef</key>
+			<string>EF65E70E0532304E1ADDA6D1</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>C353FAE17254A65EBD7FFE6D</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>70F50B179AAD58B173E6605A</string>
+				<string>E792C9A6FAFA60E064F0603E</string>
+				<string>B089C622D8425BABCB108C3B</string>
+				<string>7F4FF1EE7F54E82CD977B8A8</string>
+				<string>64C801FE23B62965614DEE4A</string>
+				<string>CF35B037251F025DD58C5AE6</string>
+				<string>73FA2A02045418B745A31170</string>
+				<string>207DF95E0A393F88CCA0FC8F</string>
+				<string>05317A4A4EF8ADFCD610121C</string>
+				<string>C33F466DBB4CE0368CE89EE4</string>
+				<string>F19D3D5A2AECB8FC0550732E</string>
+				<string>846637C929CD6772A940BECC</string>
+				<string>12E7AAF0CBD179005A8A4ED9</string>
+				<string>940FB08E05E1F9240AA74339</string>
+				<string>76EAB17A4CA3882A1D700579</string>
+				<string>91E50192755700F4D996C52C</string>
+				<string>1E111120BE888FC2BDF57781</string>
+				<string>A276DCEF68D247A1DC790A31</string>
+				<string>88B7A4FBCA2B8371A700681B</string>
+				<string>2F26F1A356771D32F0415283</string>
+				<string>7146F8C4423800DE2E40FF1A</string>
+				<string>71020F8966EF99A9A1B48EE1</string>
+				<string>9AB0F129C4BA886806504CBF</string>
+				<string>8D4D9E79D0B6C5CF5B3176E3</string>
+				<string>FBC209551885D63B928F01BB</string>
+				<string>E0117F8178A834B2A0B80C5D</string>
+				<string>79664FFCECA73F2E88E57159</string>
+				<string>2A44795537AED2B637426AA3</string>
+				<string>475EB44C4A3E7CBF35D2AC54</string>
+				<string>0773E2C8B48D44BA3BF55555</string>
+				<string>7191EFBA6F2C34F8091C7AEB</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Bolts</string>
+			<key>path</key>
+			<string>Bolts</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>C3D7B728E752776FD4664701</key>
+		<dict>
+			<key>fileRef</key>
+			<string>90316F4709CC5F16BFC89738</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>C444E32C988D421FF538884A</key>
+		<dict>
+			<key>fileRef</key>
+			<string>6023CBB9F6A69C21CD7AC336</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>C445FE66458E1F412B71E80B</key>
 		<dict>
 			<key>includeInIndex</key>
 			<string>1</string>
@@ -9478,9 +10421,176 @@
 			<key>fileRef</key>
 			<string>7E4A81522130D05FCAAB7E9F</string>
 			<key>isa</key>
-			<string>PBXBuildFile</string>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>path</key>
+			<string>Pods-Parse-prefix.pch</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
 		</dict>
 		<key>D3F577ACEEA2F3D16F2E4125</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>212B8D257A275CB83425FE28</string>
+				<string>9CF75324F1BBE16D60D76E48</string>
+				<string>AAEEBA691FFBBDE804496530</string>
+				<string>5FD0E6B89E025323EC62FA5A</string>
+				<string>E7861E854ABF2DB0449814A7</string>
+				<string>CA42BF9CEDBB532891ADBE4E</string>
+				<string>5608851E78B7613355179045</string>
+				<string>CD4E94290052CDE2D3068FED</string>
+				<string>0C30600D476F752E98CCDCE8</string>
+				<string>239B8C9DFE243C7D7E07AEDD</string>
+				<string>82A6230D8F3D8C3A18F1BF4E</string>
+				<string>E014B06D98D61BEB9C2196B6</string>
+				<string>FF1625629666FEF39F399D0C</string>
+				<string>C130AD0CC657597C213D5204</string>
+				<string>37073CAF19409F211D040BA6</string>
+				<string>EE21547078B8486F10552688</string>
+				<string>8ACC3872935545AC0BF393B6</string>
+				<string>57445926B97730E3BF7C172A</string>
+				<string>BD85BE7BE6D2ABB7A746EEDD</string>
+				<string>DFBA31F2B30E8174E08B01CE</string>
+				<string>16244B236E3141A6636E76DA</string>
+				<string>A53D2DFD7FDE4F40246B2EDF</string>
+				<string>57A1A5B8EF8B72D9BF55ECBA</string>
+				<string>EF7DDC1EB2765B99C83DDC4F</string>
+				<string>30E4EF300D0C332327836544</string>
+				<string>B7F763C8880ED26A5595041F</string>
+				<string>3D5C94FF809E4218948E77BE</string>
+				<string>09C4B3BDB92578E761FCCC31</string>
+				<string>EAA91EA5396F133D35857C0B</string>
+				<string>EF3540472DF12D34864CFEA4</string>
+				<string>293424C19C9B22E1234ADB79</string>
+				<string>4D1D95C0991725ED7BC87089</string>
+				<string>D90F03808017245DD8FE06BC</string>
+				<string>D68FB3366AD1986D8EB349DD</string>
+				<string>72D79215AB2C9B130E85207F</string>
+				<string>0BEF9FBD1CB544DD64300249</string>
+				<string>F80E379320F85A36DED19BE1</string>
+				<string>6DDB857D7EDC225391D2076C</string>
+				<string>8B4DD8148C76BDD8D7B0886A</string>
+				<string>468A21C7152355BE4A5F8145</string>
+				<string>1D849C751A2BFDD85D4F7382</string>
+				<string>6B19710C5D8F1204E7D17EFF</string>
+				<string>CA42CE5EF3A6CB7E1A4B5ECD</string>
+				<string>53A8833E6640988ECA7A26BD</string>
+				<string>E2CAE2065BA709DFB13F0EC3</string>
+				<string>3810989385E422688E203A64</string>
+				<string>23692429541F42BA3DE46582</string>
+				<string>51FF37B3900601EB3C5382FE</string>
+				<string>501C41247198F12767A22FE5</string>
+				<string>398E76AB82E57B02E64EE6A5</string>
+				<string>15563A8AE5776755BB06F77A</string>
+				<string>360D86FB224F4206F7415730</string>
+				<string>EA61EA509E8C2385BF0E7766</string>
+				<string>60A2628D7011C44BFB43C70C</string>
+				<string>847D610F9197DC4308579575</string>
+				<string>685A177849651427871E2B3B</string>
+				<string>F147F4025AA229832F9C1C22</string>
+				<string>BC39D9F72BAE77B01FA2CD22</string>
+				<string>98D05667E6B2262914F31BEE</string>
+				<string>5884B8609638DF9DAA9F15F6</string>
+				<string>1BF4B45A885A59FA0CCCDD77</string>
+				<string>2A4C32E2605FD333745212F0</string>
+				<string>16D6369ADABD1DF2C21C8372</string>
+				<string>2EEAFD56D69A9D41889FB6B9</string>
+				<string>018981DFA6F26B1CEAF2DDC0</string>
+				<string>311890499A20E1DD394A99EC</string>
+				<string>CCA4D228378E21BE4A18A301</string>
+				<string>AFC9A94F9ED16397EA26875C</string>
+				<string>B8D15D06985F0377B391D496</string>
+				<string>7858F8AC409AE61667CA986A</string>
+				<string>36B202D8770F01E173A2CA4E</string>
+				<string>2FD2FAAC3D7F997636EBC4DB</string>
+				<string>8A9B5648EA4E11B498A64EDF</string>
+				<string>7D4A0493696F7DAAE16B5EB7</string>
+				<string>5A35ABC199012E2BE6BCD36A</string>
+				<string>0FB59E2B6A34FC30A13B4B70</string>
+				<string>C531EAA20702CAB0208817C8</string>
+				<string>10CCC6888ECA4A47C6241CA4</string>
+				<string>2333C2552F9BF3DF8B40DEA7</string>
+				<string>616945A15307B6B73001F568</string>
+				<string>3EC31388FB4829FC8C13B4B8</string>
+				<string>953CC1FD35BCCA7A7EB0B14E</string>
+				<string>C57495113AE545B74E31FFFB</string>
+				<string>DAEC64765C1BC87AAD25C3B9</string>
+				<string>4E52DD96829C9A1326F7634A</string>
+				<string>2A42E26A6EBB816E77070ACF</string>
+				<string>C31EB9B2E7FD987C7631F42E</string>
+				<string>8BE1FBC642DA0F3C2BF730C9</string>
+				<string>4CA248188B368F45A71C8F5C</string>
+				<string>89B1A7EF0EE46C822FC5C9A0</string>
+				<string>8356D3878F545E88722CFF29</string>
+				<string>22508BCC3CDADA772EB1D011</string>
+				<string>AB3475FC3DE22E94450F0383</string>
+				<string>67A6601D815A50776F035CCB</string>
+				<string>8D856D32A8F3B7C90701A543</string>
+				<string>7A899BFA17603DFCB6B479EB</string>
+				<string>3013784B6A0A85F45E5B3C30</string>
+				<string>2B05BBB27717CC083C395DC5</string>
+				<string>416EAF5D79EAF10A19A7E216</string>
+				<string>F0EA1FF7D235629B1B760F50</string>
+				<string>EA5BFC3A0E949A5EC216548D</string>
+				<string>C9A99E20C82996AEB57B2D85</string>
+				<string>BB638F4665708C90BA13FD45</string>
+				<string>ED28406833E5AF96C7E8D2B2</string>
+				<string>81A623CC0DC4BDCF6D4C8618</string>
+				<string>88EF581D8C775FD0D0CFE290</string>
+				<string>7FF975AC56711A95DB836F81</string>
+				<string>2122DC692C7C9C62208FB9F6</string>
+				<string>C34E6710455348D8F43F488C</string>
+				<string>D766EB2766A5D14AFF90BC30</string>
+				<string>60F432E1C56C9F3BA0552148</string>
+				<string>F1DEB95B5841AC35B870799B</string>
+				<string>89F7926B9E315EF9FC98BDDF</string>
+				<string>3DB548F115D9BA3E83F73486</string>
+				<string>7ABD4AA44F3160F46BF0ECFD</string>
+				<string>B6B772F58F48280A7D44F52C</string>
+				<string>9947A7B7B003C9B33EB2347F</string>
+				<string>D60D27800CEE197604C8D57A</string>
+				<string>902D8B38B931581DA5D23E83</string>
+				<string>3ACB9128C0AD0B95B37378A7</string>
+				<string>7F0C2E4600F6A97AFFDFC143</string>
+				<string>384C7D7E6B1535EED8DAEF25</string>
+				<string>5D1ECD2095D0C9F21ADC97E0</string>
+				<string>FF5DF70F3A8A30CCAE5D74F0</string>
+				<string>87488C055C700CAAFC3E3960</string>
+				<string>451F8C0D7D17278C8C837913</string>
+				<string>1C21D12AE76DBC2295A2A8F9</string>
+				<string>D969BCF8373A8CE57CA07527</string>
+				<string>ABFBE5066231A8126A21477D</string>
+				<string>BED3FE11EBB02CFF95608FCB</string>
+				<string>47BC9038C3BB1C08C62D1C51</string>
+				<string>40C138FD14DC8A9A516A5919</string>
+				<string>D44B120DAAE5C0994211A4A0</string>
+				<string>43B0BE4AD1E1C18184D96E10</string>
+				<string>FBBB3A88FF30DF0F36BD8019</string>
+				<string>07819B63B35E4BE83D18F33D</string>
+				<string>6BE917AE4161408DDBD93D1A</string>
+				<string>5C6B334DA8128F411E08F48C</string>
+				<string>A0424C7DDA1CC4233DB095B7</string>
+				<string>96DC44502233D9433A7BCE64</string>
+				<string>2DE1E7D65A13699162704AC3</string>
+				<string>390D7E54B87E0DD41A8819B2</string>
+				<string>9632374A47B0B95B78EEB9D8</string>
+				<string>253C0CD5417A1BB78EC1937A</string>
+				<string>FA540263926C66F700C95609</string>
+				<string>9E8787238BC6CE7B758060BE</string>
+				<string>A3CB85133A173126509005EB</string>
+				<string>C042F56A3EBA39BDB6E7D0FC</string>
+				<string>7C9EB73D6D5DB517D2A19813</string>
+			</array>
+			<key>isa</key>
+			<string>PBXHeadersBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>C6D7D84756AC9DF68E4BDA88</key>
 		<dict>
 			<key>includeInIndex</key>
 			<string>1</string>
@@ -9504,15 +10614,40 @@
 		</dict>
 		<key>D561A8CBFFE40C2C555B7A93</key>
 		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>name</key>
+			<string>FBDialogConfig.h</string>
+			<key>path</key>
+			<string>src/DeviceAPI/FBDialogConfig.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>C7BEA3AB8B4BC55C40EB4044</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>name</key>
+			<string>PFImageView.h</string>
+			<key>path</key>
+			<string>ParseUI/Classes/Views/PFImageView.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>C9A99E20C82996AEB57B2D85</key>
+		<dict>
 			<key>fileRef</key>
 			<string>1B2D42E3C1739DAE716452B5</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
-			<key>settings</key>
-			<dict>
-				<key>COMPILER_FLAGS</key>
-				<string>-fno-objc-arc</string>
-			</dict>
 		</dict>
 		<key>D57DEE3A71B667539B321C6C</key>
 		<dict>
@@ -9530,6 +10665,21 @@
 			<string>&lt;group&gt;</string>
 		</dict>
 		<key>D5BADF30567ADFE994F8025A</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>name</key>
+			<string>FBPaymentObserver.m</string>
+			<key>path</key>
+			<string>src/Insights/FBPaymentObserver.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>CA3378526DB52230ABBD2F30</key>
 		<dict>
 			<key>fileRef</key>
 			<string>CB158BF148E42F309BDD62B6</string>
@@ -9578,6 +10728,19 @@
 			<string>PBXBuildFile</string>
 		</dict>
 		<key>D72706F8C03A055A21CAD315</key>
+		<dict>
+			<key>explicitFileType</key>
+			<string>archive.ar</string>
+			<key>includeInIndex</key>
+			<string>0</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>path</key>
+			<string>libPods-Bolts.a</string>
+			<key>sourceTree</key>
+			<string>BUILT_PRODUCTS_DIR</string>
+		</dict>
+		<key>CD3726F3A66422AAF7F4F77A</key>
 		<dict>
 			<key>includeInIndex</key>
 			<string>1</string>
@@ -9630,12 +10793,70 @@
 		</dict>
 		<key>D81629BE0475824805D4406F</key>
 		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>E755CA0E8AAD4F1426865189</string>
+				<string>202B8500BAB9E8B1C10CF290</string>
+				<string>7CF1F171CA9D90F66EB1EE52</string>
+				<string>595EFBD2768C0A999FF3A08E</string>
+				<string>E4429DB743479C40F88EE346</string>
+				<string>DD898AABAFC3DE6FD9ABE1A8</string>
+				<string>C274292ACBD5E1795F877334</string>
+				<string>C72D0470AFC4E700FA12014F</string>
+				<string>F34493E3C84FC47FFEBE7167</string>
+				<string>8376B8D5E6E470230C688CB1</string>
+				<string>4D42E2D973EF722D40018BD5</string>
+				<string>C315962309CA1D3D18037E52</string>
+				<string>D515153E1CD8FB7631BDD8BA</string>
+				<string>4725281C86D329A82561D825</string>
+				<string>FAF2D13BC9318779386EA004</string>
+				<string>36B79729DC73D76978AB08CD</string>
+				<string>181A8A12CE5BFC8743D48C71</string>
+				<string>92ECD81017F59BEFC8A8E32B</string>
+				<string>F7F50AE104A551E03FEB07CF</string>
+				<string>7E81734CB0E61988D6A9797A</string>
+				<string>630593DCC804690F09454D52</string>
+				<string>98BDBC9D38894A1E60938904</string>
+				<string>0CA60082B0306493545D32AE</string>
+				<string>C054AF266E42EF64FA8A4D69</string>
+				<string>CF96160EF11FB738FD6FEE70</string>
+				<string>69E67C6F98A423EF9FFD6588</string>
+				<string>079B24E84472F2171ACD7794</string>
+			</array>
+			<key>isa</key>
+			<string>PBXHeadersBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>CEE6E9387B8F9D2874AF38D2</key>
+		<dict>
+			<key>fileRef</key>
+			<string>F0E4852AF7806657B5A416D1</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>COMPILER_FLAGS</key>
+				<string>-fno-objc-arc</string>
+			</dict>
+		</dict>
+		<key>CF09AD44DD97C368629FE9B5</key>
+		<dict>
+			<key>fileRef</key>
+			<string>72C3ACF1084195C1B5C4351F</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>CF0C0C727C99CE07BC80F0A8</key>
+		<dict>
 			<key>includeInIndex</key>
 			<string>1</string>
 			<key>isa</key>
 			<string>PBXFileReference</string>
 			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
+			<string>sourcecode.c.objc</string>
 			<key>name</key>
 			<string>FBSession+Internal.h</string>
 			<key>path</key>
@@ -9672,7 +10893,7 @@
 			<key>isa</key>
 			<string>PBXFileReference</string>
 			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
+			<string>sourcecode.c.h</string>
 			<key>name</key>
 			<string>PFSignUpView.m</string>
 			<key>path</key>
@@ -9688,6 +10909,86 @@
 			<string>PBXBuildFile</string>
 		</dict>
 		<key>D9235D38E5EB1E268FE835F0</key>
+		<dict>
+			<key>explicitFileType</key>
+			<string>archive.ar</string>
+			<key>includeInIndex</key>
+			<string>0</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>path</key>
+			<string>libPods-ParseFacebookUtils.a</string>
+			<key>sourceTree</key>
+			<string>BUILT_PRODUCTS_DIR</string>
+		</dict>
+		<key>D13C1442758EF934CE1CE48E</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>C0884E877D888B2D10D92624</string>
+				<string>BB7A5BDE955C365B684D0A2D</string>
+				<string>E4DAB4FB2B70183A162048E9</string>
+				<string>48C1BFA5A31F126707223DB5</string>
+				<string>10522BC4C039C563FB8D764F</string>
+				<string>6023CBB9F6A69C21CD7AC336</string>
+				<string>AE0DAD58D28D48960EA3797B</string>
+				<string>7D016F5F242FD9088BBFA29D</string>
+				<string>46CBC95413E05434EEC0EEAA</string>
+				<string>4BEDC650E6BC0F108ACD239C</string>
+				<string>53BD65A1D2216ABF8B1C2839</string>
+				<string>EB229AE1B8C3C6A407B35ED7</string>
+				<string>7FDA09F73D618700D796C07D</string>
+				<string>6E133CC587853B5DCE6EDB79</string>
+				<string>25413817D2CB6FBF1F8EB7AF</string>
+				<string>90316F4709CC5F16BFC89738</string>
+				<string>A8EA4F0F95ED45BAE0D0538E</string>
+				<string>036050289889A5F9A4C56441</string>
+				<string>C7BEA3AB8B4BC55C40EB4044</string>
+				<string>1ABB55CDCDC869037B8B1628</string>
+				<string>938F02986F82EC0DE269EB96</string>
+				<string>29E170E3D12D9E6783E1E116</string>
+				<string>9F9E35B203A9F1527FEC4443</string>
+				<string>AB985A350B2086C85303D892</string>
+				<string>AA2B8BF2D6E31423EB799757</string>
+				<string>49A07E498A2094098D25DD70</string>
+				<string>35CA54EC01B7E71B31F019D8</string>
+				<string>E83BA95F28AD3BB64ACFD2BE</string>
+				<string>7EBA19289F2D1A217F6C8BCA</string>
+				<string>AA8E43E2699A16EE49F0D71F</string>
+				<string>F9646FD99C5416B705030168</string>
+				<string>AFA41095E4F5EDFDCB458A14</string>
+				<string>885E22CFB92EEA161C6028E3</string>
+				<string>D2667C7912D786E6AC208BC8</string>
+				<string>487F1C32432C951606A77DBF</string>
+				<string>CF0C0C727C99CE07BC80F0A8</string>
+				<string>538CD583C859B5F0764A3EDA</string>
+				<string>9A08F3E361761979633F955B</string>
+				<string>FD4AAFCC0F6867739993A574</string>
+				<string>04BAE534E7824F7330C64310</string>
+				<string>B7DDFD65C17DDC810BDA127D</string>
+				<string>5F83AB875B2583658A29B261</string>
+				<string>9259F8311069ABCAD10D2913</string>
+				<string>5CCCADBB57B1B0831C02CF23</string>
+				<string>70B36F72761267C78BFEA715</string>
+				<string>72C3ACF1084195C1B5C4351F</string>
+				<string>9ACFCE771E8EC1AACB866139</string>
+				<string>4B05D4B87E9C4ADFA881CCBF</string>
+				<string>357256336D5F322DBC9CEFD3</string>
+				<string>ABCA4BD3EB87DFC029A597C3</string>
+				<string>E6528835BBDE04E095A533AD</string>
+				<string>40481775406DE3C32F61F963</string>
+				<string>B14B9092407EA89692EA63F7</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>ParseUI</string>
+			<key>path</key>
+			<string>ParseUI</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>D203651A8E110FC8C1FACEA9</key>
 		<dict>
 			<key>includeInIndex</key>
 			<string>1</string>
@@ -9709,7 +11010,7 @@
 			<key>isa</key>
 			<string>PBXFileReference</string>
 			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
+			<string>sourcecode.c.objc</string>
 			<key>name</key>
 			<string>FBGraphObjectPickerViewController+Internal.h</string>
 			<key>path</key>
@@ -9753,7 +11054,15 @@
 			<key>fileRef</key>
 			<string>F12A1F08859D474930B385BD</string>
 			<key>isa</key>
-			<string>PBXBuildFile</string>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>name</key>
+			<string>FBWebDialogs.m</string>
+			<key>path</key>
+			<string>src/UI/FBWebDialogs.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
 		</dict>
 		<key>DB8F20637AB47A75BC166D5E</key>
 		<dict>
@@ -9762,7 +11071,7 @@
 			<key>isa</key>
 			<string>PBXFileReference</string>
 			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
+			<string>sourcecode.c.h</string>
 			<key>name</key>
 			<string>PFResources.m</string>
 			<key>path</key>
@@ -9776,6 +11085,11 @@
 			<string>DE4A8A13E35F468C694454FF</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>COMPILER_FLAGS</key>
+				<string>-fno-objc-arc</string>
+			</dict>
 		</dict>
 		<key>DC3FB185662289D20BF76835</key>
 		<dict>
@@ -9816,7 +11130,7 @@
 			<key>isa</key>
 			<string>PBXFileReference</string>
 			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
+			<string>sourcecode.c.objc</string>
 			<key>name</key>
 			<string>PFSignUpViewController.h</string>
 			<key>path</key>
@@ -9906,6 +11220,279 @@
 		</dict>
 		<key>DEC8408708CA7E1383032F5E</key>
 		<dict>
+			<key>children</key>
+			<array>
+				<string>FB0A9676C9CCC5FD65957D7E</string>
+				<string>7875D2BA73A918EC66AEA9F8</string>
+				<string>7D3162133FFF617F4BB8EBC4</string>
+				<string>D75C5051407A1EB3CDEA51AC</string>
+				<string>83481D625D590BCA060A6B6E</string>
+				<string>86CD8BB25F03E2DA6109570A</string>
+				<string>D78CDACF51D8C3E30A014514</string>
+				<string>F3C99172B9C490C3D3C97163</string>
+				<string>201CBC8D31C1CA4ADB47273A</string>
+				<string>410E0A83C01F3A0E760A5A59</string>
+				<string>F1ECA2E98F5E7FFF23CF7425</string>
+				<string>A4775856DA750E8D26EF57CB</string>
+				<string>E81C8CAD1D209561C97E304E</string>
+				<string>3DC1C980B5ADA502C0B13554</string>
+				<string>F6EFE1159E7C14524EA0F65B</string>
+				<string>25BDE09ABA9448E260E886E5</string>
+				<string>DE45153B396A28E3F95673B8</string>
+				<string>EBD80539DA22945E744DA6A6</string>
+				<string>99C939C1F5838E382044E32A</string>
+				<string>2D7329AFBFEA9E7D46591D3E</string>
+				<string>2E4C14728DA3472FA367B05D</string>
+				<string>566AB71C9B54CB18D1F5667A</string>
+				<string>82536646628D822AA05E5AC8</string>
+				<string>7E80428E0D6A5911C25A57BA</string>
+				<string>CC81F26D6AB8EE47467CF313</string>
+				<string>10253065852F2ADD21297FB2</string>
+				<string>FE2B069ED7441746299F2567</string>
+				<string>3D7492935622575D823181E0</string>
+				<string>142E15067E5EDD96289E6DA2</string>
+				<string>BF29B626A6E658592D3F39B8</string>
+				<string>307E91CB15F1C1AAF19C2BEC</string>
+				<string>7C096CF601A214625703DCC2</string>
+				<string>4414146FE3149955C0CE1950</string>
+				<string>5A59396F82DCF373D7E1F6D7</string>
+				<string>ABCEC2945E9C1E9EADFE07FE</string>
+				<string>352E06A221CFA1302BD3CA9E</string>
+				<string>D3DA421B3D2E0E3C97300668</string>
+				<string>3D8BED1635852DF5E0D69162</string>
+				<string>CE1C245DDBA323FADE765ED8</string>
+				<string>BD10CC186AA895A32C3F11E2</string>
+				<string>15AECC1019C87E1EE0DB286A</string>
+				<string>541C725EBC138010C02848C8</string>
+				<string>C7B809E3CCDF4E3ADC50E1B8</string>
+				<string>6659BF350487D8C6DC5FF549</string>
+				<string>8650A48484C47A1D25EDA014</string>
+				<string>B748379FC434774BCF54D3E6</string>
+				<string>2E73EBD7D017D9D22EFE6FF8</string>
+				<string>5DD60926170CD0291FF2E281</string>
+				<string>98A4C84974A70F2AC72BE35E</string>
+				<string>F49002ABE70F5D5054461421</string>
+				<string>6CA692C85FA1C18B7A5015B3</string>
+				<string>02045102CC6CB45BD5DFAD43</string>
+				<string>9F225ABDE06C48343D61D6CB</string>
+				<string>95C6F13E2BB1A51CBA373E70</string>
+				<string>4AE37E8DFBA2BC51839C0322</string>
+				<string>B442AE7A681CB42ACBD3182A</string>
+				<string>6F86E7728CBEE332621FF339</string>
+				<string>CD3726F3A66422AAF7F4F77A</string>
+				<string>84889731C6AD923AE668C6EE</string>
+				<string>C1054222CCA5A3DD2D885466</string>
+				<string>3E43B15DE55CF4408F15327A</string>
+				<string>D63446852D31B7F2351F8251</string>
+				<string>E95B9B6A2D24DDEBAEBD1699</string>
+				<string>5EF19C28861AEE0EE1C95C44</string>
+				<string>03A2AE387859D78891655CFD</string>
+				<string>48F572700DF24E90330A3363</string>
+				<string>9F7C62B52EB3C18E570CC181</string>
+				<string>06178585C7871C2252521E05</string>
+				<string>10C1428FE5F37722C756E02E</string>
+				<string>82B1A645E7BB96E5B85988E7</string>
+				<string>1CAD6B333945F3A8CE6238B4</string>
+				<string>164649DA5B66947D9BB9D772</string>
+				<string>4D2C16E2E105E840F5897498</string>
+				<string>A8B3300528118AD234C867F7</string>
+				<string>4726EB474DADA2A1662FDDAE</string>
+				<string>31B83CB8D8942F73616FC5E3</string>
+				<string>550920A9DE6412EF0F5465AB</string>
+				<string>6587C4B019BE9EC3F9682AE0</string>
+				<string>C445FE66458E1F412B71E80B</string>
+				<string>19C93BD5D4016742F578AB4A</string>
+				<string>01066D96BB0247699499FC88</string>
+				<string>C9CA2DA7807A3B5E916FCE09</string>
+				<string>E848D2E3DF1CD2710024453C</string>
+				<string>00008CAA9CED143B81829518</string>
+				<string>2331DA7EFF13087486801AA4</string>
+				<string>B7CFA2FF03AF4380DAD1A6D1</string>
+				<string>C15546BE150DAA0CC20A4D47</string>
+				<string>98F275479FB34877C6D4C930</string>
+				<string>AE1A9F0ED432385E6E012953</string>
+				<string>39A0C753EE5BCEEC831C7C93</string>
+				<string>7FFE1E9D551129C68B1377B1</string>
+				<string>DCFB61AD597D64E31158145C</string>
+				<string>0EBA1336BD929D56444E7BCE</string>
+				<string>790D87F596124092EF8218CF</string>
+				<string>DD2DA7D300E92335C8D95AD6</string>
+				<string>481E11FC43EC6AB58BF75274</string>
+				<string>0691A17C8DC17BA04DD93DC3</string>
+				<string>AFF4EC0F94143DD7DCA9FE34</string>
+				<string>1E628C64AC332DE60A4F0D08</string>
+				<string>BC122C517798C8EC61316941</string>
+				<string>70D46C07506312E35DE8CF31</string>
+				<string>F0E4852AF7806657B5A416D1</string>
+				<string>5A08B4824AA0E1B6ED778543</string>
+				<string>E33F0B88B87FACDB823DF081</string>
+				<string>B4127359BD4F503B0BCB44A3</string>
+				<string>0AD83DCE13A4833EA1555214</string>
+				<string>987E5E12BBF693D91D09BEF1</string>
+				<string>1BD43C39DB355D8767FA2B77</string>
+				<string>ADCC83E55D9E33B6D52878E0</string>
+				<string>94C772B518DCBC1B0ABB0664</string>
+				<string>A816A24098198B4FA99BA4CA</string>
+				<string>851E379C0EF95A0FECF6D45B</string>
+				<string>AC41ACF9DD10460777315FB6</string>
+				<string>1F55C18DCB7EE894BAAB2651</string>
+				<string>34DBAC8568649B835BBBBBDD</string>
+				<string>714658CD0F4B7B00F52CB1CF</string>
+				<string>87A3CF0297D209E30412710D</string>
+				<string>F2D6ED61428ED1EE178312C5</string>
+				<string>A1C0731D4A14D7BF2BF25800</string>
+				<string>B26C8BB7FAEBE202E42CB19E</string>
+				<string>D0AFE9A083D4616C64BEE06E</string>
+				<string>66243C2C5517D51D6863A60C</string>
+				<string>BF3F652EBDE6DFD5DE695623</string>
+				<string>4855FEF17D1AED50839FD45F</string>
+				<string>FE404C7101918FC421EE3D8D</string>
+				<string>8682C0B5C0E30CB58EF3FD7C</string>
+				<string>EF1D39B97CF77E4C6AE02F95</string>
+				<string>074D980D0B9525A00817087C</string>
+				<string>5950D8246390BB31BC53FDA1</string>
+				<string>15820B649A7CD05EDC54A1EE</string>
+				<string>F8BB1EADA35BC4930C76DCC9</string>
+				<string>DA4C28906751F50907C6D0CC</string>
+				<string>37B99D374FDBCA06AA2C9760</string>
+				<string>BA367E99EC45EFAD88B44149</string>
+				<string>05B824B209BF8A1DA632AF75</string>
+				<string>E8C902661958F6BAEA881F8D</string>
+				<string>B1D7AA3DBD8981C8FE6B738A</string>
+				<string>E05ED5FC996C4C8C54CCF944</string>
+				<string>D81392411C89081383EEF56B</string>
+				<string>14F291278075FFF65FAC6313</string>
+				<string>03087C1443A2E40CA5C9ACCE</string>
+				<string>5D88A23D918BBB912A5A4DA7</string>
+				<string>B83448F2F829E891D9F700F4</string>
+				<string>710DD24C4431132DEA1681F5</string>
+				<string>94AAC74841102841C53E0032</string>
+				<string>C9F6383B8D20293CF69989DB</string>
+				<string>61DBFCEA92D06A894E88EC9F</string>
+				<string>2AB0137770518B87DB5DE117</string>
+				<string>04D59E5D2424E6254D9C7BAF</string>
+				<string>6704CF1BFF2695DDD81DBCC3</string>
+				<string>6C1191F5DCC07CE22155CA6D</string>
+				<string>14DF52176B31EF36D6634D3F</string>
+				<string>63DEF54BA2263E170D997D7F</string>
+				<string>D0322479A05E2064CCCFB125</string>
+				<string>DED54D78742E4659E6A8192A</string>
+				<string>E1457A70E9B1498A4CCE6812</string>
+				<string>3184037ECFCF5F106A035BD2</string>
+				<string>148B00E437A34CFC2E745D03</string>
+				<string>A9FC30B0038108C767BD7A83</string>
+				<string>6C5FB80AE9686F97BAFE4129</string>
+				<string>113340CBA4B4068AC03845FC</string>
+				<string>FA47FA9E8AA168AB798B2772</string>
+				<string>D4F11EFACE1A0C9B4DE8C2A3</string>
+				<string>13DC06E662154A3227029763</string>
+				<string>FB60F445EDBDD4DE0216358B</string>
+				<string>500FBFD452BD8829A44FDB7A</string>
+				<string>37A9B886FFBA435532443202</string>
+				<string>743BC17C3EA98F40D6F5D72D</string>
+				<string>E2B6ABCD422B889B43F6722E</string>
+				<string>F61B0327147749C1D99736EA</string>
+				<string>00434C5284D8783D06907E36</string>
+				<string>880E92A57D61146296B8DDA5</string>
+				<string>F0E1C3656D29D07EAE881C80</string>
+				<string>110307E9389C33CB7FA091F6</string>
+				<string>84E2F5829AA61AFA38FE28F5</string>
+				<string>B76C02E64E8B0FE912401E39</string>
+				<string>B0EEEAE33D9069C95076F843</string>
+				<string>B4650E7C2DBCAFFC15D31A9E</string>
+				<string>17EEE0F618C1158296CB9341</string>
+				<string>24EE1DDCFB56A999AC5DFAB3</string>
+				<string>5A3364B42EFC52D0F39A9AC4</string>
+				<string>9128CF0245069A3D47D8A5A1</string>
+				<string>FC5EBC3E60A972C3F58FDC04</string>
+				<string>2475481090ABA19118D4F09C</string>
+				<string>FF61DA9809AA1846A03F06DE</string>
+				<string>17B711AB75C704056C49A5D8</string>
+				<string>EF65E70E0532304E1ADDA6D1</string>
+				<string>9E3BBBCE5D5BBE16DAF5730B</string>
+				<string>777EDEBB49779695FCB26E70</string>
+				<string>B3F1D6898E685697ABF49CBD</string>
+				<string>D2D900CE44DEA254A90D609F</string>
+				<string>00C27AF4FB55006392258854</string>
+				<string>34FB8B76ADF79412B0169D6D</string>
+				<string>2856F7D9FBCA98774B7D5FFC</string>
+				<string>3BFD5108B85BDF979BE43E77</string>
+				<string>E14117FD5DAE5012DC9C31C8</string>
+				<string>ACC14C54EE739FE6AB2D052B</string>
+				<string>54D29789CB1C6397E58C7A6B</string>
+				<string>0D5F66DBEF97E2C748BA12A8</string>
+				<string>60DFC3389759CB2C62867273</string>
+				<string>9CCF068FEC96D4017C3CD259</string>
+				<string>79F3594449CE5D4810042129</string>
+				<string>D8C856197F8EF2F36C2F50EF</string>
+				<string>5266D6F7F0BD0DF0FAED40C6</string>
+				<string>2612A469E2F330ADA6B3210F</string>
+				<string>E49569796C505766B197D197</string>
+				<string>C2D4BA76B04A88F42D58B8CF</string>
+				<string>995348FB47ED0DD27FA34681</string>
+				<string>AAD05B0A359B951C0AA2D236</string>
+				<string>ACF447ED0C01BAFF5E05B02B</string>
+				<string>203A4DB4D464E80CD61CCDF4</string>
+				<string>8D4CC70391D0E171F102AA7E</string>
+				<string>1C8D5B5D75D45CC3C915189F</string>
+				<string>E63467E45E11D43699AA26AF</string>
+				<string>1913FD78EA8C56D737BA6373</string>
+				<string>FD947E83E3581B927D81EC53</string>
+				<string>1767C718BB4283BBB4C0577F</string>
+				<string>B8336A55051EDEFC29CCD2BF</string>
+				<string>447E3A3A57F5034184BD32DE</string>
+				<string>61E5D1A644C2CDC75ED4A768</string>
+				<string>ABEE3D972606FD61136E045B</string>
+				<string>8BA17CF9E95F418542223774</string>
+				<string>46B10B5B8A65A5B9202FB1EA</string>
+				<string>B6EC8DD9118A2E699B3F570E</string>
+				<string>F7F90DCF78C778C8D41D8723</string>
+				<string>B59264F3D5C18B28246AFA18</string>
+				<string>4D96369A1EC84F98752BEFEC</string>
+				<string>6B25EBE456A04BB84885A2E1</string>
+				<string>E178A01E1709E72941A4FB40</string>
+				<string>8C9916759F57FAF81F3A0A23</string>
+				<string>00F97E85AF3A7F62CF4E9D67</string>
+				<string>38D3FD33D41CCD1E87C560C4</string>
+				<string>7E8C6AE5B70B4BF8110A5D2C</string>
+				<string>5615A428185CE95EE4A2F9E2</string>
+				<string>1D8551D9E477E329B5409144</string>
+				<string>DEC3D38A46EDFD97C58CBF49</string>
+				<string>9996CE7E38DED21E11B5E52F</string>
+				<string>30143866973F464EA914BC43</string>
+				<string>9A050E19A193E938F2313EEC</string>
+				<string>E84FC1FD0397D7DC80B80471</string>
+				<string>A1AC14A757F3338146482908</string>
+				<string>54647AA7EF9DD430B76240DA</string>
+				<string>C6D7D84756AC9DF68E4BDA88</string>
+				<string>52CFC08A4866A7DD586FB72E</string>
+				<string>DCD633ABF8613B5D32B068DB</string>
+				<string>3CAD1BBB63C3EBA68E82D176</string>
+				<string>2A9D03CC04FE137A510E7DC0</string>
+				<string>29EC34158512F805A45D12A5</string>
+				<string>8F5D05E97131B5D4DB3CE588</string>
+				<string>591BA0C14468714D122D4F01</string>
+				<string>D3B82F6242A5A87186A6C836</string>
+				<string>38A5780C92C362CFFAF19223</string>
+				<string>18A75C0BD169FBB2D93E38B6</string>
+				<string>A51E215F6A3A63A393BB88B2</string>
+				<string>506FEB886B4B8D053CD9ABAB</string>
+				<string>1FE8B4DBE57B2ED519585F31</string>
+				<string>AD753EEA04743F01D254BAA2</string>
+				<string>2EFEB58D257E5EB895BAD43B</string>
+				<string>5A656197960FE3315B667C18</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Facebook-iOS-SDK</string>
+			<key>path</key>
+			<string>Facebook-iOS-SDK</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>D81392411C89081383EEF56B</key>
+		<dict>
 			<key>includeInIndex</key>
 			<string>1</string>
 			<key>isa</key>
@@ -9926,7 +11513,7 @@
 			<key>isa</key>
 			<string>PBXFileReference</string>
 			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
+			<string>sourcecode.c.objc</string>
 			<key>name</key>
 			<string>FBOpenGraphAction.h</string>
 			<key>path</key>
@@ -9989,7 +11576,7 @@
 			<key>isa</key>
 			<string>PBXFileReference</string>
 			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
+			<string>sourcecode.c.h</string>
 			<key>name</key>
 			<string>NSError+FBError.m</string>
 			<key>path</key>
@@ -10061,7 +11648,7 @@
 		<key>E2A7624AF1F3F0CAD7341064</key>
 		<dict>
 			<key>includeInIndex</key>
-			<string>1</string>
+			<string>0</string>
 			<key>isa</key>
 			<string>PBXFileReference</string>
 			<key>lastKnownFileType</key>
@@ -10071,7 +11658,7 @@
 			<key>path</key>
 			<string>src/UI/FBFriendPickerViewController+Internal.h</string>
 			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
+			<string>BUILT_PRODUCTS_DIR</string>
 		</dict>
 		<key>E329FCEC2C0EA59ED194FB56</key>
 		<dict>
@@ -10283,12 +11870,15 @@
 			<key>fileRef</key>
 			<string>0F2696D8E7B8365216B6AC76</string>
 			<key>isa</key>
-			<string>PBXBuildFile</string>
-			<key>settings</key>
-			<dict>
-				<key>COMPILER_FLAGS</key>
-				<string>-fno-objc-arc</string>
-			</dict>
+			<string>PBXNativeTarget</string>
+			<key>name</key>
+			<string>Pods-ParseUI</string>
+			<key>productName</key>
+			<string>Pods-ParseUI</string>
+			<key>productReference</key>
+			<string>FC118B0BF7AC60B618159489</string>
+			<key>productType</key>
+			<string>com.apple.product-type.library.static</string>
 		</dict>
 		<key>E8BE84C00B6DA0A9848E8DCB</key>
 		<dict>
@@ -10370,9 +11960,13 @@
 				<key>ALWAYS_SEARCH_USER_PATHS</key>
 				<string>NO</string>
 				<key>COPY_PHASE_STRIP</key>
-				<string>YES</string>
+				<string>NO</string>
 				<key>DSTROOT</key>
 				<string>/tmp/xcodeproj.dst</string>
+				<key>GCC_DYNAMIC_NO_PIC</key>
+				<string>NO</string>
+				<key>GCC_OPTIMIZATION_LEVEL</key>
+				<string>0</string>
 				<key>GCC_PRECOMPILE_PREFIX_HEADER</key>
 				<string>YES</string>
 				<key>GCC_PREFIX_HEADER</key>
@@ -10381,16 +11975,6 @@
 				<string>$(BUILT_PRODUCTS_DIR)</string>
 				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
 				<string>8.1</string>
-				<key>OTHER_CFLAGS</key>
-				<array>
-					<string>-DNS_BLOCK_ASSERTIONS=1</string>
-					<string>$(inherited)</string>
-				</array>
-				<key>OTHER_CPLUSPLUSFLAGS</key>
-				<array>
-					<string>-DNS_BLOCK_ASSERTIONS=1</string>
-					<string>$(inherited)</string>
-				</array>
 				<key>OTHER_LDFLAGS</key>
 				<string></string>
 				<key>OTHER_LIBTOOLFLAGS</key>
@@ -10403,13 +11987,11 @@
 				<string>iphoneos</string>
 				<key>SKIP_INSTALL</key>
 				<string>YES</string>
-				<key>VALIDATE_PRODUCT</key>
-				<string>YES</string>
 			</dict>
 			<key>isa</key>
 			<string>XCBuildConfiguration</string>
 			<key>name</key>
-			<string>Release</string>
+			<string>Debug</string>
 		</dict>
 		<key>EBC40D8A7E7E2A4CDC97F264</key>
 		<dict>
@@ -10425,7 +12007,7 @@
 			<key>isa</key>
 			<string>PBXFileReference</string>
 			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
+			<string>sourcecode.c.objc</string>
 			<key>name</key>
 			<string>FBGraphObjectPagingLoader.h</string>
 			<key>path</key>
@@ -10458,6 +12040,13 @@
 			</dict>
 		</dict>
 		<key>ECEEFB2A33822B6C5BCF9B15</key>
+		<dict>
+			<key>fileRef</key>
+			<string>46CBC95413E05434EEC0EEAA</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>E49569796C505766B197D197</key>
 		<dict>
 			<key>includeInIndex</key>
 			<string>1</string>
@@ -10500,6 +12089,22 @@
 		</dict>
 		<key>EDAE41236D6EF0544439A80A</key>
 		<dict>
+			<key>children</key>
+			<array>
+				<string>3676EA7D1EA864BF18D11596</string>
+				<string>6CED314C8F82B9645B0840C7</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Parse</string>
+			<key>path</key>
+			<string>Parse</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>E6528835BBDE04E095A533AD</key>
+		<dict>
 			<key>includeInIndex</key>
 			<string>1</string>
 			<key>isa</key>
@@ -10526,11 +12131,6 @@
 			<string>9DC7DF51389ABC55D12918D2</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
-			<key>settings</key>
-			<dict>
-				<key>COMPILER_FLAGS</key>
-				<string>-fno-objc-arc</string>
-			</dict>
 		</dict>
 		<key>EF04B9B26C69CED328175B04</key>
 		<dict>
@@ -10635,7 +12235,7 @@
 			<key>isa</key>
 			<string>PBXFileReference</string>
 			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
+			<string>sourcecode.c.objc</string>
 			<key>name</key>
 			<string>FBDialogConfig.h</string>
 			<key>path</key>
@@ -10729,7 +12329,7 @@
 			<key>isa</key>
 			<string>PBXFileReference</string>
 			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
+			<string>sourcecode.c.h</string>
 			<key>name</key>
 			<string>FBKeychainStoreDeprecated.m</string>
 			<key>path</key>
@@ -10768,15 +12368,33 @@
 			<string>6B3C99001A4795AB80C45C31</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>COMPILER_FLAGS</key>
+				<string>-fno-objc-arc</string>
+			</dict>
 		</dict>
 		<key>F43E982E3BAC1D58081ECA87</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>F070C7AD5B24118D84F7BACE</string>
+			</array>
+			<key>isa</key>
+			<string>PBXFrameworksBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>EBD80539DA22945E744DA6A6</key>
 		<dict>
 			<key>includeInIndex</key>
 			<string>1</string>
 			<key>isa</key>
 			<string>PBXFileReference</string>
 			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
+			<string>sourcecode.c.objc</string>
 			<key>name</key>
 			<string>FBLikeButtonBackgroundSelectedPNG.h</string>
 			<key>path</key>
@@ -10888,6 +12506,21 @@
 		</dict>
 		<key>F5A76689E6D277D6F30385BC</key>
 		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>name</key>
+			<string>FBLikeActionController.m</string>
+			<key>path</key>
+			<string>src/UI/FBLikeActionController.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>F0EA1FF7D235629B1B760F50</key>
+		<dict>
 			<key>fileRef</key>
 			<string>6E74587D3F3536472B42B085</string>
 			<key>isa</key>
@@ -10952,6 +12585,21 @@
 		</dict>
 		<key>F76218528433729EA106E62B</key>
 		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>name</key>
+			<string>FBLikeButtonPopWAV.m</string>
+			<key>path</key>
+			<string>src/AudioResources/FBLikeButtonPopWAV.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>F34493E3C84FC47FFEBE7167</key>
+		<dict>
 			<key>fileRef</key>
 			<string>14DCE4EF508962441C1B5ADB</string>
 			<key>isa</key>
@@ -10992,7 +12640,13 @@
 			<key>fileRef</key>
 			<string>7E43C359DC121BFA3C34AB9F</string>
 			<key>isa</key>
-			<string>PBXBuildFile</string>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.xcconfig</string>
+			<key>path</key>
+			<string>Pods-Bolts-Private.xcconfig</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
 		</dict>
 		<key>F818246F803A1456A00DF48C</key>
 		<dict>
@@ -11033,6 +12687,25 @@
 		</dict>
 		<key>F8E606849862B085B2B58A6B</key>
 		<dict>
+			<key>fileRef</key>
+			<string>B748379FC434774BCF54D3E6</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>COMPILER_FLAGS</key>
+				<string>-fno-objc-arc</string>
+			</dict>
+		</dict>
+		<key>F6B155FC49DF990754100FCB</key>
+		<dict>
+			<key>fileRef</key>
+			<string>EB229AE1B8C3C6A407B35ED7</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>F6EFE1159E7C14524EA0F65B</key>
+		<dict>
 			<key>includeInIndex</key>
 			<string>1</string>
 			<key>isa</key>
@@ -11047,6 +12720,13 @@
 			<string>&lt;group&gt;</string>
 		</dict>
 		<key>F8F7C7C33D1E5E8261B8023C</key>
+		<dict>
+			<key>fileRef</key>
+			<string>88B7A4FBCA2B8371A700681B</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>F799AB05F0FB174B618E0C88</key>
 		<dict>
 			<key>includeInIndex</key>
 			<string>1</string>
@@ -11121,7 +12801,7 @@
 			<key>isa</key>
 			<string>PBXFileReference</string>
 			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
+			<string>sourcecode.c.h</string>
 			<key>name</key>
 			<string>BFAppLinkNavigation.m</string>
 			<key>path</key>
@@ -11232,7 +12912,7 @@
 			<key>isa</key>
 			<string>PBXFileReference</string>
 			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
+			<string>sourcecode.c.h</string>
 			<key>name</key>
 			<string>FBLikeButton.m</string>
 			<key>path</key>
@@ -11246,6 +12926,11 @@
 			<string>4613E0B252E369B6B09C8C7F</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>COMPILER_FLAGS</key>
+				<string>-fno-objc-arc</string>
+			</dict>
 		</dict>
 		<key>FAF2BE5C432835D61B4CEDD2</key>
 		<dict>
@@ -11316,7 +13001,15 @@
 			<key>fileRef</key>
 			<string>7BC5153828D3AC108579BC36</string>
 			<key>isa</key>
-			<string>PBXBuildFile</string>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>name</key>
+			<string>FBBoltsMeasurementEventListener.m</string>
+			<key>path</key>
+			<string>src/AppLink/FBBoltsMeasurementEventListener.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
 		</dict>
 		<key>FC14BED035318914465A77BC</key>
 		<dict>
@@ -11372,7 +13065,7 @@
 		<key>FD62FE0684F9ADB469A2391C</key>
 		<dict>
 			<key>includeInIndex</key>
-			<string>1</string>
+			<string>0</string>
 			<key>isa</key>
 			<string>PBXFileReference</string>
 			<key>lastKnownFileType</key>
@@ -11382,7 +13075,7 @@
 			<key>path</key>
 			<string>src/UI/FBProfilePictureView.m</string>
 			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
+			<string>BUILT_PRODUCTS_DIR</string>
 		</dict>
 		<key>FDF3237854E0D03A3B8347CA</key>
 		<dict>
@@ -11393,8 +13086,8 @@
 		</dict>
 		<key>FDFD3E8ACDA669BE6778BC9D</key>
 		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
+			<key>fileRef</key>
+			<string>E63467E45E11D43699AA26AF</string>
 			<key>isa</key>
 			<string>PBXFileReference</string>
 			<key>lastKnownFileType</key>

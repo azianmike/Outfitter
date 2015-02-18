@@ -8,6 +8,7 @@
 
 import UIKit
 import XCTest
+import Outfitter
 
 
 class OutfitterTests: XCTestCase {
@@ -15,6 +16,7 @@ class OutfitterTests: XCTestCase {
     override func setUp() {
         super.setUp()
         // Put setup code here. This method is called before the invocation of each test method in the class.
+
     }
     
     override func tearDown() {
@@ -36,4 +38,16 @@ class OutfitterTests: XCTestCase {
         }
     }
     
+    // we can't do much  without a view on our root View Controller
+    func testViewDidLoad()
+    {
+        // we only have access to this if we import our project above
+        let v = ViewController()
+        
+        // assert that the ViewController.view is not nil
+        XCTAssertNotNil(v.view, "View Did Not load")
+    }
+    
 }
+
+
