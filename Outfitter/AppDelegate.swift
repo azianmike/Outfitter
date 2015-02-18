@@ -18,7 +18,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         Parse.setApplicationId("SOzwRu6FgQqXZutDyUx25OhuydwfBhY5amOqp2Td", clientKey: "wpuJaLeNKjskcN5dCWbMfqIxkfuz91tvX8sFDNXS")
         PFFacebookUtils.initializeFacebook()
-        //NSLog(Parse)
+        let permissions = ["email", "name"]
+        PFFacebookUtils.logInWithPermissions(permissions, {
+            (user: PFUser!, error: NSError!) -> Void in
+            if user == nil {
+                NSLog("Uh oh. The user cancelled the Facebook login.")
+            } else if user.isNew {
+                NSLog("User signed up and logged in through Facebook!")
+            } else {
+                NSLog("User logged in through Facebook!")
+            }
+        })
+        
         return true
     }
 

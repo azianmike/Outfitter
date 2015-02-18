@@ -15,7 +15,6 @@ class ViewController: UIViewController, PFLogInViewControllerDelegate {
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(false)
         // Do any additional setup after loading the view, typically from a nib.
-        NSLog("enter view didAppear")
         showLoginView()
         
     }
@@ -41,8 +40,6 @@ class ViewController: UIViewController, PFLogInViewControllerDelegate {
     }
     
     func logInViewController(controller: PFLogInViewController, didLogInUser user: PFUser!) -> Void {
-        //self.dismissViewController(true, completion: nil)
-        NSLog("enter")
         self.dismissViewControllerAnimated(true, completion: nil)
     }
     
