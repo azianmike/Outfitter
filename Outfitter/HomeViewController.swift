@@ -52,7 +52,8 @@ class ViewController: UIViewController, PFLogInViewControllerDelegate {
         {
             FBRequest.requestForMe().startWithCompletionHandler({ (FBRequestConnection connected, FBGraphUser user, NSError error) -> Void in
                 let currentUser=PFUser.currentUser()
-                currentUser.username=user.name
+                //currentUser.username=user.name
+                currentUser.setValue(user.name, forKey: "name")
                 currentUser.email = user.email
                 
                 PFUser.currentUser().save()
