@@ -64,6 +64,9 @@
                             </mask>
                         </variation>
                     </view>
+                    <connections>
+                        <outlet property="welcomeMessage" destination="Jbs-vj-iqb" id="NKc-Ky-4Tc"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
