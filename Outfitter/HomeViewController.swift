@@ -47,7 +47,12 @@ class ViewController: UIViewController, PFLogInViewControllerDelegate {
 
     }
     
+    
     func updateWelcomeMessage(){
+        if (PFUser.currentUser() == nil){
+            return
+        }
+        
         if (FBSession.activeSession().isOpen)
         {
             FBRequest.requestForMe().startWithCompletionHandler({ (FBRequestConnection connected, FBGraphUser user, NSError error) -> Void in
