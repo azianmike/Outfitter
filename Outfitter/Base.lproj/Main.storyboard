@@ -89,5 +89,43 @@
             </objects>
             <point key="canvasLocation" x="-739.5" y="-1.5"/>
         </scene>
+        <!--Submit Photo View Controller-->
+        <scene sceneID="egJ-86-3p7">
+            <objects>
+                <viewController storyboardIdentifier="SubmitPhotoViewController" id="BL6-xL-juj" customClass="SubmitPhotoViewController" customModule="Outfitter" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="pkw-NH-f2U"/>
+                        <viewControllerLayoutGuide type="bottom" id="tOK-nd-kaV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="L15-in-dYI">
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="hem-WJ-1bd">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="59" y="34" width="283" height="440"/>
+                                </variation>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="hem-WJ-1bd"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular-widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="hem-WJ-1bd"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <connections>
+                        <outlet property="imageView" destination="hem-WJ-1bd" id="czb-Cg-EGt"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="La2-km-vOY" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="88.5" y="-244.5"/>
+        </scene>
     </scenes>
 </document>

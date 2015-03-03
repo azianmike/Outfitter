@@ -90,6 +90,15 @@ class HomeViewController: UIViewController, PFLogInViewControllerDelegate, UINav
     func imagePickerController(picker: UIImagePickerController!, didFinishPickingImage image: UIImage!, editingInfo: NSDictionary!){
         self.dismissViewControllerAnimated(true, completion: nil)
         println("i've got an image");
+        let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
+        
+        // Force the downcast as an AnsViewController (this could crash at runtime
+        // if the return value is nil or not an AnsViewController, so again,
+        // the previous example is safer
+        let ansViewController: UIViewController! = storyBoard.instantiateViewControllerWithIdentifier("SubmitPhotoViewController") as UIViewController
+        ansViewController.setValue(image, forKey: "imageToSubmit")
+        self.presentViewController(ansViewController, animated:true, completion:nil)
+        
     }
 
     

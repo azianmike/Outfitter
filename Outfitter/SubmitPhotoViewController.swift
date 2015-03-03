@@ -9,10 +9,17 @@
 import UIKit
 
 public class SubmitPhotoViewController: UIViewController {
-
+    
+    
+    var imageToSubmit:UIImage!
+    @IBOutlet var imageView:UIImageView!
     override public func viewDidAppear(animated: Bool) {
         super.viewDidAppear(false)
         // Do any additional setup after loading the view, typically from a nib.
+        imageToSubmit = self.valueForKey("imageToSubmit") as UIImage
+         NSLog("got my image")
+        imageView.image = imageToSubmit
+        
         
     }
     
