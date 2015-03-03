@@ -4,10 +4,10 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Home View Controller-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
-                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModule="Outfitter" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="vXZ-lx-hvc" customClass="HomeViewController" customModule="Outfitter" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
                         <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
@@ -31,36 +31,53 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yo9-zH-ROA">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" title="Take Picture">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="takePhoto" destination="vXZ-lx-hvc" eventType="touchUpInside" id="UDh-hb-gdL"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="centerX" secondItem="Pmo-KO-jUy" secondAttribute="centerX" constant="-0.5" id="7EB-AD-Cjc"/>
                             <constraint firstAttribute="centerX" secondItem="Jbs-vj-iqb" secondAttribute="centerX" constant="-0.5" id="RQw-jw-nVc"/>
                             <constraint firstItem="Pmo-KO-jUy" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="412" id="RbQ-EH-hAg"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="yo9-zH-ROA" secondAttribute="bottom" constant="483" id="Ylw-G2-srC"/>
+                            <constraint firstAttribute="centerX" secondItem="yo9-zH-ROA" secondAttribute="centerX" id="bJE-F7-k8f"/>
                             <constraint firstItem="Jbs-vj-iqb" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="175" id="jYK-jx-srs"/>
                         </constraints>
                         <variation key="default">
                             <mask key="subviews">
                                 <exclude reference="Pmo-KO-jUy"/>
                                 <exclude reference="Jbs-vj-iqb"/>
+                                <exclude reference="yo9-zH-ROA"/>
                             </mask>
                             <mask key="constraints">
                                 <exclude reference="RQw-jw-nVc"/>
                                 <exclude reference="jYK-jx-srs"/>
+                                <exclude reference="bJE-F7-k8f"/>
                                 <exclude reference="7EB-AD-Cjc"/>
                                 <exclude reference="RbQ-EH-hAg"/>
+                                <exclude reference="Ylw-G2-srC"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular-widthClass=compact">
                             <mask key="subviews">
                                 <include reference="Pmo-KO-jUy"/>
                                 <include reference="Jbs-vj-iqb"/>
+                                <include reference="yo9-zH-ROA"/>
                             </mask>
                             <mask key="constraints">
                                 <include reference="RQw-jw-nVc"/>
                                 <include reference="jYK-jx-srs"/>
+                                <include reference="bJE-F7-k8f"/>
                                 <include reference="7EB-AD-Cjc"/>
                                 <include reference="RbQ-EH-hAg"/>
+                                <include reference="Ylw-G2-srC"/>
                             </mask>
                         </variation>
                     </view>
@@ -70,6 +87,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="-739.5" y="-1.5"/>
         </scene>
     </scenes>
 </document>

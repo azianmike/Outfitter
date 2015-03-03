@@ -42,7 +42,7 @@ class OutfitterTests: XCTestCase {
     func testViewDidLoad()
     {
         // we only have access to this if we import our project above
-        let v = ViewController()
+        let v = HomeViewController()
         
         // assert that the ViewController.view is not nil
         XCTAssertNotNil(v.view, "View Did Not load")

@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController, PFLogInViewControllerDelegate {
+class HomeViewController: UIViewController, PFLogInViewControllerDelegate, UINavigationControllerDelegate, UIImagePickerControllerDelegate {
     
     @IBOutlet var welcomeMessage: UILabel!
     
@@ -85,6 +85,23 @@ class ViewController: UIViewController, PFLogInViewControllerDelegate {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    func imagePickerController(picker: UIImagePickerController!, didFinishPickingImage image: UIImage!, editingInfo: NSDictionary!){
+        self.dismissViewControllerAnimated(true, completion: nil)
+        println("i've got an image");
+    }
+
+    
+    @IBAction func takePhoto()
+    {
+        NSLog("enter takephoto")
+        let temp = UIImagePickerController();
+        temp.delegate = self;
+        temp.sourceType = UIImagePickerControllerSourceType.Camera;
+        self.presentViewController(temp, animated: true, completion: nil)
+        
+        
     }
     
     

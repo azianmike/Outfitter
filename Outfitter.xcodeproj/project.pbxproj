@@ -20,6 +20,7 @@
 		C19A09141A806CC00013997B /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C19A09131A806CC00013997B /* Images.xcassets */; };
 		C19A09171A806CC00013997B /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = C19A09151A806CC00013997B /* LaunchScreen.xib */; };
 		C19A09231A806CC00013997B /* OutfitterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C19A09221A806CC00013997B /* OutfitterTests.swift */; };
+		C19EFDF71AA55A2900D45421 /* SubmitPhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C19EFDF61AA55A2900D45421 /* SubmitPhotoViewController.swift */; };
 		E75B87FB3EEEF2BEC42B836D /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4FFABC43CED10E9BAEAEDC5D /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -53,6 +54,7 @@
 		C19A091C1A806CC00013997B /* OutfitterTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OutfitterTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C19A09211A806CC00013997B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C19A09221A806CC00013997B /* OutfitterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OutfitterTests.swift; sourceTree = "<group>"; };
+		C19EFDF61AA55A2900D45421 /* SubmitPhotoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SubmitPhotoViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -126,6 +128,7 @@
 			children = (
 				C19A090C1A806CC00013997B /* AppDelegate.swift */,
 				C19A090E1A806CC00013997B /* HomeViewController.swift */,
+				C19EFDF61AA55A2900D45421 /* SubmitPhotoViewController.swift */,
 				C19A09101A806CC00013997B /* Main.storyboard */,
 				C19A09131A806CC00013997B /* Images.xcassets */,
 				C19A09151A806CC00013997B /* LaunchScreen.xib */,
@@ -339,6 +342,7 @@
 			files = (
 				C19A090F1A806CC00013997B /* HomeViewController.swift in Sources */,
 				C19A090D1A806CC00013997B /* AppDelegate.swift in Sources */,
+				C19EFDF71AA55A2900D45421 /* SubmitPhotoViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
