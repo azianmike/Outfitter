@@ -57,12 +57,12 @@
                                 <exclude reference="yo9-zH-ROA"/>
                             </mask>
                             <mask key="constraints">
+                                <exclude reference="Ylw-G2-srC"/>
                                 <exclude reference="RQw-jw-nVc"/>
                                 <exclude reference="jYK-jx-srs"/>
-                                <exclude reference="bJE-F7-k8f"/>
                                 <exclude reference="7EB-AD-Cjc"/>
                                 <exclude reference="RbQ-EH-hAg"/>
-                                <exclude reference="Ylw-G2-srC"/>
+                                <exclude reference="bJE-F7-k8f"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular-widthClass=compact">
@@ -72,12 +72,12 @@
                                 <include reference="yo9-zH-ROA"/>
                             </mask>
                             <mask key="constraints">
+                                <include reference="Ylw-G2-srC"/>
                                 <include reference="RQw-jw-nVc"/>
                                 <include reference="jYK-jx-srs"/>
-                                <include reference="bJE-F7-k8f"/>
                                 <include reference="7EB-AD-Cjc"/>
                                 <include reference="RbQ-EH-hAg"/>
-                                <include reference="Ylw-G2-srC"/>
+                                <include reference="bJE-F7-k8f"/>
                             </mask>
                         </variation>
                     </view>
@@ -98,34 +98,92 @@
                         <viewControllerLayoutGuide type="bottom" id="tOK-nd-kaV"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="L15-in-dYI">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="f3I-AC-dro">
+                                <rect key="frame" x="-61" y="-14" width="123" height="29"/>
+                                <segments>
+                                    <segment title="Guys + Girls"/>
+                                    <segment title="Guys"/>
+                                    <segment title="Girls"/>
+                                </segments>
+                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="0.0" y="496" width="400" height="29"/>
+                                </variation>
+                            </segmentedControl>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="ueG-ff-g21">
+                                <rect key="frame" x="-61" y="-14" width="123" height="29"/>
+                                <segments>
+                                    <segment title="Not Priority"/>
+                                    <segment title="Priority"/>
+                                </segments>
+                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="0.0" y="532" width="400" height="29"/>
+                                </variation>
+                            </segmentedControl>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="hem-WJ-1bd">
                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                                 <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="59" y="34" width="283" height="440"/>
+                                    <rect key="frame" x="57" y="44" width="287" height="401"/>
                                 </variation>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lsg-rv-I86">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" title="Submit">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="176" y="580" width="49" height="30"/>
+                                </variation>
+                                <connections>
+                                    <action selector="submitPhoto" destination="BL6-xL-juj" eventType="touchUpInside" id="8mk-j2-rvT"/>
+                                </connections>
+                            </button>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="m2Y-Hm-5WZ">
+                                <rect key="frame" x="-61" y="-14" width="123" height="29"/>
+                                <segments>
+                                    <segment title="Full Outfit"/>
+                                    <segment title="Top"/>
+                                    <segment title="Bottom"/>
+                                    <segment title="Shoes"/>
+                                    <segment title="Accessories"/>
+                                </segments>
+                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="0.0" y="460" width="390" height="29"/>
+                                </variation>
+                            </segmentedControl>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <variation key="default">
                             <mask key="subviews">
+                                <exclude reference="f3I-AC-dro"/>
+                                <exclude reference="ueG-ff-g21"/>
                                 <exclude reference="hem-WJ-1bd"/>
+                                <exclude reference="lsg-rv-I86"/>
+                                <exclude reference="m2Y-Hm-5WZ"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular-widthClass=compact">
                             <mask key="subviews">
+                                <include reference="f3I-AC-dro"/>
+                                <include reference="ueG-ff-g21"/>
                                 <include reference="hem-WJ-1bd"/>
+                                <include reference="lsg-rv-I86"/>
+                                <include reference="m2Y-Hm-5WZ"/>
                             </mask>
                         </variation>
                     </view>
                     <connections>
+                        <outlet property="article" destination="m2Y-Hm-5WZ" id="s7V-ip-Dr1"/>
+                        <outlet property="guysOrGirls" destination="f3I-AC-dro" id="tXf-aJ-Z8f"/>
                         <outlet property="imageView" destination="hem-WJ-1bd" id="czb-Cg-EGt"/>
+                        <outlet property="priority" destination="ueG-ff-g21" id="rR6-Jk-yJI"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="La2-km-vOY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="88.5" y="-244.5"/>
+            <point key="canvasLocation" x="88.5" y="-189.75"/>
         </scene>
     </scenes>
 </document>
