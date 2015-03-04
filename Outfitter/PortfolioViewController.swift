@@ -10,39 +10,46 @@ import UIKit
 
 public class PortfolioViewController: UIViewController {
     @IBOutlet var collectionView: UICollectionView!
-    //@IBOutlet var portfolioTitle: UILabel!
     @IBOutlet var navigationBar: UINavigationBar!
     var submissions:[PFObject]!
     
     override public func viewDidAppear(animated: Bool) {
         super.viewDidAppear(false)
         // Do any additional setup after loading the view, typically from a nib.
-    }
-    
-    override public func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
-        //portfolioTitle.text = PFUser.currentUser().username + "'s Portfolio"
         navigationBar.topItem?.title = PFUser.currentUser().objectForKey("name") as String! + "'s Portfolio"
-        
-        // Getting the pictures from Parse
         var query = PFQuery(className:"Submission")
         query.whereKey("submittedByUser", equalTo:PFUser.currentUser().username)
+        
+        let loadingNotification = MBProgressHUD.showHUDAddedTo(self.view, animated: true)
+        loadingNotification.mode = MBProgressHUDModeIndeterminate
+        loadingNotification.labelText = "Loading Submissions"
+        
         query.findObjectsInBackgroundWithBlock {
             (objects: [AnyObject]!, error: NSError!) -> Void in
             if error == nil {
                 if let objects = objects as? [PFObject] {
                     self.submissions = [PFObject]()
-                    for object in objects {
-                        self.submissions.append(object)
+                    if objects.count == 0 {
+                        NSLog("User does not have any submissions")
+                    } else {
+                        for object in objects {
+                            self.submissions.append(object)
+                        }
                     }
                     self.collectionView.reloadData()
                 }
+                MBProgressHUD.hideAllHUDsForView(self.view, animated: true)
             } else {
                 // Log details of the failure
                 println("Error: \(error) \(error.userInfo!)")
+                MBProgressHUD.hideAllHUDsForView(self.view, animated: true)
             }
         }
+    }
+    
+    override public func viewDidLoad() {
+        super.viewDidLoad()
+        // Do any additional setup after loading the view, typically from a nib.
     }
     
     override public func didReceiveMemoryWarning() {
@@ -65,7 +72,6 @@ public class PortfolioViewController: UIViewController {
         
         let cell = collectionView.dequeueReusableCellWithReuseIdentifier("PortfolioCell", forIndexPath: indexPath) as PortfolioCell
         cell.setImage(submissions[indexPath.row].objectForKey("image").url)
-        //cell.setGalleryItem(galleryItems[indexPath.row])
         return cell
     }
     

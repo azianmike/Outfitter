@@ -22,6 +22,8 @@ class PortfolioCell: UICollectionViewCell {
     internal func setImage(imageURL:NSString){
         let url = NSURL(string: imageURL)
         let data = NSData(contentsOfURL: url!)
-        imageView.image = UIImage(data: data!)
+        let image = UIImage(data: data!)
+        imageView.image = image!
+        NSLog(NSStringFromCGSize(image!.size))
     }
 }
