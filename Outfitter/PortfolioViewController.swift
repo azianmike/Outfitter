@@ -16,8 +16,14 @@ public class PortfolioViewController: UIViewController {
     override public func viewDidAppear(animated: Bool) {
         super.viewDidAppear(false)
         // Do any additional setup after loading the view, typically from a nib.
-        navigationBar.topItem?.title = PFUser.currentUser().objectForKey("name") as String! + "'s Portfolio"
-        var query = PFQuery(className:"Submission")
+        
+        let loadingNotification = MBProgressHUD.showHUDAddedTo(self.view, animated: true)
+        loadingNotification.mode = MBProgressHUDModeIndeterminate
+        loadingNotification.labelText = "Loading Submissions"
+
+        submissions = [PFObject]()
+        getSubmissions(doneGettingSubmissions)
+        /*var query = PFQuery(className:"Submission")
         query.whereKey("submittedByUser", equalTo:PFUser.currentUser().username)
         
         let loadingNotification = MBProgressHUD.showHUDAddedTo(self.view, animated: true)
@@ -46,12 +52,49 @@ public class PortfolioViewController: UIViewController {
                 println("Error: \(error) \(error.userInfo!)")
                 MBProgressHUD.hideAllHUDsForView(self.view, animated: true)
             }
+        }*/
+    }
+    
+    func doneGettingSubmissions(){
+        MBProgressHUD.hideAllHUDsForView(self.view, animated: true)
+        if submissions.count == 0 {
+            let alert = UIAlertController(title: "Error", message: "We cannot load your submissions because you do not have any!", preferredStyle: UIAlertControllerStyle.Alert)
+            alert.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.Default, handler: nil))
+            self.presentViewController(alert, animated: true, completion: nil)
+        } else {
+            self.collectionView.reloadData()
+        }
+    }
+    
+    func getSubmissions(callback:(()->Void)){
+        var query = PFQuery(className:"Submission")
+        query.whereKey("submittedByUser", equalTo:PFUser.currentUser().username)
+        
+        let loadingNotification = MBProgressHUD.showHUDAddedTo(self.view, animated: true)
+        loadingNotification.mode = MBProgressHUDModeIndeterminate
+        loadingNotification.labelText = "Loading Submissions"
+        
+        query.findObjectsInBackgroundWithBlock {
+            (objects: [AnyObject]!, error: NSError!) -> Void in
+            if error == nil {
+                if let objects = objects as? [PFObject] {
+                    for object in objects {
+                        self.submissions.append(object)
+                    }
+                }
+                callback()
+            } else {
+                // Log details of the failure
+                println("Error: \(error) \(error.userInfo!)")
+                callback()
+            }
         }
     }
     
     override public func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        navigationBar.topItem?.title = PFUser.currentUser().objectForKey("name") as String! + "'s Portfolio"
     }
     
     override public func didReceiveMemoryWarning() {
