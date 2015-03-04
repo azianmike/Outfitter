@@ -43,7 +43,54 @@ public class SubmitPhotoViewController: UIViewController {
     
     @IBAction func submitPhoto()
     {
-    
+        var articleID:Int = article.selectedSegmentIndex
+        var femaleFeedback:Bool
+        var maleFeedback:Bool
+        if guysOrGirls.selectedSegmentIndex == 0{
+            femaleFeedback = true
+            maleFeedback = true
+        } else if guysOrGirls.selectedSegmentIndex == 1{
+            femaleFeedback = false
+            maleFeedback = true
+        } else {
+            femaleFeedback = true
+            maleFeedback = false
+        }
+        var submitPriority:Bool
+        if priority.selectedSegmentIndex == 0{
+            submitPriority = false
+        } else {
+            submitPriority = true
+        }
+        var submission = PFObject(className: "Submission")
+        
+        // Deal with UIImage not saving to Parse
+        var imageData:NSData = UIImageJPEGRepresentation(imageToSubmit, 0.70)
+        var imageFile:PFFile = PFFile(name: "submissionImage.png", data: imageData)
+        
+        submission.setObject(imageFile, forKey: "image")
+        submission.setObject(articleID, forKey: "article")
+        submission.setObject(submitPriority, forKey: "isPrioritySubmission")
+        submission.setObject(0, forKey: "numDislikes")
+        submission.setObject(0, forKey: "numLikes")
+        submission.setObject(PFUser.currentUser().username, forKey: "submittedByUser")
+        submission.setObject(femaleFeedback, forKey: "toReceiveFemaleFeedback")
+        submission.setObject(maleFeedback, forKey: "toReceiveMaleFeedback")
+        
+        let loadingNotification = MBProgressHUD.showHUDAddedTo(self.view, animated: true)
+        loadingNotification.mode = MBProgressHUDModeIndeterminate
+        loadingNotification.labelText = "Saving Submission"
+        
+        submission.saveInBackgroundWithBlock {
+            (success: Bool, error: NSError!) -> Void in
+            if success {
+                NSLog("Object created with id: \(submission.objectId)")
+                MBProgressHUD.hideAllHUDsForView(self.view, animated: true)
+            } else {
+                NSLog("%@", error)
+                MBProgressHUD.hideAllHUDsForView(self.view, animated: true)
+            }
+        }
     }
     
 
