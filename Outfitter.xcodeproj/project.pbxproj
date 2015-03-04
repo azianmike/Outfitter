@@ -9,11 +9,13 @@
 /* Begin PBXBuildFile section */
 		0ED53F008DF4C6E613AC80A6 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4FFABC43CED10E9BAEAEDC5D /* libPods.a */; };
 		20D1CCD41A94062300E072B8 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C19A090E1A806CC00013997B /* HomeViewController.swift */; };
+		3C2025051AA7689D0080222F /* PortfolioViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C2025041AA7689D0080222F /* PortfolioViewController.swift */; };
 		3C347C1C1A95464F00B5B830 /* LoginUIAutomationTest.trace in Resources */ = {isa = PBXBuildFile; fileRef = 3C347C1B1A95464F00B5B830 /* LoginUIAutomationTest.trace */; };
 		3C58D68E1A969424009C86B1 /* SignupAndLoginTest.js in Resources */ = {isa = PBXBuildFile; fileRef = 3C58D68D1A969424009C86B1 /* SignupAndLoginTest.js */; };
 		3C58D6901A9694CE009C86B1 /* FacebookLoginTest.js in Resources */ = {isa = PBXBuildFile; fileRef = 3C58D68F1A9694CE009C86B1 /* FacebookLoginTest.js */; };
 		3C58D6921A969527009C86B1 /* IncorrectLoginTest.js in Resources */ = {isa = PBXBuildFile; fileRef = 3C58D6911A969527009C86B1 /* IncorrectLoginTest.js */; };
 		3C58D69A1A96A1AC009C86B1 /* APIKeys.js in Resources */ = {isa = PBXBuildFile; fileRef = 3C58D6991A96A1AC009C86B1 /* APIKeys.js */; };
+		3C7AA0DA1AA7958D00EEA3EE /* PortfolioCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C7AA0D91AA7958D00EEA3EE /* PortfolioCell.swift */; };
 		C19A090D1A806CC00013997B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C19A090C1A806CC00013997B /* AppDelegate.swift */; };
 		C19A090F1A806CC00013997B /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C19A090E1A806CC00013997B /* HomeViewController.swift */; };
 		C19A09121A806CC00013997B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C19A09101A806CC00013997B /* Main.storyboard */; };
@@ -37,11 +39,13 @@
 /* Begin PBXFileReference section */
 		0BEE8D65BB0A721D365B2DB0 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		20D1CCD11A93E2A500E072B8 /* Outfitter-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Outfitter-Bridging-Header.h"; sourceTree = "<group>"; };
+		3C2025041AA7689D0080222F /* PortfolioViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PortfolioViewController.swift; sourceTree = "<group>"; };
 		3C347C1B1A95464F00B5B830 /* LoginUIAutomationTest.trace */ = {isa = PBXFileReference; lastKnownFileType = folder; path = LoginUIAutomationTest.trace; sourceTree = "<group>"; };
 		3C58D68D1A969424009C86B1 /* SignupAndLoginTest.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = SignupAndLoginTest.js; sourceTree = "<group>"; };
 		3C58D68F1A9694CE009C86B1 /* FacebookLoginTest.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = FacebookLoginTest.js; sourceTree = "<group>"; };
 		3C58D6911A969527009C86B1 /* IncorrectLoginTest.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = IncorrectLoginTest.js; sourceTree = "<group>"; };
 		3C58D6991A96A1AC009C86B1 /* APIKeys.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = APIKeys.js; sourceTree = "<group>"; };
+		3C7AA0D91AA7958D00EEA3EE /* PortfolioCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PortfolioCell.swift; sourceTree = "<group>"; };
 		453069873DB8EB6020AEB58F /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		4FFABC43CED10E9BAEAEDC5D /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		C19A09071A806CC00013997B /* Outfitter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Outfitter.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -129,6 +133,8 @@
 				C19A090C1A806CC00013997B /* AppDelegate.swift */,
 				C19A090E1A806CC00013997B /* HomeViewController.swift */,
 				C19EFDF61AA55A2900D45421 /* SubmitPhotoViewController.swift */,
+				3C2025041AA7689D0080222F /* PortfolioViewController.swift */,
+				3C7AA0D91AA7958D00EEA3EE /* PortfolioCell.swift */,
 				C19A09101A806CC00013997B /* Main.storyboard */,
 				C19A09131A806CC00013997B /* Images.xcassets */,
 				C19A09151A806CC00013997B /* LaunchScreen.xib */,
@@ -341,8 +347,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				C19A090F1A806CC00013997B /* HomeViewController.swift in Sources */,
+				3C2025051AA7689D0080222F /* PortfolioViewController.swift in Sources */,
 				C19A090D1A806CC00013997B /* AppDelegate.swift in Sources */,
 				C19EFDF71AA55A2900D45421 /* SubmitPhotoViewController.swift in Sources */,
+				3C7AA0DA1AA7958D00EEA3EE /* PortfolioCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
