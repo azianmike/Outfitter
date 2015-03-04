@@ -86,12 +86,19 @@ public class SubmitPhotoViewController: UIViewController {
             if success {
                 NSLog("Object created with id: \(submission.objectId)")
                 MBProgressHUD.hideAllHUDsForView(self.view, animated: true)
+                self.dismissViewControllerAnimated(true, completion: nil)
             } else {
                 NSLog("%@", error)
                 MBProgressHUD.hideAllHUDsForView(self.view, animated: true)
+                let alert = UIAlertController(title: "Error", message: "There was an error when submitting you image...Please try again soon!", preferredStyle: UIAlertControllerStyle.Alert)
+                alert.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.Default, handler: nil))
+                self.presentViewController(alert, animated: true, completion: nil)
             }
         }
     }
     
-
+    @IBAction func cancelSubmit()
+    {
+        self.dismissViewControllerAnimated(true, completion: nil)
+    }
 }
