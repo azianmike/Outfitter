@@ -70,7 +70,7 @@ public class SubmitPhotoViewController: UIViewController {
         var submission = PFObject(className: "Submission")
         
         // Deal with UIImage not saving to Parse
-        var imageData:NSData = UIImageJPEGRepresentation(imageToSubmit, 0.70)
+        var imageData:NSData = UIImageJPEGRepresentation(imageToSubmit, 0.40)
         var imageFile:PFFile = PFFile(name: "submissionImage.png", data: imageData)
         
         submission.setObject(imageFile, forKey: "image")

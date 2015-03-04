@@ -30,7 +30,9 @@ public class PortfolioViewController: UIViewController {
                 if let objects = objects as? [PFObject] {
                     self.submissions = [PFObject]()
                     if objects.count == 0 {
-                        NSLog("User does not have any submissions")
+                        let alert = UIAlertController(title: "Error", message: "We cannot load your submissions because you do not have any!", preferredStyle: UIAlertControllerStyle.Alert)
+                        alert.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.Default, handler: nil))
+                        self.presentViewController(alert, animated: true, completion: nil)
                     } else {
                         for object in objects {
                             self.submissions.append(object)
