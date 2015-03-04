@@ -62,6 +62,11 @@ public class SubmitPhotoViewController: UIViewController {
         } else {
             submitPriority = true
         }
+        
+        submitPhotoToParse(imageToSubmit, articleID: articleID, femaleFeedback: femaleFeedback, maleFeedback: maleFeedback, submitPriority: submitPriority)
+    }
+    
+    func submitPhotoToParse(image:UIImage, articleID:Int, femaleFeedback:Bool, maleFeedback:Bool, submitPriority:Bool){
         var submission = PFObject(className: "Submission")
         
         // Deal with UIImage not saving to Parse
@@ -96,7 +101,7 @@ public class SubmitPhotoViewController: UIViewController {
             }
         }
     }
-    
+  
     @IBAction func cancelSubmit()
     {
         self.dismissViewControllerAnimated(true, completion: nil)
