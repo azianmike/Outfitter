@@ -113,6 +113,10 @@ class HomeViewController: UIViewController, PFLogInViewControllerDelegate, UINav
         
     }
     
-    
+    @IBAction func showPortfolio(){
+        let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
+        let portfolioViewController: UIViewController! = storyBoard.instantiateViewControllerWithIdentifier("PortfolioViewController") as UIViewController
+        self.presentViewController(portfolioViewController, animated:true, completion:nil)
+    }
 }
 
