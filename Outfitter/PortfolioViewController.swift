@@ -64,7 +64,11 @@ public class PortfolioViewController: UIViewController {
     override public func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        navigationBar.topItem?.title = PFUser.currentUser().objectForKey("name") as String! + "'s Portfolio"
+        if let temp = PFUser.currentUser().objectForKey("name") as String! {
+            navigationBar.topItem?.title = temp + "'s Portfolio"
+        } else {
+            navigationBar.topItem?.title = PFUser.currentUser().username + "'s Portfolio"
+        }
     }
     
     override public func didReceiveMemoryWarning() {
