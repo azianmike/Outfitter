@@ -23,36 +23,6 @@ public class PortfolioViewController: UIViewController {
 
         submissions = [PFObject]()
         getSubmissions(doneGettingSubmissions)
-        /*var query = PFQuery(className:"Submission")
-        query.whereKey("submittedByUser", equalTo:PFUser.currentUser().username)
-        
-        let loadingNotification = MBProgressHUD.showHUDAddedTo(self.view, animated: true)
-        loadingNotification.mode = MBProgressHUDModeIndeterminate
-        loadingNotification.labelText = "Loading Submissions"
-        
-        query.findObjectsInBackgroundWithBlock {
-            (objects: [AnyObject]!, error: NSError!) -> Void in
-            if error == nil {
-                if let objects = objects as? [PFObject] {
-                    self.submissions = [PFObject]()
-                    if objects.count == 0 {
-                        let alert = UIAlertController(title: "Error", message: "We cannot load your submissions because you do not have any!", preferredStyle: UIAlertControllerStyle.Alert)
-                        alert.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.Default, handler: nil))
-                        self.presentViewController(alert, animated: true, completion: nil)
-                    } else {
-                        for object in objects {
-                            self.submissions.append(object)
-                        }
-                    }
-                    self.collectionView.reloadData()
-                }
-                MBProgressHUD.hideAllHUDsForView(self.view, animated: true)
-            } else {
-                // Log details of the failure
-                println("Error: \(error) \(error.userInfo!)")
-                MBProgressHUD.hideAllHUDsForView(self.view, animated: true)
-            }
-        }*/
     }
     
     func doneGettingSubmissions(){

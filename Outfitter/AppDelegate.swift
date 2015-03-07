@@ -13,12 +13,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
-
-    func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
-        // Override point for customization after application launch.
+    func setupAPIS() {
         Parse.setApplicationId("SOzwRu6FgQqXZutDyUx25OhuydwfBhY5amOqp2Td", clientKey: "wpuJaLeNKjskcN5dCWbMfqIxkfuz91tvX8sFDNXS")
         PFFacebookUtils.initializeFacebook()
-
+    }
+    
+    func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
+        // Override point for customization after application launch.
+        setupAPIS()
         
         return true
     }

@@ -66,7 +66,7 @@ public class SubmitPhotoViewController: UIViewController {
         submitPhotoToParse(imageToSubmit, articleID: articleID, femaleFeedback: femaleFeedback, maleFeedback: maleFeedback, submitPriority: submitPriority)
     }
     
-    func submitPhotoToParse(image:UIImage, articleID:Int, femaleFeedback:Bool, maleFeedback:Bool, submitPriority:Bool){
+    func submitPhotoToParse(image:UIImage, articleID:Int, femaleFeedback:Bool, maleFeedback:Bool, submitPriority:Bool, completionHandler: ((result:Bool) -> Void)! = nil){
         var submission = PFObject(className: "Submission")
         
         // Deal with UIImage not saving to Parse
@@ -88,6 +88,11 @@ public class SubmitPhotoViewController: UIViewController {
         
         submission.saveInBackgroundWithBlock {
             (success: Bool, error: NSError!) -> Void in
+            
+            if((completionHandler) != nil) {
+                completionHandler(result: success)
+            }
+            
             if success {
                 NSLog("Object created with id: \(submission.objectId)")
                 MBProgressHUD.hideAllHUDsForView(self.view, animated: true)

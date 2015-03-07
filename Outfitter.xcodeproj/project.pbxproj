@@ -8,6 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		0ED53F008DF4C6E613AC80A6 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4FFABC43CED10E9BAEAEDC5D /* libPods.a */; };
+		203F87CF1AAB3D34005F8A60 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C19A09101A806CC00013997B /* Main.storyboard */; };
+		203F87D01AAB3E23005F8A60 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C19A090C1A806CC00013997B /* AppDelegate.swift */; };
+		203F87D11AAB4270005F8A60 /* SubmitPhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C19EFDF61AA55A2900D45421 /* SubmitPhotoViewController.swift */; };
+		203F87D21AAB4692005F8A60 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C19A09131A806CC00013997B /* Images.xcassets */; };
+		203F87D31AAB5207005F8A60 /* PortfolioViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C2025041AA7689D0080222F /* PortfolioViewController.swift */; };
+		203F87D41AAB5219005F8A60 /* PortfolioCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C7AA0D91AA7958D00EEA3EE /* PortfolioCell.swift */; };
 		20D1CCD41A94062300E072B8 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C19A090E1A806CC00013997B /* HomeViewController.swift */; };
 		3C2025051AA7689D0080222F /* PortfolioViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C2025041AA7689D0080222F /* PortfolioViewController.swift */; };
 		3C347C1C1A95464F00B5B830 /* LoginUIAutomationTest.trace in Resources */ = {isa = PBXBuildFile; fileRef = 3C347C1B1A95464F00B5B830 /* LoginUIAutomationTest.trace */; };
@@ -267,8 +273,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				3C58D6901A9694CE009C86B1 /* FacebookLoginTest.js in Resources */,
+				203F87D21AAB4692005F8A60 /* Images.xcassets in Resources */,
 				3C58D68E1A969424009C86B1 /* SignupAndLoginTest.js in Resources */,
 				3C58D6921A969527009C86B1 /* IncorrectLoginTest.js in Resources */,
+				203F87CF1AAB3D34005F8A60 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -354,8 +362,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				203F87D01AAB3E23005F8A60 /* AppDelegate.swift in Sources */,
+				203F87D31AAB5207005F8A60 /* PortfolioViewController.swift in Sources */,
 				C19A09231A806CC00013997B /* OutfitterTests.swift in Sources */,
 				20D1CCD41A94062300E072B8 /* HomeViewController.swift in Sources */,
+				203F87D41AAB5219005F8A60 /* PortfolioCell.swift in Sources */,
+				203F87D11AAB4270005F8A60 /* SubmitPhotoViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
