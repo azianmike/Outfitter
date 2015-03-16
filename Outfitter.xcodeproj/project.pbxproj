@@ -14,6 +14,8 @@
 		203F87D21AAB4692005F8A60 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C19A09131A806CC00013997B /* Images.xcassets */; };
 		203F87D31AAB5207005F8A60 /* PortfolioViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C2025041AA7689D0080222F /* PortfolioViewController.swift */; };
 		203F87D41AAB5219005F8A60 /* PortfolioCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C7AA0D91AA7958D00EEA3EE /* PortfolioCell.swift */; };
+		2045B0B61AB78BDB00ADEC20 /* BrowseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2045B0B51AB78BDB00ADEC20 /* BrowseViewController.swift */; };
+		2045B0B71AB78BDB00ADEC20 /* BrowseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2045B0B51AB78BDB00ADEC20 /* BrowseViewController.swift */; };
 		20D1CCD41A94062300E072B8 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C19A090E1A806CC00013997B /* HomeViewController.swift */; };
 		3C2025051AA7689D0080222F /* PortfolioViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C2025041AA7689D0080222F /* PortfolioViewController.swift */; };
 		3C347C1C1A95464F00B5B830 /* LoginUIAutomationTest.trace in Resources */ = {isa = PBXBuildFile; fileRef = 3C347C1B1A95464F00B5B830 /* LoginUIAutomationTest.trace */; };
@@ -43,6 +45,7 @@
 
 /* Begin PBXFileReference section */
 		0BEE8D65BB0A721D365B2DB0 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		2045B0B51AB78BDB00ADEC20 /* BrowseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BrowseViewController.swift; sourceTree = "<group>"; };
 		20D1CCD11A93E2A500E072B8 /* Outfitter-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Outfitter-Bridging-Header.h"; sourceTree = "<group>"; };
 		3C2025041AA7689D0080222F /* PortfolioViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PortfolioViewController.swift; sourceTree = "<group>"; };
 		3C347C1B1A95464F00B5B830 /* LoginUIAutomationTest.trace */ = {isa = PBXFileReference; lastKnownFileType = folder; path = LoginUIAutomationTest.trace; sourceTree = "<group>"; };
@@ -144,6 +147,7 @@
 				C19A09151A806CC00013997B /* LaunchScreen.xib */,
 				C19A090A1A806CC00013997B /* Supporting Files */,
 				20D1CCD11A93E2A500E072B8 /* Outfitter-Bridging-Header.h */,
+				2045B0B51AB78BDB00ADEC20 /* BrowseViewController.swift */,
 			);
 			path = Outfitter;
 			sourceTree = "<group>";
@@ -350,6 +354,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2045B0B61AB78BDB00ADEC20 /* BrowseViewController.swift in Sources */,
 				C19A090F1A806CC00013997B /* HomeViewController.swift in Sources */,
 				3C2025051AA7689D0080222F /* PortfolioViewController.swift in Sources */,
 				C19A090D1A806CC00013997B /* AppDelegate.swift in Sources */,
@@ -368,6 +373,7 @@
 				20D1CCD41A94062300E072B8 /* HomeViewController.swift in Sources */,
 				203F87D41AAB5219005F8A60 /* PortfolioCell.swift in Sources */,
 				203F87D11AAB4270005F8A60 /* SubmitPhotoViewController.swift in Sources */,
+				2045B0B71AB78BDB00ADEC20 /* BrowseViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
