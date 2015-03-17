@@ -11,15 +11,29 @@ import UIKit
 class BrowseViewController: UIViewController {
     @IBOutlet var genderButton:UIButton!
     @IBOutlet var articleButton:UIButton!
+    @IBOutlet var currentImageView:UIImageView!
     var submissions:[PFObject]!
     var genderPickerSelectedIndex:Int!
     var articlePickerSelectedIndex:Int!
+    var currentSubmissionIndex:Int!
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        submissions = [PFObject]()
+        currentSubmissionIndex = -1
         genderPickerSelectedIndex = 0
         articlePickerSelectedIndex = 0
-        //getSubmissions(doneGettingSubmissions)
+        
+        //Setup swipe
+        var swipeRight = UISwipeGestureRecognizer(target: self, action: "userSwiped:")
+        swipeRight.direction = UISwipeGestureRecognizerDirection.Right
+        self.view.addGestureRecognizer(swipeRight)
+        
+        var swipLeft = UISwipeGestureRecognizer(target: self, action: "userSwiped:")
+        swipLeft.direction = UISwipeGestureRecognizerDirection.Left
+        self.view.addGestureRecognizer(swipLeft)
+        
+        go()
     }
 
     override func didReceiveMemoryWarning() {
@@ -47,24 +61,63 @@ class BrowseViewController: UIViewController {
             }, cancelBlock: { ActionStringCancelBlock in return }, origin: sender)
     }
     
+    @IBAction func go(){
+        submissions.removeAll(keepCapacity: false)
+        getSubmissions(doneGettingSubmissions)
+    }
+    
+    @IBAction func closeBrowse(){
+        self.dismissViewControllerAnimated(true, completion: nil)
+    }
+    
+    func loadCurrentPicture(){
+        if currentSubmissionIndex >= 0 && currentSubmissionIndex < submissions.count {
+            var imageURL:NSString = submissions[currentSubmissionIndex].objectForKey("image").url
+            let url = NSURL(string: imageURL)
+            let data = NSData(contentsOfURL: url!)
+            let image = UIImage(data: data!)
+            currentImageView.image = image!
+        } else {
+            currentImageView.image = nil
+            let alert = UIAlertController(title: "Error", message: "No submissions Available", preferredStyle: UIAlertControllerStyle.Alert)
+            alert.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.Default, handler: nil))
+            self.presentViewController(alert, animated: true, completion: nil)
+        }
+    }
+    
+    func userSwiped(gesture: UIGestureRecognizer) {
+        if currentSubmissionIndex >= 0 && currentSubmissionIndex < submissions.count {
+            if let swipeGesture = gesture as? UISwipeGestureRecognizer {
+                switch swipeGesture.direction {
+                case UISwipeGestureRecognizerDirection.Right: // yes
+                    NSLog("Swiped right")
+                    submissions[currentSubmissionIndex]["numLikes"] = submissions[currentSubmissionIndex].objectForKey("numLikes") as Int! + 1
+                case UISwipeGestureRecognizerDirection.Left: // no
+                    NSLog("Swiped left")
+                    submissions[currentSubmissionIndex]["numDislikes"] = submissions[currentSubmissionIndex].objectForKey("numDislikes") as Int! + 1
+                default:
+                    break
+                }
+                //updateSubmission(submissions[currentSubmissionIndex])
+                // Need the code to add the vote to the RatingActivity table
+                
+                currentSubmissionIndex = currentSubmissionIndex + 1
+                loadCurrentPicture()
+            }
+        }
+    }
+    
     func doneGettingSubmissions(){
         MBProgressHUD.hideAllHUDsForView(self.view, animated: true)
+        NSLog(String(submissions.count))
         if submissions.count == 0 {
             let alert = UIAlertController(title: "Error", message: "No submissions Available", preferredStyle: UIAlertControllerStyle.Alert)
             alert.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.Default, handler: nil))
             self.presentViewController(alert, animated: true, completion: nil)
         } else {
-            
-            // ** Example Test Code -- Replace with implementation **
-            if var submissionExample = submissions.first {
-                var numLikes: AnyObject! = submissionExample.objectForKey("numLikes")
-                submissionExample.setObject(numLikes.integerValue + 1, forKey: "numLikes")
-                updateSubmission(submissionExample, completionHandler: { (result) -> Void in
-                    NSLog("Updated submission")
-                })
-            }
-            
-            //self.collectionView.reloadData()
+            // We have submissions
+            self.currentSubmissionIndex = 0
+            loadCurrentPicture()
         }
     }
     
