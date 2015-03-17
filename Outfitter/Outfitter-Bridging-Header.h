@@ -13,5 +13,6 @@
 #import <ParseUI/ParseUI.h>
 #import <ParseFacebookUtils/PFFacebookUtils.h>
 #import "MBProgressHUD.h"
+#import "ActionSheetStringPicker.h"
 
 #endif

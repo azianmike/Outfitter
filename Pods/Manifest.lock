@@ -1,4 +1,5 @@
 PODS:
+  - ActionSheetPicker-3.0 (1.5.0)
   - Bolts (1.1.3)
   - Facebook-iOS-SDK (3.23.0):
     - Bolts (~> 1.0)
@@ -13,11 +14,13 @@ PODS:
     - ParseFacebookUtils (~> 1.6)
 
 DEPENDENCIES:
+  - ActionSheetPicker-3.0 (~> 1.5.0)
   - MBProgressHUD (~> 0.8)
   - Parse
   - ParseUI
 
 SPEC CHECKSUMS:
+  ActionSheetPicker-3.0: 30565e92a38b23f06f4a3fce113bd92f0e44dd4d
   Bolts: 3db0a875235e0c9042b013af13af0f00f79b102c
   Facebook-iOS-SDK: 3d65f685348b789e46a9aacf92bfa85b60b63755
   MBProgressHUD: 2038dbcf3dce73215abed6001657043d53aa79a8

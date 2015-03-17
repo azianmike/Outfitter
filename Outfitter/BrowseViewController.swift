@@ -9,17 +9,42 @@
 import UIKit
 
 class BrowseViewController: UIViewController {
+    @IBOutlet var genderButton:UIButton!
+    @IBOutlet var articleButton:UIButton!
     var submissions:[PFObject]!
+    var genderPickerSelectedIndex:Int!
+    var articlePickerSelectedIndex:Int!
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        getSubmissions(doneGettingSubmissions)
+        genderPickerSelectedIndex = 0
+        articlePickerSelectedIndex = 0
+        //getSubmissions(doneGettingSubmissions)
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    @IBAction func showGenderPicker(sender: UIButton!){
+        ActionSheetStringPicker.showPickerWithTitle("Gender", rows: ["Male", "Female", "Both Male and Female"], initialSelection: self.genderPickerSelectedIndex, doneBlock: {
+            picker, index, value in
+            
+            sender.setTitle(value as String!, forState: UIControlState.Normal)
+            self.genderPickerSelectedIndex = index
+            return
+            }, cancelBlock: { ActionStringCancelBlock in return }, origin: sender)
+    }
+    
+    @IBAction func showArticlePicker(sender: UIButton!){
+        ActionSheetStringPicker.showPickerWithTitle("Articles", rows: ["Full Outfits", "Tops", "Bottoms", "Shoes", "Accessories"], initialSelection: self.articlePickerSelectedIndex, doneBlock: {
+            picker, index, value in
+            
+            sender.setTitle(value as String!, forState: UIControlState.Normal)
+            self.articlePickerSelectedIndex = index
+            return
+            }, cancelBlock: { ActionStringCancelBlock in return }, origin: sender)
     }
     
     func doneGettingSubmissions(){

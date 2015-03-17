@@ -142,12 +142,12 @@
 				C19EFDF61AA55A2900D45421 /* SubmitPhotoViewController.swift */,
 				3C2025041AA7689D0080222F /* PortfolioViewController.swift */,
 				3C7AA0D91AA7958D00EEA3EE /* PortfolioCell.swift */,
+				2045B0B51AB78BDB00ADEC20 /* BrowseViewController.swift */,
 				C19A09101A806CC00013997B /* Main.storyboard */,
 				C19A09131A806CC00013997B /* Images.xcassets */,
 				C19A09151A806CC00013997B /* LaunchScreen.xib */,
 				C19A090A1A806CC00013997B /* Supporting Files */,
 				20D1CCD11A93E2A500E072B8 /* Outfitter-Bridging-Header.h */,
-				2045B0B51AB78BDB00ADEC20 /* BrowseViewController.swift */,
 			);
 			path = Outfitter;
 			sourceTree = "<group>";
