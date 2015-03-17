@@ -174,7 +174,7 @@ class BrowseViewController: UIViewController {
             } else {
                 NSLog("%@", error)
                 MBProgressHUD.hideAllHUDsForView(self.view, animated: true)
-                let alert = UIAlertController(title: "Error", message: "There was an error when submitting you image...Please try again soon!", preferredStyle: UIAlertControllerStyle.Alert)
+                let alert = UIAlertController(title: "Error", message: "There was an error when submitting your rating...Please try again soon!", preferredStyle: UIAlertControllerStyle.Alert)
                 alert.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.Default, handler: nil))
             }
         }

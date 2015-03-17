@@ -30,6 +30,7 @@
 		C19A09171A806CC00013997B /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = C19A09151A806CC00013997B /* LaunchScreen.xib */; };
 		C19A09231A806CC00013997B /* OutfitterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C19A09221A806CC00013997B /* OutfitterTests.swift */; };
 		C19EFDF71AA55A2900D45421 /* SubmitPhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C19EFDF61AA55A2900D45421 /* SubmitPhotoViewController.swift */; };
+		C1E8DAA31AB8D21700DA1465 /* BrowsePhotosTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1E8DAA21AB8D21700DA1465 /* BrowsePhotosTests.swift */; };
 		E75B87FB3EEEF2BEC42B836D /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4FFABC43CED10E9BAEAEDC5D /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -66,6 +67,7 @@
 		C19A09211A806CC00013997B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C19A09221A806CC00013997B /* OutfitterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OutfitterTests.swift; sourceTree = "<group>"; };
 		C19EFDF61AA55A2900D45421 /* SubmitPhotoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SubmitPhotoViewController.swift; sourceTree = "<group>"; };
+		C1E8DAA21AB8D21700DA1465 /* BrowsePhotosTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BrowsePhotosTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -163,6 +165,7 @@
 		C19A091F1A806CC00013997B /* OutfitterTests */ = {
 			isa = PBXGroup;
 			children = (
+				C1E8DAA21AB8D21700DA1465 /* BrowsePhotosTests.swift */,
 				C19A09221A806CC00013997B /* OutfitterTests.swift */,
 				C19A09201A806CC00013997B /* Supporting Files */,
 				3C58D68D1A969424009C86B1 /* SignupAndLoginTest.js */,
@@ -371,6 +374,7 @@
 				203F87D31AAB5207005F8A60 /* PortfolioViewController.swift in Sources */,
 				C19A09231A806CC00013997B /* OutfitterTests.swift in Sources */,
 				20D1CCD41A94062300E072B8 /* HomeViewController.swift in Sources */,
+				C1E8DAA31AB8D21700DA1465 /* BrowsePhotosTests.swift in Sources */,
 				203F87D41AAB5219005F8A60 /* PortfolioCell.swift in Sources */,
 				203F87D11AAB4270005F8A60 /* SubmitPhotoViewController.swift in Sources */,
 				2045B0B71AB78BDB00ADEC20 /* BrowseViewController.swift in Sources */,
