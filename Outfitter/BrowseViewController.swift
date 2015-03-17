@@ -87,19 +87,19 @@ class BrowseViewController: UIViewController {
     
     func userSwiped(gesture: UIGestureRecognizer) {
         if currentSubmissionIndex >= 0 && currentSubmissionIndex < submissions.count {
+            var curObj = submissions[currentSubmissionIndex]
+            
             if let swipeGesture = gesture as? UISwipeGestureRecognizer {
                 switch swipeGesture.direction {
                 case UISwipeGestureRecognizerDirection.Right: // yes
                     NSLog("Swiped right")
-                    submissions[currentSubmissionIndex]["numLikes"] = submissions[currentSubmissionIndex].objectForKey("numLikes") as Int! + 1
+                    self.submitRatingActivity(curObj.objectId, userId: PFUser.currentUser().objectId, votedYes: true, completionHandler: nil)
                 case UISwipeGestureRecognizerDirection.Left: // no
                     NSLog("Swiped left")
-                    submissions[currentSubmissionIndex]["numDislikes"] = submissions[currentSubmissionIndex].objectForKey("numDislikes") as Int! + 1
+                    self.submitRatingActivity(curObj.objectId, userId: PFUser.currentUser().objectId, votedYes: false, completionHandler: nil)
                 default:
                     break
                 }
-                //updateSubmission(submissions[currentSubmissionIndex])
-                // Need the code to add the vote to the RatingActivity table
                 
                 currentSubmissionIndex = currentSubmissionIndex + 1
                 loadCurrentPicture()
@@ -125,6 +125,11 @@ class BrowseViewController: UIViewController {
         var query = PFQuery(className:"Submission")
         query.whereKey("submittedByUser", notEqualTo:PFUser.currentUser().username)
         
+        var ratingQuery = PFQuery(className:"RatingActivity")
+        
+        //query where there is no rating activity associated with submission
+        query.whereKey("objectId", doesNotMatchKey: "submissionId", inQuery: ratingQuery)
+        
         let loadingNotification = MBProgressHUD.showHUDAddedTo(self.view, animated: true)
         loadingNotification.mode = MBProgressHUDModeIndeterminate
         loadingNotification.labelText = "Loading Submissions"
@@ -146,8 +151,15 @@ class BrowseViewController: UIViewController {
         }
     }
     
-    // Call this after updating the submission object
-    func updateSubmission(submission:PFObject, completionHandler: ((result:Bool) -> Void)! = nil){
+    func submitRatingActivity(submissionId:String, userId:String, votedYes:Bool, completionHandler: ((result:Bool) -> Void)! = nil){
+        var submission = PFObject(className: "RatingActivity")
+        submission.setObject(submissionId, forKey: "submissionId")
+        submission.setObject(userId, forKey: "userId")
+        submission.setObject(votedYes, forKey: "votedYes")
+        
+        let loadingNotification = MBProgressHUD.showHUDAddedTo(self.view, animated: true)
+        loadingNotification.mode = MBProgressHUDModeIndeterminate
+        loadingNotification.labelText = "Saving Submission"
         
         submission.saveInBackgroundWithBlock {
             (success: Bool, error: NSError!) -> Void in
@@ -156,17 +168,17 @@ class BrowseViewController: UIViewController {
                 completionHandler(result: success)
             }
             
-            MBProgressHUD.hideAllHUDsForView(self.view, animated: true)
-
             if success {
-                NSLog("Object updated with id: \(submission.objectId)")
+                NSLog("Object created with id: \(submission.objectId)")
+                MBProgressHUD.hideAllHUDsForView(self.view, animated: true)
             } else {
                 NSLog("%@", error)
+                MBProgressHUD.hideAllHUDsForView(self.view, animated: true)
                 let alert = UIAlertController(title: "Error", message: "There was an error when submitting you image...Please try again soon!", preferredStyle: UIAlertControllerStyle.Alert)
                 alert.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.Default, handler: nil))
-                self.presentViewController(alert, animated: true, completion: nil)
             }
         }
     }
+    
 
 }
