@@ -79,9 +79,7 @@ class BrowseViewController: UIViewController {
             currentImageView.image = image!
         } else {
             currentImageView.image = nil
-            let alert = UIAlertController(title: "Error", message: "No submissions Available", preferredStyle: UIAlertControllerStyle.Alert)
-            alert.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.Default, handler: nil))
-            self.presentViewController(alert, animated: true, completion: nil)
+            go()
         }
     }
     
