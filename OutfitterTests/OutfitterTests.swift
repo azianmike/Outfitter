@@ -215,7 +215,7 @@ class PortfolioViewControllerTests: BaseTests {
         let expectation = self.expectationWithDescription("Load submissions")
         
         // assert that the ViewController.view is not nil
-        XCTAssertNil(v.submissions,"No submissions loaded yet")
+        XCTAssertNil(v.submissions?,"No submissions loaded yet")
         v.submissions = [PFObject]()
         func submissionsCallBack() {
             XCTAssertTrue(v.submissions.count > 0,"Submissions were loaded")

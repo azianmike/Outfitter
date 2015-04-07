@@ -177,6 +177,22 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wGx-PN-0S2">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                                <textAttributes key="titleTextAttributes">
+                                    <color key="textColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                </textAttributes>
+                                <items>
+                                    <navigationItem title="Title" id="wXo-jU-4kw">
+                                        <barButtonItem key="leftBarButtonItem" systemItem="done" id="FJq-NS-3gP">
+                                            <inset key="imageInsets" minX="25" minY="0.0" maxX="24" maxY="0.0"/>
+                                            <connections>
+                                                <action selector="closePortfolio" destination="Yf1-Gj-FHf" id="ih0-gx-YgX"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Htj-r5-lbG">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -272,22 +288,6 @@
                                     <outlet property="delegate" destination="Yf1-Gj-FHf" id="4fe-m3-d9d"/>
                                 </connections>
                             </collectionView>
-                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wGx-PN-0S2">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
-                                <textAttributes key="titleTextAttributes">
-                                    <color key="textColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                </textAttributes>
-                                <items>
-                                    <navigationItem title="Title" id="wXo-jU-4kw">
-                                        <barButtonItem key="leftBarButtonItem" systemItem="done" id="FJq-NS-3gP">
-                                            <inset key="imageInsets" minX="25" minY="0.0" maxX="24" maxY="0.0"/>
-                                            <connections>
-                                                <action selector="closePortfolio" destination="Yf1-Gj-FHf" id="ih0-gx-YgX"/>
-                                            </connections>
-                                        </barButtonItem>
-                                    </navigationItem>
-                                </items>
-                            </navigationBar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -321,8 +321,8 @@
                         </constraints>
                         <variation key="default">
                             <mask key="subviews">
-                                <exclude reference="Htj-r5-lbG"/>
                                 <exclude reference="wGx-PN-0S2"/>
+                                <exclude reference="Htj-r5-lbG"/>
                             </mask>
                             <mask key="constraints">
                                 <exclude reference="3Og-xf-qcC"/>
@@ -346,8 +346,8 @@
                         </variation>
                         <variation key="heightClass=regular-widthClass=compact">
                             <mask key="subviews">
-                                <include reference="Htj-r5-lbG"/>
                                 <include reference="wGx-PN-0S2"/>
+                                <include reference="Htj-r5-lbG"/>
                             </mask>
                             <mask key="constraints">
                                 <exclude reference="3Og-xf-qcC"/>
@@ -381,10 +381,79 @@
             </objects>
             <point key="canvasLocation" x="99" y="348.75"/>
         </scene>
+        <!--Portfolio Submission View Controller-->
+        <scene sceneID="fbr-5u-Kgr">
+            <objects>
+                <viewController storyboardIdentifier="PortfolioSubmissionViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="ZXv-PY-Ueb" customClass="PortfolioSubmissionViewController" customModule="Outfitter" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="2E6-3E-NMF"/>
+                        <viewControllerLayoutGuide type="bottom" id="Jgh-o5-BRK"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="UtO-my-lkH">
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="900" verticalHuggingPriority="900" horizontalCompressionResistancePriority="245" verticalCompressionResistancePriority="245" translatesAutoresizingMaskIntoConstraints="NO" id="0d3-aB-weH">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="0d3-aB-weH" secondAttribute="height" multiplier="117:125" id="ICW-fk-QWz"/>
+                                    <constraint firstAttribute="height" constant="375" id="NfH-wX-Z1U"/>
+                                    <constraint firstAttribute="width" constant="351" id="nGe-3R-8tF"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="ICW-fk-QWz"/>
+                                        <exclude reference="NfH-wX-Z1U"/>
+                                        <exclude reference="nGe-3R-8tF"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=compact">
+                                    <mask key="constraints">
+                                        <exclude reference="ICW-fk-QWz"/>
+                                        <include reference="NfH-wX-Z1U"/>
+                                        <include reference="nGe-3R-8tF"/>
+                                    </mask>
+                                </variation>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="0d3-aB-weH" firstAttribute="top" secondItem="2E6-3E-NMF" secondAttribute="bottom" constant="20" id="9Ig-kj-sOY"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="0d3-aB-weH" secondAttribute="trailing" constant="8" id="pDf-C4-z4v"/>
+                            <constraint firstItem="0d3-aB-weH" firstAttribute="leading" secondItem="UtO-my-lkH" secondAttribute="leadingMargin" constant="9" id="vHk-iS-2y4"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="0d3-aB-weH"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="9Ig-kj-sOY"/>
+                                <exclude reference="pDf-C4-z4v"/>
+                                <exclude reference="vHk-iS-2y4"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular-widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="0d3-aB-weH"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="9Ig-kj-sOY"/>
+                                <include reference="pDf-C4-z4v"/>
+                                <include reference="vHk-iS-2y4"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <connections>
+                        <outlet property="selectedImage" destination="0d3-aB-weH" id="Blb-Th-HFo"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zhD-PD-dXP" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="834" y="789.75"/>
+        </scene>
         <!--Browse View Controller-->
         <scene sceneID="LBF-yT-UdP">
             <objects>
-                <viewController storyboardIdentifier="BrowseViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="o4b-Qs-Ejl" customClass="BrowseViewController" customModule="Outfitter" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="BrowseViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="o4b-Qs-Ejl" customClass="BrowseViewController" customModule="Outfitter" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="rl9-Tf-CUZ"/>
                         <viewControllerLayoutGuide type="bottom" id="use-Yw-4si"/>
