@@ -16,6 +16,10 @@ class BrowseViewController: UIViewController {
     var genderPickerSelectedIndex:Int!
     var articlePickerSelectedIndex:Int!
     var currentSubmissionIndex:Int!
+    
+    enum ArticleValues: Int {
+        case fullOutfit = 0, top, bottom, shoes, accessories
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -47,6 +51,9 @@ class BrowseViewController: UIViewController {
             
             sender.setTitle(value as String!, forState: UIControlState.Normal)
             self.genderPickerSelectedIndex = index
+            
+            self.filterByGender(value as String!)
+            
             return
             }, cancelBlock: { ActionStringCancelBlock in return }, origin: sender)
     }
@@ -57,8 +64,38 @@ class BrowseViewController: UIViewController {
             
             sender.setTitle(value as String!, forState: UIControlState.Normal)
             self.articlePickerSelectedIndex = index
+            
+            self.filterByArticle(value as String!)
+
             return
             }, cancelBlock: { ActionStringCancelBlock in return }, origin: sender)
+    }
+    
+    func filterByGender(gender: String) {
+        
+    }
+    
+    func filterByArticle(article: String) {
+        
+        var articleID:Int
+        
+        switch article {
+            case "Full Outfits":
+                articleID = ArticleValues.fullOutfit.rawValue
+            case "Tops":
+                articleID = ArticleValues.top.rawValue
+            case "Bottoms":
+                articleID = ArticleValues.bottom.rawValue
+            case "Shoes":
+                articleID = ArticleValues.shoes.rawValue
+            case "Accessories":
+                articleID = ArticleValues.accessories.rawValue
+        default:
+            articleID = -1
+        }
+        
+        submissions.removeAll(keepCapacity: false)
+        getSubmissions(doneGettingSubmissions,articleId: articleID)
     }
     
     @IBAction func go(){
@@ -79,7 +116,12 @@ class BrowseViewController: UIViewController {
             currentImageView.image = image!
         } else {
             currentImageView.image = nil
-            go()
+            
+            let alert = UIAlertController(title: "Error", message: "No submissions Available", preferredStyle: UIAlertControllerStyle.Alert)
+            alert.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.Default, handler: nil))
+            self.presentViewController(alert, animated: true, completion: nil)
+
+//            go()
         }
     }
     
@@ -119,7 +161,7 @@ class BrowseViewController: UIViewController {
         }
     }
     
-    func getSubmissions(callback:(()->Void)){
+    func getSubmissions(callback:(()->Void),articleId:Int = -1){
         var query = PFQuery(className:"Submission")
         query.whereKey("submittedByUser", notEqualTo:PFUser.currentUser().username)
         
@@ -128,6 +170,18 @@ class BrowseViewController: UIViewController {
         //query where there is no rating activity associated with submission
         query.whereKey("objectId", doesNotMatchKey: "submissionId", inQuery: ratingQuery)
         
+        if let gender = PFUser.currentUser().objectForKey("gender") as? String {
+            if(gender == "male") {
+                query.whereKey("toReceiveMaleFeedback", equalTo: true)
+            } else {
+                query.whereKey("toReceiveFemaleFeedback", equalTo: true)
+            }
+        }
+
+        if(articleId >= 0) {
+            query.whereKey("article", equalTo:articleId)
+        }
+
         let loadingNotification = MBProgressHUD.showHUDAddedTo(self.view, animated: true)
         loadingNotification.mode = MBProgressHUDModeIndeterminate
         loadingNotification.labelText = "Loading Submissions"
