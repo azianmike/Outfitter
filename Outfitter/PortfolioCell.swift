@@ -44,15 +44,21 @@ class SubmissionObject:NSObject{
     var numDislikes:Int!
     var image:UIImage!
     var objectID:String!
+    var article: Int!
+    var maleFeedback: Bool!
+    var femaleFeedback: Bool!
     
     init(submissionThing:PFObject){
         super.init()
         NSLog("enter")
-        NSLog(submissionThing.objectForKey("objectId")! as String)
-        objectID = submissionThing.objectForKey("objectId")! as String
+        //NSLog(submissionThing.objectForKey("objectId")! as String)
+        objectID = submissionThing.objectId
+        article = submissionThing.objectForKey("article")! as Int
         numLikes = submissionThing.objectForKey("numLikes")! as Int
         numDislikes = submissionThing.objectForKey("numDislikes")! as Int
         image = setImage(submissionThing.objectForKey("image").url)
+        maleFeedback = submissionThing.objectForKey("toReceiveMaleFeedback") as Bool
+        femaleFeedback = submissionThing.objectForKey("toReceiveFemaleFeedback") as Bool
     }
     
     internal func setImage(imageURL:NSString)->UIImage{
@@ -72,6 +78,17 @@ class SubmissionObject:NSObject{
     
     func getObjectID()-> String{
         return objectID!
+    }
+    
+    func getArticle()-> Int{
+        return article
+    }
+    
+    func getMaleFeedback()-> Bool!{
+        return maleFeedback
+    }
+    func getFemaleFeedback()-> Bool!{
+        return femaleFeedback
     }
     
 }

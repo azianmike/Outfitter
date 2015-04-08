@@ -90,10 +90,10 @@ public class PortfolioViewController: UIViewController, UICollectionViewDelegate
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
         
         let cell = collectionView.dequeueReusableCellWithReuseIdentifier("PortfolioCell", forIndexPath: indexPath) as PortfolioCell
-        //let temp = SubmissionObject(submissionThing: submissions[indexPath.row])
-        //cell.setSubmissionObj(temp)
-        let testNum:String! = submissions[indexPath.row].objectId as String!
-        NSLog(testNum)
+        let temp = SubmissionObject(submissionThing: submissions[indexPath.row])
+        cell.setSubmissionObj(temp)
+        //let testNum:String! = submissions[indexPath.row].objectId as String!
+        //NSLog(testNum)
         cell.setImage(submissions[indexPath.row].objectForKey("image").url)
         return cell
     }
