@@ -8,7 +8,7 @@
 
 import UIKit
 
-public class PortfolioViewController: UIViewController {
+public class PortfolioViewController: UIViewController, UICollectionViewDelegate {
     @IBOutlet var collectionView: UICollectionView!
     @IBOutlet var navigationBar: UINavigationBar!
     var submissions:[PFObject]!
@@ -90,6 +90,10 @@ public class PortfolioViewController: UIViewController {
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
         
         let cell = collectionView.dequeueReusableCellWithReuseIdentifier("PortfolioCell", forIndexPath: indexPath) as PortfolioCell
+        let temp = SubmissionObject(submissionThing: submissions[indexPath.row])
+        cell.setSubmissionObj(temp)
+        //let testNum:String! = submissions[indexPath.row].objectId as String!
+        //NSLog(testNum)
         cell.setImage(submissions[indexPath.row].objectForKey("image").url)
         return cell
     }
@@ -97,4 +101,16 @@ public class PortfolioViewController: UIViewController {
     @IBAction func closePortfolio(){
         self.dismissViewControllerAnimated(true, completion: nil)
     }
+    
+    func collectionView(collectionView: UICollectionView!, didSelectItemAtIndexPath indexPath: NSIndexPath!)
+    {
+        let cell = collectionView.cellForItemAtIndexPath(indexPath) as PortfolioCell
+        let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
+        let submissionViewController: UIViewController! = storyBoard.instantiateViewControllerWithIdentifier("PortfolioSubmissionViewController") as UIViewController
+        submissionViewController.setValue(cell.imageView.image, forKey: "image")
+        submissionViewController.setValue(cell.submissionObj, forKey: "submissionObj")
+        
+        self.presentViewController(submissionViewController, animated:true, completion:nil)
+    }
+
 }
