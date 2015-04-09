@@ -13,6 +13,7 @@ import Outfitter
 class BrowseViewControllerTest: BaseTests {
     
     var viewController: BrowseViewController!
+    var listOfRatings = [String]()
     
     override func setUp() {
         
@@ -21,6 +22,20 @@ class BrowseViewControllerTest: BaseTests {
         viewController = storyBoard.instantiateViewControllerWithIdentifier("BrowseViewController") as BrowseViewController
         
         viewController.loadView()
+    }
+    
+    override func tearDown() {
+        super.tearDown()
+        cleanUpLikes()
+    }
+    
+    func cleanUpLikes(){
+        if listOfRatings.count > 0 {
+            for rating in listOfRatings {
+                removeLikeOrDislike(rating, currentUserId: PFUser.currentUser().objectId)
+            }
+            listOfRatings.removeAll(keepCapacity: false)
+        }
     }
     
     func testViewDidLoad()
@@ -67,6 +82,26 @@ class BrowseViewControllerTest: BaseTests {
         
     }
     
+    func removeLikeOrDislike(objectId: String, currentUserId: String)
+    {
+        var ratingQuery = PFQuery(className:"RatingActivity")
+        ratingQuery.whereKey("submissionId", equalTo: objectId)
+        ratingQuery.whereKey("userId", equalTo: currentUserId)
+        ratingQuery.findObjectsInBackgroundWithBlock {
+            (objects: [AnyObject]!, error: NSError!) -> Void in
+            if error == nil {
+                if let objects = objects as? [PFObject] {
+                    for object in objects {
+                        object.delete()
+                    }
+                }
+            } else {
+                // Log details of the failure
+                println("Error: \(error) \(error.userInfo!)")
+            }
+        }
+    }
+    
     func testSubmitRatingDislike()
     {
         // we only have access to this if we import our project above
@@ -96,6 +131,7 @@ class BrowseViewControllerTest: BaseTests {
         
         func ratingCallback(result:Bool){
             XCTAssertTrue(result);
+            listOfRatings.append(v.submissions[0].objectId)
             expectation2.fulfill()
         }
         
@@ -106,7 +142,6 @@ class BrowseViewControllerTest: BaseTests {
                 XCTFail("FAILED due to " + error.description)
             }
         }
-        
     }
     
     func testSubmitRatingLike()
@@ -139,6 +174,7 @@ class BrowseViewControllerTest: BaseTests {
         func ratingCallback(result:Bool){
             XCTAssertTrue(result);
             expectation2.fulfill()
+            listOfRatings.append(v.submissions[0].objectId)
         }
         
         v.submitRatingActivity(v.submissions[0].objectId, userId: PFUser.currentUser().objectId, votedYes: false, ratingCallback)
@@ -148,7 +184,6 @@ class BrowseViewControllerTest: BaseTests {
                 XCTFail("FAILED due to " + error.description)
             }
         }
-        
     }
     
     func testSubmitRatingSubmissionsListDecreasesByOne()
@@ -185,6 +220,8 @@ class BrowseViewControllerTest: BaseTests {
             expectation2.fulfill()
         }
         
+        let submissionObjectId = v.submissions[0].objectId
+        listOfRatings.append(v.submissions[0].objectId)
         v.submitRatingActivity(v.submissions[0].objectId, userId: PFUser.currentUser().objectId, votedYes: false, ratingCallback)
         
         self.waitForExpectationsWithTimeout(5.0) { (error) in
@@ -198,8 +235,11 @@ class BrowseViewControllerTest: BaseTests {
         // assert that the ViewController.view is not nil
         v.submissions = [PFObject]()
         func submissionsCallBack3() {
+            NSLog("HERE")
+            NSLog(String(v.submissions.count))
+            NSLog(String(oldSubmissionsCount))
             XCTAssertTrue(v.submissions.count > 0,"Submissions were loaded")
-            XCTAssertTrue(v.submissions.count<oldSubmissionsCount)
+            XCTAssertTrue(v.submissions.count<=oldSubmissionsCount)
             expectation3.fulfill()
         }
         
@@ -210,7 +250,6 @@ class BrowseViewControllerTest: BaseTests {
                 XCTFail("FAILED due to " + error.description)
             }
         }
-        
     }
     
     func testLoadCurrentPictureNoPictures()
@@ -256,7 +295,7 @@ class BrowseViewControllerTest: BaseTests {
         
     }
     
-    func testArticleFilterFullOutfitPass()
+    func testArticleFilterFullOutfit()
     {
         let v = viewController
         
@@ -282,6 +321,113 @@ class BrowseViewControllerTest: BaseTests {
         }
     }
     
+    func testArticleFilterTops()
+    {
+        let v = viewController
+        let articleIdToPass = 1
+        
+        v.currentSubmissionIndex = -1
+        v.currentImageView.image = nil
+        let expectation = self.expectationWithDescription("Load submissions")
+        
+        // assert that the ViewController.view is not nil
+        XCTAssertNil(v.submissions,"No submissions loaded yet")
+        v.submissions = [PFObject]()
+        func submissionsCallBack(){
+            XCTAssertTrue(v.submissions.count > 0,"Submissions were loaded")
+            for sub in v.submissions {
+                XCTAssertTrue(sub.objectForKey("article") as Int! == articleIdToPass, "Object of correct article")
+            }
+            expectation.fulfill()
+        }
+        v.getSubmissions(submissionsCallBack, articleId: articleIdToPass)
+        self.waitForExpectationsWithTimeout(5.0) { (error) in
+            if(error != nil) {
+                XCTFail("FAILED due to " + error.description)
+            }
+        }
+    }
+    
+    func testArticleFilterBottoms()
+    {
+        let v = viewController
+        let articleIdToPass = 2
+        
+        v.currentSubmissionIndex = -1
+        v.currentImageView.image = nil
+        let expectation = self.expectationWithDescription("Load submissions")
+        
+        // assert that the ViewController.view is not nil
+        XCTAssertNil(v.submissions,"No submissions loaded yet")
+        v.submissions = [PFObject]()
+        func submissionsCallBack(){
+            XCTAssertTrue(v.submissions.count > 0,"Submissions were loaded")
+            for sub in v.submissions {
+                XCTAssertTrue(sub.objectForKey("article") as Int! == articleIdToPass, "Object of correct article")
+            }
+            expectation.fulfill()
+        }
+        v.getSubmissions(submissionsCallBack, articleId: articleIdToPass)
+        self.waitForExpectationsWithTimeout(5.0) { (error) in
+            if(error != nil) {
+                XCTFail("FAILED due to " + error.description)
+            }
+        }
+    }
+    
+    func testArticleFilterShoes()
+    {
+        let v = viewController
+        let articleIdToPass = 3
+        
+        v.currentSubmissionIndex = -1
+        v.currentImageView.image = nil
+        let expectation = self.expectationWithDescription("Load submissions")
+        
+        // assert that the ViewController.view is not nil
+        XCTAssertNil(v.submissions,"No submissions loaded yet")
+        v.submissions = [PFObject]()
+        func submissionsCallBack(){
+            XCTAssertTrue(v.submissions.count > 0,"Submissions were loaded")
+            for sub in v.submissions {
+                XCTAssertTrue(sub.objectForKey("article") as Int! == articleIdToPass, "Object of correct article")
+            }
+            expectation.fulfill()
+        }
+        v.getSubmissions(submissionsCallBack, articleId: articleIdToPass)
+        self.waitForExpectationsWithTimeout(5.0) { (error) in
+            if(error != nil) {
+                XCTFail("FAILED due to " + error.description)
+            }
+        }
+    }
+    
+    func testArticleFilterAcc()
+    {
+        let v = viewController
+        let articleIdToPass = 4
+        
+        v.currentSubmissionIndex = -1
+        v.currentImageView.image = nil
+        let expectation = self.expectationWithDescription("Load submissions")
+        
+        // assert that the ViewController.view is not nil
+        XCTAssertNil(v.submissions,"No submissions loaded yet")
+        v.submissions = [PFObject]()
+        func submissionsCallBack(){
+            XCTAssertTrue(v.submissions.count > 0,"Submissions were loaded")
+            for sub in v.submissions {
+                XCTAssertTrue(sub.objectForKey("article") as Int! == articleIdToPass, "Object of correct article")
+            }
+            expectation.fulfill()
+        }
+        v.getSubmissions(submissionsCallBack, articleId: articleIdToPass)
+        self.waitForExpectationsWithTimeout(5.0) { (error) in
+            if(error != nil) {
+                XCTFail("FAILED due to " + error.description)
+            }
+        }
+    }
 }
 
 
