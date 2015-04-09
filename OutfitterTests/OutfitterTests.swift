@@ -231,9 +231,5 @@ class PortfolioViewControllerTests: BaseTests {
         }
 
     }
-
-    
 }
-
-
 

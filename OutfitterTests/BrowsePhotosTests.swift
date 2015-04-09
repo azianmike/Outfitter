@@ -10,8 +10,6 @@ import UIKit
 import XCTest
 import Outfitter
 
-
-
 class BrowseViewControllerTest: BaseTests {
     
     var viewController: BrowseViewController!
@@ -256,6 +254,11 @@ class BrowseViewControllerTest: BaseTests {
         v.loadCurrentPicture()
         XCTAssertNotNil(v.currentImageView.image,"Current imageView is not supposed to be nil")
         
+    }
+    
+    func testArticleFilter()
+    {
+        XCTAssertTrue(true)
     }
     
 }
