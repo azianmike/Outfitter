@@ -20,7 +20,7 @@ DEPENDENCIES:
   - ParseUI
 
 SPEC CHECKSUMS:
-  ActionSheetPicker-3.0: 30565e92a38b23f06f4a3fce113bd92f0e44dd4d
+  ActionSheetPicker-3.0: c95dca3dde5e593adb53a3362e255f29751b4286
   Bolts: 3db0a875235e0c9042b013af13af0f00f79b102c
   Facebook-iOS-SDK: 3d65f685348b789e46a9aacf92bfa85b60b63755
   MBProgressHUD: 2038dbcf3dce73215abed6001657043d53aa79a8

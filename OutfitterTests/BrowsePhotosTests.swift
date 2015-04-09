@@ -256,9 +256,30 @@ class BrowseViewControllerTest: BaseTests {
         
     }
     
-    func testArticleFilter()
+    func testArticleFilterFullOutfitPass()
     {
-        XCTAssertTrue(true)
+        let v = viewController
+        
+        v.currentSubmissionIndex = -1
+        v.currentImageView.image = nil
+        let expectation = self.expectationWithDescription("Load submissions")
+        
+        // assert that the ViewController.view is not nil
+        XCTAssertNil(v.submissions,"No submissions loaded yet")
+        v.submissions = [PFObject]()
+        func submissionsCallBack(){
+            XCTAssertTrue(v.submissions.count > 0,"Submissions were loaded")
+            for sub in v.submissions {
+                XCTAssertTrue(sub.objectForKey("article") as Int! == 0, "Object of correct article")
+            }
+            expectation.fulfill()
+        }
+        v.getSubmissions(submissionsCallBack, articleId: 0)
+        self.waitForExpectationsWithTimeout(5.0) { (error) in
+            if(error != nil) {
+                XCTFail("FAILED due to " + error.description)
+            }
+        }
     }
     
 }
