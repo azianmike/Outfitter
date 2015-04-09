@@ -64,17 +64,30 @@ public class PortfolioSubmissionViewController: UIViewController {
         self.dismissViewControllerAnimated(true, completion: nil)
     }
     
-    func callback(){
-        NSLog("enter callback")
-        var likeCount = 0
-        var dislikeCount = 0
+    func getLikeCount() -> Int{
+        var count = 0
         for object in ratings{
             if object.objectForKey("votedYes") as Bool{
-                likeCount += 1
-            }else{
-                dislikeCount += 1
+                count += 1
             }
         }
+        return count
+    }
+    
+    func getDislikedCount() -> Int{
+        var count = 0
+        for object in ratings{
+            if !(object.objectForKey("votedYes") as Bool){
+                count += 1
+            }
+        }
+        return count
+    }
+    
+    func callback(){
+        NSLog("enter callback")
+        var likeCount = getLikeCount()
+        var dislikeCount = getDislikedCount()
         if dislikeCount == 0 && likeCount == 0
         {
             likePercent.text = "100"
