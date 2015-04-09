@@ -169,5 +169,87 @@ class PortfolioSubmissionViewControllerTests: BaseTests {
             }
         }
     }
+    
+    func testCurrentStatisticsUpdate()
+    {
+        // we only have access to this if we import our project above
+        let v = viewController
+        
+        let expectation = self.expectationWithDescription("Load submissions")
+        
+        // assert that the ViewController.view is not nil
+        XCTAssertNotNil(v.view,"Not Nil")
+        
+        // assert that the ViewController.view is not nil
+        XCTAssertNotNil(PFUser.currentUser(),"Not Nil")
+        
+        var query = PFQuery(className:"Submission")
+        query.whereKey("submittedByUser", equalTo:PFUser.currentUser().username)
+        
+        var submissionThing: PFObject!
+        
+        query.findObjectsInBackgroundWithBlock {
+            (objects: [AnyObject]!, error: NSError!) -> Void in
+            if error == nil {
+                if let objects = objects as? [PFObject] {
+                    for object in objects {
+                        submissionThing = object
+                        break
+                    }
+                    let image = UIImage()
+                    let subObj = SubmissionObject(submissionThing: submissionThing!)
+                    v.setValue(subObj, forKey: "submissionObj")
+                    v.setValue(image, forKey: "image")
+                    v.viewDidAppear(false)
+                    let result = self.getRatings(submissionThing)
+                    XCTAssertTrue(v.getLikeCount() == result.liked, "Correct like count")
+                    XCTAssertTrue(v.getDislikedCount() == result.disliked, "Correct dislike count")
+                    
+                    var testLike = PFObject(className: "RatingActivity")
+                    testLike["submissionId"] = submissionThing.objectId
+                    testLike["userId"] = PFUser.currentUser().objectId
+                    testLike["votedYes"] = true
+                    
+                    testLike.saveInBackgroundWithBlock{(success: Bool, error: NSError!) -> Void in
+                        if (success) {
+                            var query2 = PFQuery(className:"Submission")
+                            query2.whereKey("objectId", equalTo:submissionThing.objectId)
+                            
+                            var submissionThing2: PFObject!
+                            query2.findObjectsInBackgroundWithBlock {
+                                (objects: [AnyObject]!, error: NSError!) -> Void in
+                                if error == nil {
+                                    if let objects = objects as? [PFObject] {
+                                        for object in objects {
+                                            submissionThing2 = object
+                                            break
+                                        }
+                                        
+                                        let subObj2 = SubmissionObject(submissionThing: submissionThing2!)
+                                        XCTAssertTrue(subObj2.getLikes() == result.liked+1, "Correct like count")
+                                        XCTAssertTrue(subObj2.getDislikes() == result.disliked, "Correct dislike count")
+                                        expectation.fulfill()
+                                        testLike.delete()
+                                    }
+                                }
+                            }
+                        } else {
+                            XCTFail("Could not save the test like")
+                        }
+                    }
+                }
+            } else {
+                // Log details of the failure
+                println("Error: \(error) \(error.userInfo!)")
+                XCTFail("Could not get the submissions")
+            }
+        }
+        
+        self.waitForExpectationsWithTimeout(15.0) { (error) in
+            if(error != nil) {
+                XCTFail("FAILED due to " + error.description)
+            }
+        }
+    }
 
 }

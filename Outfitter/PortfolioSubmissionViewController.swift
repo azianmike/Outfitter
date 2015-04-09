@@ -84,6 +84,11 @@ public class PortfolioSubmissionViewController: UIViewController {
         return count
     }
     
+    public func refreshStats(){
+        ratings.removeAll(keepCapacity: false)
+        getImageStats(callback)
+    }
+    
     func callback(){
         NSLog("enter callback")
         var likeCount = getLikeCount()
