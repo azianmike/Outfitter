@@ -64,7 +64,7 @@ public class PortfolioSubmissionViewController: UIViewController {
         self.dismissViewControllerAnimated(true, completion: nil)
     }
     
-    func getLikeCount() -> Int{
+    public func getLikeCount() -> Int{
         var count = 0
         for object in ratings{
             if object.objectForKey("votedYes") as Bool{
@@ -74,7 +74,7 @@ public class PortfolioSubmissionViewController: UIViewController {
         return count
     }
     
-    func getDislikedCount() -> Int{
+    public func getDislikedCount() -> Int{
         var count = 0
         for object in ratings{
             if !(object.objectForKey("votedYes") as Bool){
