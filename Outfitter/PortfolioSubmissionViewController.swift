@@ -88,11 +88,6 @@ public class PortfolioSubmissionViewController: UIViewController {
         MBProgressHUD.hideAllHUDsForView(self.view, animated: true)
     }
     
-    func callback2()
-    {
-        
-    }
-    
     func getImageStats(callback:(()->Void)){
         var query = PFQuery(className:"RatingActivity")
         query.whereKey("submissionId", equalTo:submissionObj.objectID)
