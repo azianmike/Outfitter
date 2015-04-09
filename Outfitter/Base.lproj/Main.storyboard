@@ -384,7 +384,7 @@
         <!--Portfolio Submission View Controller-->
         <scene sceneID="fbr-5u-Kgr">
             <objects>
-                <viewController storyboardIdentifier="PortfolioSubmissionViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="ZXv-PY-Ueb" customClass="PortfolioSubmissionViewController" customModule="Outfitter" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="PortfolioSubmissionViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="ZXv-PY-Ueb" customClass="PortfolioSubmissionViewController" customModule="Outfitter" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="2E6-3E-NMF"/>
                         <viewControllerLayoutGuide type="bottom" id="Jgh-o5-BRK"/>

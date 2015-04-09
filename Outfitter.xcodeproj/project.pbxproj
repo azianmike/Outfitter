@@ -19,6 +19,7 @@
 		20D1CCD41A94062300E072B8 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C19A090E1A806CC00013997B /* HomeViewController.swift */; };
 		3C2025051AA7689D0080222F /* PortfolioViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C2025041AA7689D0080222F /* PortfolioViewController.swift */; };
 		3C347C1C1A95464F00B5B830 /* LoginUIAutomationTest.trace in Resources */ = {isa = PBXBuildFile; fileRef = 3C347C1B1A95464F00B5B830 /* LoginUIAutomationTest.trace */; };
+		3C3EE98A1AD6FE240068B45E /* PortfolioSubmissionViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C3EE9891AD6FE240068B45E /* PortfolioSubmissionViewControllerTests.swift */; };
 		3C58D68E1A969424009C86B1 /* SignupAndLoginTest.js in Resources */ = {isa = PBXBuildFile; fileRef = 3C58D68D1A969424009C86B1 /* SignupAndLoginTest.js */; };
 		3C58D6901A9694CE009C86B1 /* FacebookLoginTest.js in Resources */ = {isa = PBXBuildFile; fileRef = 3C58D68F1A9694CE009C86B1 /* FacebookLoginTest.js */; };
 		3C58D6921A969527009C86B1 /* IncorrectLoginTest.js in Resources */ = {isa = PBXBuildFile; fileRef = 3C58D6911A969527009C86B1 /* IncorrectLoginTest.js */; };
@@ -51,6 +52,7 @@
 		20D1CCD11A93E2A500E072B8 /* Outfitter-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Outfitter-Bridging-Header.h"; sourceTree = "<group>"; };
 		3C2025041AA7689D0080222F /* PortfolioViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PortfolioViewController.swift; sourceTree = "<group>"; };
 		3C347C1B1A95464F00B5B830 /* LoginUIAutomationTest.trace */ = {isa = PBXFileReference; lastKnownFileType = folder; path = LoginUIAutomationTest.trace; sourceTree = "<group>"; };
+		3C3EE9891AD6FE240068B45E /* PortfolioSubmissionViewControllerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PortfolioSubmissionViewControllerTests.swift; sourceTree = "<group>"; };
 		3C58D68D1A969424009C86B1 /* SignupAndLoginTest.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = SignupAndLoginTest.js; sourceTree = "<group>"; };
 		3C58D68F1A9694CE009C86B1 /* FacebookLoginTest.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = FacebookLoginTest.js; sourceTree = "<group>"; };
 		3C58D6911A969527009C86B1 /* IncorrectLoginTest.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = IncorrectLoginTest.js; sourceTree = "<group>"; };
@@ -168,6 +170,7 @@
 		C19A091F1A806CC00013997B /* OutfitterTests */ = {
 			isa = PBXGroup;
 			children = (
+				3C3EE9891AD6FE240068B45E /* PortfolioSubmissionViewControllerTests.swift */,
 				C1E8DAA21AB8D21700DA1465 /* BrowsePhotosTests.swift */,
 				C19A09221A806CC00013997B /* OutfitterTests.swift */,
 				C19A09201A806CC00013997B /* Supporting Files */,
@@ -381,6 +384,7 @@
 				C1E8DAA31AB8D21700DA1465 /* BrowsePhotosTests.swift in Sources */,
 				203F87D41AAB5219005F8A60 /* PortfolioCell.swift in Sources */,
 				203F87D11AAB4270005F8A60 /* SubmitPhotoViewController.swift in Sources */,
+				3C3EE98A1AD6FE240068B45E /* PortfolioSubmissionViewControllerTests.swift in Sources */,
 				2045B0B71AB78BDB00ADEC20 /* BrowseViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
