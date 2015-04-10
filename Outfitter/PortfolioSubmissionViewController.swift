@@ -64,24 +64,17 @@ public class PortfolioSubmissionViewController: UIViewController {
         self.dismissViewControllerAnimated(true, completion: nil)
     }
     
-    public func getLikeCount() -> Int{
-        var count = 0
+    public func getStats() -> (liked: Int, disliked: Int){
+        var like = 0
+        var dislike = 0
         for object in ratings{
             if object.objectForKey("votedYes") as Bool{
-                count += 1
+                like += 1
+            } else {
+                dislike += 1
             }
         }
-        return count
-    }
-    
-    public func getDislikedCount() -> Int{
-        var count = 0
-        for object in ratings{
-            if !(object.objectForKey("votedYes") as Bool){
-                count += 1
-            }
-        }
-        return count
+        return (like, dislike)
     }
     
     public func refreshStats(){
@@ -91,8 +84,9 @@ public class PortfolioSubmissionViewController: UIViewController {
     
     func callback(){
         NSLog("enter callback")
-        var likeCount = getLikeCount()
-        var dislikeCount = getDislikedCount()
+        var tempStats = getStats()
+        var likeCount = tempStats.liked
+        var dislikeCount = tempStats.disliked
         if dislikeCount == 0 && likeCount == 0
         {
             likePercent.text = "100"

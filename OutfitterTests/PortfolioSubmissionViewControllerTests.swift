@@ -152,8 +152,9 @@ class PortfolioSubmissionViewControllerTests: BaseTests {
                     v.setValue(UIImage(), forKey: "image")
                     v.viewDidAppear(false)
                     let result = self.getRatings(submissionThing)
-                    XCTAssertTrue(v.getLikeCount() == result.liked, "Correct like count")
-                    XCTAssertTrue(v.getDislikedCount() == result.disliked, "Correct dislike count")
+                    let vResult = v.getStats()
+                    XCTAssertTrue(vResult.liked == result.liked, "Correct like count")
+                    XCTAssertTrue(vResult.disliked == result.disliked, "Correct dislike count")
                     expectation.fulfill()
                 }
             } else {
@@ -202,8 +203,9 @@ class PortfolioSubmissionViewControllerTests: BaseTests {
                     v.setValue(image, forKey: "image")
                     v.viewDidAppear(false)
                     let result = self.getRatings(submissionThing)
-                    XCTAssertTrue(v.getLikeCount() == result.liked, "Correct like count")
-                    XCTAssertTrue(v.getDislikedCount() == result.disliked, "Correct dislike count")
+                    let vResult = v.getStats()
+                    XCTAssertTrue(vResult.liked == result.liked, "Correct like count")
+                    XCTAssertTrue(vResult.disliked == result.disliked, "Correct dislike count")
                     
                     var testLike = PFObject(className: "RatingActivity")
                     testLike["submissionId"] = submissionThing.objectId
