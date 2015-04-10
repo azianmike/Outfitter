@@ -34,7 +34,7 @@ public class PortfolioSubmissionViewController: UIViewController {
         
         let maleFeedback = submissionObj.getMaleFeedback()
         let femaleFeedback = submissionObj.getFemaleFeedback()
-        if (maleFeedback & femaleFeedback){
+        if (maleFeedback && femaleFeedback){
             genderFeedback.selectedSegmentIndex=0
         }else if (maleFeedback!)
         {
@@ -108,7 +108,11 @@ public class PortfolioSubmissionViewController: UIViewController {
         loadingNotification.mode = MBProgressHUDModeIndeterminate
         loadingNotification.labelText = "Loading Data"
         
+        performQuery(query, callback)
         
+    }
+    
+    func performQuery(query:PFQuery, callback:(()->Void)){
         query.findObjectsInBackgroundWithBlock {
             (objects: [AnyObject]!, error: NSError!) -> Void in
             if error == nil {
