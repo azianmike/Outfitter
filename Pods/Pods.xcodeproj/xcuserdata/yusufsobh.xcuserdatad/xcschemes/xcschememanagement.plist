@@ -4,6 +4,11 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>Pods-ActionSheetPicker-3.0.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods-Bolts.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -15,16 +20,6 @@
 			<false/>
 		</dict>
 		<key>Pods-MBProgressHUD.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
-		<key>Pods-Parse.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
-		<key>Pods-ParseFacebookUtils.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
@@ -42,37 +37,32 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>0E236D5E7046EAF1C9A797B9</key>
+		<key>164B14B01886D1A6A1AF2526</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>3716BDE7FDF5A6D075844CA9</key>
+		<key>1DBA728D6CA465DF0F6AFE9E</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>7158566AAD013EEF5DF515FB</key>
+		<key>2A3404609C4CBDA55391927A</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>7EB13B6FAAB51AFB185A6A14</key>
+		<key>81CAD36EC42AB794AA888D10</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>9F6307F6E3BF05AC55B08505</key>
+		<key>97E57CAA95483463115C83EA</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>B6A5E3EA4C594B9BB6339F6F</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>BC958041AC3D8A6C3D3B1DF4</key>
+		<key>A230B73840FFD134F1BE8F6B</key>
 		<dict>
 			<key>primary</key>
 			<true/>

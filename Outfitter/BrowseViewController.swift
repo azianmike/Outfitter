@@ -51,9 +51,7 @@ class BrowseViewController: UIViewController {
             
             sender.setTitle(value as String!, forState: UIControlState.Normal)
             self.genderPickerSelectedIndex = index
-            
-            self.filterByGender(value as String!)
-            
+                        
             return
             }, cancelBlock: { ActionStringCancelBlock in return }, origin: sender)
     }
@@ -69,10 +67,6 @@ class BrowseViewController: UIViewController {
 
             return
             }, cancelBlock: { ActionStringCancelBlock in return }, origin: sender)
-    }
-    
-    func filterByGender(gender: String) {
-        
     }
     
     func filterByArticle(article: String) {
@@ -120,8 +114,6 @@ class BrowseViewController: UIViewController {
             let alert = UIAlertController(title: "Error", message: "No submissions Available", preferredStyle: UIAlertControllerStyle.Alert)
             alert.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.Default, handler: nil))
             self.presentViewController(alert, animated: true, completion: nil)
-
-//            go()
         }
     }
     
