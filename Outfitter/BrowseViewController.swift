@@ -51,7 +51,8 @@ class BrowseViewController: UIViewController {
             
             sender.setTitle(value as String!, forState: UIControlState.Normal)
             self.genderPickerSelectedIndex = index
-                        
+            
+            //self.filterByGender()
             return
             }, cancelBlock: { ActionStringCancelBlock in return }, origin: sender)
     }
@@ -68,6 +69,12 @@ class BrowseViewController: UIViewController {
             return
             }, cancelBlock: { ActionStringCancelBlock in return }, origin: sender)
     }
+    
+    /*func filterByGender()
+    {
+        submissions.removeAll(keepCapacity: false)
+        getSubmissions(doneGettingSubmissions,articleId: articlePickerSelectedIndex)
+    }*/
     
     func filterByArticle(article: String) {
         
@@ -94,7 +101,7 @@ class BrowseViewController: UIViewController {
     
     @IBAction func go(){
         submissions.removeAll(keepCapacity: false)
-        getSubmissions(doneGettingSubmissions)
+        getSubmissions(doneGettingSubmissions, articleId: articlePickerSelectedIndex)
     }
     
     @IBAction func closeBrowse(){
@@ -173,6 +180,12 @@ class BrowseViewController: UIViewController {
         if(articleId >= 0) {
             query.whereKey("article", equalTo:articleId)
         }
+        
+        /*if(genderPickerSelectedIndex == 0){
+            query.whereKey("genderOfSubmitter", equalTo:"male")
+        } else if (genderPickerSelectedIndex == 1){
+            query.whereKey("genderOfSubmitter", equalTo:"female")
+        }*/
 
         let loadingNotification = MBProgressHUD.showHUDAddedTo(self.view, animated: true)
         loadingNotification.mode = MBProgressHUDModeIndeterminate

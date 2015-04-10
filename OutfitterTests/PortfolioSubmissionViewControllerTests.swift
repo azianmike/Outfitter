@@ -226,8 +226,11 @@ class PortfolioSubmissionViewControllerTests: BaseTests {
                                             submissionThing2 = object
                                             break
                                         }
-                                        
+                                        NSLog(String(submissionThing2.objectId))
+                                        NSLog(String(submissionThing.objectId))
                                         let subObj2 = SubmissionObject(submissionThing: submissionThing2!)
+                                        NSLog(String(subObj2.getLikes()))
+                                        NSLog(String(result.liked+1))
                                         XCTAssertTrue(subObj2.getLikes() == result.liked+1, "Correct like count")
                                         XCTAssertTrue(subObj2.getDislikes() == result.disliked, "Correct dislike count")
                                         expectation.fulfill()

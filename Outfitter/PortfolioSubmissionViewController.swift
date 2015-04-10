@@ -34,7 +34,7 @@ public class PortfolioSubmissionViewController: UIViewController {
         
         let maleFeedback = submissionObj.getMaleFeedback()
         let femaleFeedback = submissionObj.getFemaleFeedback()
-        if (maleFeedback && femaleFeedback){
+        if (maleFeedback & femaleFeedback){
             genderFeedback.selectedSegmentIndex=0
         }else if (maleFeedback!)
         {
