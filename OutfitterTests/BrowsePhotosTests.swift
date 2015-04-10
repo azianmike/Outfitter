@@ -73,6 +73,12 @@ class BrowseViewControllerTest: BaseTests {
         }
         
         v.getSubmissions(submissionsCallBack)
+        
+        self.waitForExpectationsWithTimeout(5.0) { (error) in
+            if(error != nil) {
+                XCTFail("FAILED due to " + error.description)
+            }
+        }
     }
     
     func removeLikeOrDislike(objectId: String, currentUserId: String)
