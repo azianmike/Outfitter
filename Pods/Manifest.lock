@@ -23,9 +23,9 @@ SPEC CHECKSUMS:
   ActionSheetPicker-3.0: c95dca3dde5e593adb53a3362e255f29751b4286
   Bolts: e431c88fd02115d4a34016c2100bbfa4d2d5b146
   Facebook-iOS-SDK: fcb0fd5bcdb50f1fe9ce27bf6b8cdf1aa5b2b0ed
-  MBProgressHUD: d8e7ea388dc1549a42e0d219067cf5f2c898fb66
-  Parse: 5d2c7c40c4c3791efd182355c0578fc92bbc3400
-  ParseFacebookUtils: 1743db2d2e5e0359dcd40ae8b53535abb79b272b
-  ParseUI: 03fc6b0a15db10eecccf8140b658c35107111931
+  MBProgressHUD: 2038dbcf3dce73215abed6001657043d53aa79a8
+  Parse: 60d65108fe39da77ec16c9e51d74b4d296b21424
+  ParseFacebookUtils: 0b86cd67283c60d10e3ddc8427f989f5e60ebbd7
+  ParseUI: 00c4c39aab3944d88758b55416581650caa37f89
 
-COCOAPODS: 0.36.1
+COCOAPODS: 0.35.0

@@ -237,5 +237,23 @@ class BrowseViewController: UIViewController {
         }
     }
     
-
+    func addComment(commentString:String, submissionId:String, userId:String) -> String{
+        var comment = PFObject(className: "Comment")
+        comment.setObject(submissionId, forKey: "submissionId")
+        comment.setObject(userId, forKey: "userId")
+        comment.setObject(commentString, forKey: "comment")
+        
+        var sema = dispatch_semaphore_create(0)
+        comment.saveInBackgroundWithBlock{
+            (success: Bool, error: NSError?) -> Void in
+            if (success) {
+                sleep(10)
+                dispatch_semaphore_signal(sema)
+            } else {
+                // There was a problem, check error.description
+            }
+        }
+        dispatch_semaphore_wait(sema, DISPATCH_TIME_FOREVER)
+        return comment.objectId
+    }
 }
