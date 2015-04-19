@@ -237,23 +237,30 @@ class BrowseViewController: UIViewController {
         }
     }
     
-    func addComment(commentString:String, submissionId:String, userId:String) -> String{
+    // The callback function is optional, it will be called when the comment is finally saved and it will be passed the new comments objectId
+    func addComment(commentString:String, submissionId:String, userId:String, callback:((objectId: String)->Void)! = nil){
         var comment = PFObject(className: "Comment")
         comment.setObject(submissionId, forKey: "submissionId")
         comment.setObject(userId, forKey: "userId")
         comment.setObject(commentString, forKey: "comment")
         
-        var sema = dispatch_semaphore_create(0)
+        let loadingNotification = MBProgressHUD.showHUDAddedTo(self.view, animated: true)
+        loadingNotification.mode = MBProgressHUDModeIndeterminate
+        loadingNotification.labelText = "Saving Comment"
+        
         comment.saveInBackgroundWithBlock{
             (success: Bool, error: NSError?) -> Void in
             if (success) {
-                sleep(10)
-                dispatch_semaphore_signal(sema)
+                if ((callback) != nil){
+                    callback(objectId: comment.objectId)
+                }
+                MBProgressHUD.hideAllHUDsForView(self.view, animated: true)
             } else {
-                // There was a problem, check error.description
+                NSLog("%@", error!)
+                MBProgressHUD.hideAllHUDsForView(self.view, animated: true)
+                let alert = UIAlertController(title: "Error", message: "There was an error when submitting your comment...Please try again soon!", preferredStyle: UIAlertControllerStyle.Alert)
+                alert.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.Default, handler: nil))
             }
         }
-        dispatch_semaphore_wait(sema, DISPATCH_TIME_FOREVER)
-        return comment.objectId
     }
 }
