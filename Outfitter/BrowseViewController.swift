@@ -180,12 +180,6 @@ class BrowseViewController: UIViewController {
         if(articleId >= 0) {
             query.whereKey("article", equalTo:articleId)
         }
-        
-        /*if(genderPickerSelectedIndex == 0){
-            query.whereKey("genderOfSubmitter", equalTo:"male")
-        } else if (genderPickerSelectedIndex == 1){
-            query.whereKey("genderOfSubmitter", equalTo:"female")
-        }*/
 
         let loadingNotification = MBProgressHUD.showHUDAddedTo(self.view, animated: true)
         loadingNotification.mode = MBProgressHUDModeIndeterminate
@@ -238,12 +232,11 @@ class BrowseViewController: UIViewController {
     }
     
     // The callback function is optional, it will be called when the comment is finally saved and it will be passed the new comments objectId
-    func addComment(commentString:String, submissionId:String, userId:String, callback:((objectId: String)->Void)! = nil, filterDictionary:NSDictionary){
-        var newCommentString = filterBadWords(commentString, filterDictionary: filterDictionary)
+    func addComment(commentString:String, submissionId:String, userId:String, callback:((objectId: String)->Void)! = nil){
         var comment = PFObject(className: "Comment")
         comment.setObject(submissionId, forKey: "submissionId")
         comment.setObject(userId, forKey: "userId")
-        comment.setObject(newCommentString, forKey: "comment")
+        comment.setObject(commentString, forKey: "comment")
         
         let loadingNotification = MBProgressHUD.showHUDAddedTo(self.view, animated: true)
         loadingNotification.mode = MBProgressHUDModeIndeterminate
@@ -265,84 +258,10 @@ class BrowseViewController: UIViewController {
         }
     }
     
-    func filterBadWords(commentString:String, filterDictionary:NSDictionary) -> String{
-        var newString = commentString
-        for word in filterDictionary.allKeys{
-            var filterWord = filterDictionary.objectForKey(word) as! String
-            newString = newString.stringByReplacingOccurrencesOfString(word as! String, withString: filterWord, options: NSStringCompareOptions.LiteralSearch, range: nil)
-        }
-        return newString
+    @IBAction func goToComments(){
+        let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
+        let submissionViewController: UIViewController! = storyBoard.instantiateViewControllerWithIdentifier("CommentViewController") as! UIViewController
+        self.presentViewController(submissionViewController, animated:true, completion:nil)
     }
     
-    // The delete and upvote functions need to be moved to the new view
-    func deleteComment(commentId:String){
-        var query = PFQuery(className:"Comment")
-        query.whereKey("objectId", equalTo: commentId)
-        
-        let loadingNotification = MBProgressHUD.showHUDAddedTo(self.view, animated: true)
-        loadingNotification.mode = MBProgressHUDModeIndeterminate
-        loadingNotification.labelText = "Deleting Comment"
-        
-        query.findObjectsInBackgroundWithBlock {
-            (objects: [AnyObject]!, error: NSError!) -> Void in
-            if error == nil {
-                if let objects = objects as? [PFObject] {
-                    for object in objects {
-                        // Now to delete all the upvotes
-                        var voteQuery = PFQuery(className: "CommentActivity")
-                        voteQuery.whereKey("commentId", equalTo: object.objectId)
-                        
-                        voteQuery.findObjectsInBackgroundWithBlock{
-                            (objects2: [AnyObject]!, error2: NSError!) -> Void in
-                            if error2 == nil{
-                                if let objects2 = objects2 as? [PFObject] {
-                                    for object2 in objects2 {
-                                        object2.delete()
-                                    }
-                                }
-                                object.delete()
-                                MBProgressHUD.hideAllHUDsForView(self.view, animated: true)
-                            } else {
-                                NSLog("%@", error!)
-                                MBProgressHUD.hideAllHUDsForView(self.view, animated: true)
-                                let alert = UIAlertController(title: "Error", message: "There was an error when deleting your comment...Please try again soon!", preferredStyle: UIAlertControllerStyle.Alert)
-                                alert.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.Default, handler: nil))
-                            }
-                        }
-                    }
-                }
-            } else {
-                NSLog("%@", error!)
-                MBProgressHUD.hideAllHUDsForView(self.view, animated: true)
-                let alert = UIAlertController(title: "Error", message: "There was an error when deleting your comment...Please try again soon!", preferredStyle: UIAlertControllerStyle.Alert)
-                alert.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.Default, handler: nil))
-            }
-        }
-    }
-    
-    func upvoteComment(commentId:String, userId:String, callback:((objectId: String)->Void)! = nil){
-        var vote = PFObject(className: "CommentActivity")
-        vote.setObject(commentId, forKey: "commentId")
-        vote.setObject(userId, forKey: "userId")
-        
-        let loadingNotification = MBProgressHUD.showHUDAddedTo(self.view, animated: true)
-        loadingNotification.mode = MBProgressHUDModeIndeterminate
-        loadingNotification.labelText = "Upvoting Comment"
-
-        
-        vote.saveInBackgroundWithBlock{
-            (success: Bool, error: NSError?) -> Void in
-            if (success) {
-                if ((callback) != nil){
-                    callback(objectId: vote.objectId)
-                }
-                MBProgressHUD.hideAllHUDsForView(self.view, animated: true)
-            } else {
-                NSLog("%@", error!)
-                MBProgressHUD.hideAllHUDsForView(self.view, animated: true)
-                let alert = UIAlertController(title: "Error", message: "There was an error when submitting your upvote...Please try again soon!", preferredStyle: UIAlertControllerStyle.Alert)
-                alert.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.Default, handler: nil))
-            }
-        }
-    }
 }
