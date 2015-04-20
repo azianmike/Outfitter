@@ -16,6 +16,17 @@ class CommentTableViewCell : UITableViewCell {
         commentLabel.text = comment
         titleLabel.text = title
     }
+    
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        // Initialization code
+    }
+    
+    override func setSelected(selected: Bool, animated: Bool) {
+        super.setSelected(selected, animated: animated)
+        
+        // Configure the view for the selected state
+    }
 }
 
 
@@ -23,6 +34,7 @@ class CommentViewController: UIViewController, UITableViewDelegate, UITableViewD
 
     @IBOutlet var tableView: UITableView!
     var items: [String] = ["We", "Heart", "Swift"]
+    var items2: [String] = ["I", "am", "poop"]
     
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(false)
@@ -30,12 +42,16 @@ class CommentViewController: UIViewController, UITableViewDelegate, UITableViewD
         
     }
     
+    func configureTableView() {
+        tableView.rowHeight = UITableViewAutomaticDimension
+        tableView.estimatedRowHeight = 160.0
+    }
+    
     override internal func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        println("enter viewDidLoad")
-        self.tableView.registerClass(UITableViewCell.self, forCellReuseIdentifier: "cell")
-        println("done viewDidLoad")
+        //self.tableView.registerClass(UITableViewCell.self, forCellReuseIdentifier: "CommentCell")
+        
     }
     
     override internal func didReceiveMemoryWarning() {
@@ -48,9 +64,10 @@ class CommentViewController: UIViewController, UITableViewDelegate, UITableViewD
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        var cell:UITableViewCell = self.tableView.dequeueReusableCellWithIdentifier("cell") as! UITableViewCell
+        var cell:CommentTableViewCell = self.tableView.dequeueReusableCellWithIdentifier("CommentCell") as! CommentTableViewCell
         
-        cell.textLabel?.text = self.items[indexPath.row]
+        cell.commentLabel.text = self.items2[indexPath.row]
+        cell.titleLabel?.text = self.items[indexPath.row]
         
         return cell
     }
