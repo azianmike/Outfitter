@@ -18,7 +18,7 @@ class PortfolioSubmissionViewControllerTests: BaseTests {
         
         super.setUp();
         
-        viewController = storyBoard.instantiateViewControllerWithIdentifier("PortfolioSubmissionViewController") as PortfolioSubmissionViewController
+        viewController = storyBoard.instantiateViewControllerWithIdentifier("PortfolioSubmissionViewController") as! PortfolioSubmissionViewController
         
         viewController.loadView()
     }
@@ -70,7 +70,7 @@ class PortfolioSubmissionViewControllerTests: BaseTests {
                     
                     let subObj = SubmissionObject(submissionThing: submissionThing!)
                     v.setValue(subObj, forKey: "submissionObj")
-                    XCTAssertTrue(v.valueForKey("submissionObj") as SubmissionObject == subObj, "Correctly passed the submission object")
+                    XCTAssertTrue(v.valueForKey("submissionObj") as! SubmissionObject == subObj, "Correctly passed the submission object")
                     expectation.fulfill()
                 }
             } else {
@@ -111,7 +111,7 @@ class PortfolioSubmissionViewControllerTests: BaseTests {
         var liked = 0
         var disliked = 0
         for rating in ratings {
-            if rating.objectForKey("votedYes") as Bool{
+            if rating.objectForKey("votedYes") as! Bool{
                 liked += 1
             } else {
                 disliked += 1

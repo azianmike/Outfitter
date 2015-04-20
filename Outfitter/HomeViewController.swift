@@ -87,7 +87,12 @@ class HomeViewController: UIViewController, PFLogInViewControllerDelegate, UINav
         // Dispose of any resources that can be recreated.
     }
     
-    func imagePickerController(picker: UIImagePickerController!, didFinishPickingImage image: UIImage!, editingInfo: NSDictionary!){
+    /*func imagePickerController(picker: UIImagePickerController!, didFinishPickingImage image: UIImage!, editingInfo: NSDictionary!){
+        self.dismissViewControllerAnimated(true, completion: nil)
+        self.presentPhotoSubmissionController(image)
+    }*/
+    
+    func imagePickerController(picker: UIImagePickerController, didFinishPickingImage image: UIImage!, editingInfo: [NSObject : AnyObject]!) {
         self.dismissViewControllerAnimated(true, completion: nil)
         self.presentPhotoSubmissionController(image)
     }
@@ -99,7 +104,7 @@ class HomeViewController: UIViewController, PFLogInViewControllerDelegate, UINav
         // Force the downcast as an AnsViewController (this could crash at runtime
         // if the return value is nil or not an AnsViewController, so again,
         // the previous example is safer
-        let ansViewController: UIViewController! = storyBoard.instantiateViewControllerWithIdentifier("SubmitPhotoViewController") as UIViewController
+        let ansViewController: UIViewController! = storyBoard.instantiateViewControllerWithIdentifier("SubmitPhotoViewController") as! UIViewController
         ansViewController.setValue(image, forKey: "imageToSubmit")
         self.presentViewController(ansViewController, animated:true, completion:nil)
     }
@@ -118,13 +123,13 @@ class HomeViewController: UIViewController, PFLogInViewControllerDelegate, UINav
     
     @IBAction func showPortfolio(){
         let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
-        let portfolioViewController: UIViewController! = storyBoard.instantiateViewControllerWithIdentifier("PortfolioViewController") as UIViewController
+        let portfolioViewController: UIViewController! = storyBoard.instantiateViewControllerWithIdentifier("PortfolioViewController") as! UIViewController
         self.presentViewController(portfolioViewController, animated:true, completion:nil)
     }
     
     @IBAction func showBrowseView(){
         let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
-        let portfolioViewController: UIViewController! = storyBoard.instantiateViewControllerWithIdentifier("BrowseViewController") as UIViewController
+        let portfolioViewController: UIViewController! = storyBoard.instantiateViewControllerWithIdentifier("BrowseViewController") as! UIViewController
         self.presentViewController(portfolioViewController, animated:true, completion:nil)
     }
 }

@@ -72,7 +72,7 @@ class HomeViewControllerTests: BaseTests {
         
         super.setUp();
         
-        viewController = storyBoard.instantiateViewControllerWithIdentifier("HomeViewController") as HomeViewController
+        viewController = storyBoard.instantiateViewControllerWithIdentifier("HomeViewController") as! HomeViewController
         
         viewController.loadView()
     }
@@ -104,7 +104,7 @@ class SubmitPhotoViewControllerTests: BaseTests {
         
         super.setUp();
         
-        viewController = storyBoard.instantiateViewControllerWithIdentifier("SubmitPhotoViewController") as SubmitPhotoViewController
+        viewController = storyBoard.instantiateViewControllerWithIdentifier("SubmitPhotoViewController")as! SubmitPhotoViewController
         
         viewController.loadView()
     }
@@ -147,7 +147,7 @@ class SubmitPhotoViewControllerTests: BaseTests {
             expectation.fulfill()
         }
       
-        viewController.submitPhotoToParse(mockImage!, articleID: 1, femaleFeedback: true, maleFeedback: true, submitPriority: true, submissionCallback)
+        viewController.submitPhotoToParse(mockImage!, articleID: 1, femaleFeedback: true, maleFeedback: true, submitPriority: true, completionHandler: submissionCallback)
         
         self.waitForExpectationsWithTimeout(15.0) { (error) in
             if(error != nil) {
@@ -183,7 +183,7 @@ class PortfolioViewControllerTests: BaseTests {
         
         super.setUp();
         
-        viewController = storyBoard.instantiateViewControllerWithIdentifier("PortfolioViewController") as PortfolioViewController
+        viewController = storyBoard.instantiateViewControllerWithIdentifier("PortfolioViewController") as! PortfolioViewController
         
         viewController.loadView()
     }
@@ -215,7 +215,7 @@ class PortfolioViewControllerTests: BaseTests {
         let expectation = self.expectationWithDescription("Load submissions")
         
         // assert that the ViewController.view is not nil
-        XCTAssertNil(v.submissions?,"No submissions loaded yet")
+        XCTAssertNil(v.submissions,"No submissions loaded yet")
         v.submissions = [PFObject]()
         func submissionsCallBack() {
             XCTAssertTrue(v.submissions.count > 0,"Submissions were loaded")

@@ -64,7 +64,7 @@ public class PortfolioViewController: UIViewController, UICollectionViewDelegate
     override public func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        if let temp = PFUser.currentUser().objectForKey("name") as String! {
+        if let temp = PFUser.currentUser().objectForKey("name") as! String! {
             navigationBar.topItem?.title = temp + "'s Portfolio"
         } else {
             navigationBar.topItem?.title = PFUser.currentUser().username + "'s Portfolio"
@@ -89,9 +89,9 @@ public class PortfolioViewController: UIViewController, UICollectionViewDelegate
     
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
         
-        let cell = collectionView.dequeueReusableCellWithReuseIdentifier("PortfolioCell", forIndexPath: indexPath) as PortfolioCell
+        let cell = collectionView.dequeueReusableCellWithReuseIdentifier("PortfolioCell", forIndexPath: indexPath) as! PortfolioCell
         let temp = SubmissionObject(submissionThing: submissions[indexPath.row])
-        cell.setSubmissionObj(temp)
+        cell.setSubmissionObj2(temp)
         //let testNum:String! = submissions[indexPath.row].objectId as String!
         //NSLog(testNum)
         cell.setImage(submissions[indexPath.row].objectForKey("image").url)
@@ -102,11 +102,11 @@ public class PortfolioViewController: UIViewController, UICollectionViewDelegate
         self.dismissViewControllerAnimated(true, completion: nil)
     }
     
-    func collectionView(collectionView: UICollectionView!, didSelectItemAtIndexPath indexPath: NSIndexPath!)
+    public func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath)
     {
-        let cell = collectionView.cellForItemAtIndexPath(indexPath) as PortfolioCell
+        let cell = collectionView.cellForItemAtIndexPath(indexPath) as! PortfolioCell
         let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
-        let submissionViewController: UIViewController! = storyBoard.instantiateViewControllerWithIdentifier("PortfolioSubmissionViewController") as UIViewController
+        let submissionViewController: UIViewController! = storyBoard.instantiateViewControllerWithIdentifier("PortfolioSubmissionViewController") as! UIViewController
         submissionViewController.setValue(cell.imageView.image, forKey: "image")
         submissionViewController.setValue(cell.submissionObj, forKey: "submissionObj")
         

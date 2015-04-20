@@ -24,22 +24,22 @@ public class PortfolioSubmissionViewController: UIViewController {
     
     override public func viewDidAppear(animated: Bool) {
         super.viewDidAppear(false)
-        image = self.valueForKey("image") as UIImage
+        image = self.valueForKey("image") as! UIImage
         selectedImage.image = image
-        submissionObj = self.valueForKey("submissionObj") as SubmissionObject
+        submissionObj = self.valueForKey("submissionObj") as! SubmissionObject
         let articleNum = submissionObj.getArticle()
         
         outfitType.selectedSegmentIndex=articleNum
         outfitType.userInteractionEnabled=false
         
-        let maleFeedback = submissionObj.getMaleFeedback()
-        let femaleFeedback = submissionObj.getFemaleFeedback()
-        if (maleFeedback & femaleFeedback){
+        let maleFeedback = submissionObj.getMaleFeedback() as Bool
+        let femaleFeedback = submissionObj.getFemaleFeedback() as Bool
+        if (maleFeedback && femaleFeedback){
             genderFeedback.selectedSegmentIndex=0
-        }else if (maleFeedback!)
+        }else if (maleFeedback)
         {
             genderFeedback.selectedSegmentIndex=1
-        }else if (femaleFeedback!)
+        }else if (femaleFeedback)
         {
             genderFeedback.selectedSegmentIndex=2
         }
@@ -68,7 +68,7 @@ public class PortfolioSubmissionViewController: UIViewController {
         var like = 0
         var dislike = 0
         for object in ratings{
-            if object.objectForKey("votedYes") as Bool{
+            if object.objectForKey("votedYes") as! Bool{
                 like += 1
             } else {
                 dislike += 1
@@ -108,7 +108,7 @@ public class PortfolioSubmissionViewController: UIViewController {
         loadingNotification.mode = MBProgressHUDModeIndeterminate
         loadingNotification.labelText = "Loading Data"
         
-        performQuery(query, callback)
+        performQuery(query, callback: callback)
         
     }
     

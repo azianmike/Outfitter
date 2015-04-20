@@ -20,7 +20,7 @@ public class SubmitPhotoViewController: UIViewController {
     override public func viewDidAppear(animated: Bool) {
         super.viewDidAppear(false)
         // Do any additional setup after loading the view, typically from a nib.
-        imageToSubmit = self.valueForKey("imageToSubmit") as UIImage
+        imageToSubmit = self.valueForKey("imageToSubmit") as! UIImage
          NSLog("got my image")
         imageView.image = imageToSubmit
         

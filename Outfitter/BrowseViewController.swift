@@ -49,7 +49,7 @@ class BrowseViewController: UIViewController {
         ActionSheetStringPicker.showPickerWithTitle("Gender", rows: ["Male", "Female", "Both Male and Female"], initialSelection: self.genderPickerSelectedIndex, doneBlock: {
             picker, index, value in
             
-            sender.setTitle(value as String!, forState: UIControlState.Normal)
+            sender.setTitle(value as! String!, forState: UIControlState.Normal)
             self.genderPickerSelectedIndex = index
             
             //self.filterByGender()
@@ -61,10 +61,10 @@ class BrowseViewController: UIViewController {
         ActionSheetStringPicker.showPickerWithTitle("Articles", rows: ["Full Outfits", "Tops", "Bottoms", "Shoes", "Accessories"], initialSelection: self.articlePickerSelectedIndex, doneBlock: {
             picker, index, value in
             
-            sender.setTitle(value as String!, forState: UIControlState.Normal)
+            sender.setTitle(value as! String!, forState: UIControlState.Normal)
             self.articlePickerSelectedIndex = index
             
-            self.filterByArticle(value as String!)
+            self.filterByArticle(value as! String!)
 
             return
             }, cancelBlock: { ActionStringCancelBlock in return }, origin: sender)
@@ -111,7 +111,7 @@ class BrowseViewController: UIViewController {
     func loadCurrentPicture(){
         if currentSubmissionIndex >= 0 && currentSubmissionIndex < submissions.count {
             var imageURL:NSString = submissions[currentSubmissionIndex].objectForKey("image").url
-            let url = NSURL(string: imageURL)
+            let url = NSURL(string: imageURL as String)
             let data = NSData(contentsOfURL: url!)
             let image = UIImage(data: data!)
             currentImageView.image = image!

@@ -22,13 +22,13 @@ class PortfolioCell: UICollectionViewCell {
     }
     
     internal func setImage(imageURL:NSString){
-        let url = NSURL(string: imageURL)
+        let url = NSURL(string: imageURL as String)
         let data = NSData(contentsOfURL: url!)
         let image = UIImage(data: data!)
         imageView.image = image!
     }
     
-    func setSubmissionObj(submissionObj:SubmissionObject)
+    func setSubmissionObj2(submissionObj:SubmissionObject)
     {
         self.submissionObj=submissionObj
     }
@@ -53,16 +53,16 @@ class SubmissionObject:NSObject{
         NSLog("enter")
         //NSLog(submissionThing.objectForKey("objectId")! as String)
         objectID = submissionThing.objectId
-        article = submissionThing.objectForKey("article")! as Int
-        numLikes = submissionThing.objectForKey("numLikes")! as Int
-        numDislikes = submissionThing.objectForKey("numDislikes")! as Int
-        image = setImage(submissionThing.objectForKey("image").url)
-        maleFeedback = submissionThing.objectForKey("toReceiveMaleFeedback") as Bool
-        femaleFeedback = submissionThing.objectForKey("toReceiveFemaleFeedback") as Bool
+        article = submissionThing.objectForKey("article")! as! Int
+        numLikes = submissionThing.objectForKey("numLikes")! as! Int
+        numDislikes = submissionThing.objectForKey("numDislikes")! as! Int
+        image = setImage2(submissionThing.objectForKey("image").url)
+        maleFeedback = submissionThing.objectForKey("toReceiveMaleFeedback") as! Bool
+        femaleFeedback = submissionThing.objectForKey("toReceiveFemaleFeedback") as! Bool
     }
     
-    internal func setImage(imageURL:NSString)->UIImage{
-        let url = NSURL(string: imageURL)
+    internal func setImage2(imageURL:NSString)->UIImage{
+        let url = NSURL(string: imageURL as String)
         let data = NSData(contentsOfURL: url!)
         let image = UIImage(data: data!)
         return image!

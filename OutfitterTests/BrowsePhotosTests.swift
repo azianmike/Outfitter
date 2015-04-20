@@ -19,7 +19,7 @@ class BrowseViewControllerTest: BaseTests {
         
         super.setUp();
         
-        viewController = storyBoard.instantiateViewControllerWithIdentifier("BrowseViewController") as BrowseViewController
+        viewController = storyBoard.instantiateViewControllerWithIdentifier("BrowseViewController") as! BrowseViewController
         
         viewController.loadView()
     }
@@ -134,7 +134,7 @@ class BrowseViewControllerTest: BaseTests {
             expectation2.fulfill()
         }
         
-        v.submitRatingActivity(v.submissions[0].objectId, userId: PFUser.currentUser().objectId, votedYes: false, ratingCallback)
+        v.submitRatingActivity(v.submissions[0].objectId, userId: PFUser.currentUser().objectId, votedYes: false, completionHandler: ratingCallback)
         
         self.waitForExpectationsWithTimeout(5.0) { (error) in
             if(error != nil) {
@@ -176,7 +176,7 @@ class BrowseViewControllerTest: BaseTests {
             listOfRatings.append(v.submissions[0].objectId)
         }
         
-        v.submitRatingActivity(v.submissions[0].objectId, userId: PFUser.currentUser().objectId, votedYes: false, ratingCallback)
+        v.submitRatingActivity(v.submissions[0].objectId, userId: PFUser.currentUser().objectId, votedYes: false, completionHandler: ratingCallback)
         
         self.waitForExpectationsWithTimeout(5.0) { (error) in
             if(error != nil) {
@@ -221,7 +221,7 @@ class BrowseViewControllerTest: BaseTests {
         
         let submissionObjectId = v.submissions[0].objectId
         listOfRatings.append(v.submissions[0].objectId)
-        v.submitRatingActivity(v.submissions[0].objectId, userId: PFUser.currentUser().objectId, votedYes: false, ratingCallback)
+        v.submitRatingActivity(v.submissions[0].objectId, userId: PFUser.currentUser().objectId, votedYes: false, completionHandler: ratingCallback)
         
         self.waitForExpectationsWithTimeout(5.0) { (error) in
             if(error != nil) {
@@ -308,7 +308,7 @@ class BrowseViewControllerTest: BaseTests {
         func submissionsCallBack(){
             XCTAssertTrue(v.submissions.count > 0,"Submissions were loaded")
             for sub in v.submissions {
-                XCTAssertTrue(sub.objectForKey("article") as Int! == 0, "Object of correct article")
+                XCTAssertTrue(sub.objectForKey("article") as! Int! == 0, "Object of correct article")
             }
             expectation.fulfill()
         }
@@ -335,7 +335,7 @@ class BrowseViewControllerTest: BaseTests {
         func submissionsCallBack(){
             XCTAssertTrue(v.submissions.count > 0,"Submissions were loaded")
             for sub in v.submissions {
-                XCTAssertTrue(sub.objectForKey("article") as Int! == articleIdToPass, "Object of correct article")
+                XCTAssertTrue(sub.objectForKey("article") as! Int! == articleIdToPass, "Object of correct article")
             }
             expectation.fulfill()
         }
@@ -362,7 +362,7 @@ class BrowseViewControllerTest: BaseTests {
         func submissionsCallBack(){
             XCTAssertTrue(v.submissions.count > 0,"Submissions were loaded")
             for sub in v.submissions {
-                XCTAssertTrue(sub.objectForKey("article") as Int! == articleIdToPass, "Object of correct article")
+                XCTAssertTrue(sub.objectForKey("article") as! Int! == articleIdToPass, "Object of correct article")
             }
             expectation.fulfill()
         }
@@ -389,7 +389,7 @@ class BrowseViewControllerTest: BaseTests {
         func submissionsCallBack(){
             XCTAssertTrue(v.submissions.count > 0,"Submissions were loaded")
             for sub in v.submissions {
-                XCTAssertTrue(sub.objectForKey("article") as Int! == articleIdToPass, "Object of correct article")
+                XCTAssertTrue(sub.objectForKey("article") as! Int! == articleIdToPass, "Object of correct article")
             }
             expectation.fulfill()
         }
@@ -416,7 +416,7 @@ class BrowseViewControllerTest: BaseTests {
         func submissionsCallBack(){
             XCTAssertTrue(v.submissions.count > 0,"Submissions were loaded")
             for sub in v.submissions {
-                XCTAssertTrue(sub.objectForKey("article") as Int! == articleIdToPass, "Object of correct article")
+                XCTAssertTrue(sub.objectForKey("article") as! Int! == articleIdToPass, "Object of correct article")
             }
             expectation.fulfill()
         }
