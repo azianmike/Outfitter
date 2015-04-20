@@ -238,11 +238,12 @@ class BrowseViewController: UIViewController {
     }
     
     // The callback function is optional, it will be called when the comment is finally saved and it will be passed the new comments objectId
-    func addComment(commentString:String, submissionId:String, userId:String, callback:((objectId: String)->Void)! = nil){
+    func addComment(commentString:String, submissionId:String, userId:String, callback:((objectId: String)->Void)! = nil, filterDictionary:NSDictionary){
+        var newCommentString = filterBadWords(commentString, filterDictionary: filterDictionary)
         var comment = PFObject(className: "Comment")
         comment.setObject(submissionId, forKey: "submissionId")
         comment.setObject(userId, forKey: "userId")
-        comment.setObject(commentString, forKey: "comment")
+        comment.setObject(newCommentString, forKey: "comment")
         
         let loadingNotification = MBProgressHUD.showHUDAddedTo(self.view, animated: true)
         loadingNotification.mode = MBProgressHUDModeIndeterminate
@@ -262,6 +263,15 @@ class BrowseViewController: UIViewController {
                 alert.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.Default, handler: nil))
             }
         }
+    }
+    
+    func filterBadWords(commentString:String, filterDictionary:NSDictionary) -> String{
+        var newString = commentString
+        for word in filterDictionary.allKeys{
+            var filterWord = filterDictionary.objectForKey(word) as! String
+            newString = newString.stringByReplacingOccurrencesOfString(word as! String, withString: filterWord, options: NSStringCompareOptions.LiteralSearch, range: nil)
+        }
+        return newString
     }
     
     // The delete and upvote functions need to be moved to the new view
