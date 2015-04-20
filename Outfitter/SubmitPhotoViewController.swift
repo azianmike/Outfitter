@@ -24,9 +24,6 @@ public class SubmitPhotoViewController: UIViewController {
          NSLog("got my image")
         imageView.image = imageToSubmit
         
-        
-        
-        
     }
     
     override public func viewDidLoad() {

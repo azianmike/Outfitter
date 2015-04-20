@@ -180,12 +180,6 @@ class BrowseViewController: UIViewController {
         if(articleId >= 0) {
             query.whereKey("article", equalTo:articleId)
         }
-        
-        /*if(genderPickerSelectedIndex == 0){
-            query.whereKey("genderOfSubmitter", equalTo:"male")
-        } else if (genderPickerSelectedIndex == 1){
-            query.whereKey("genderOfSubmitter", equalTo:"female")
-        }*/
 
         let loadingNotification = MBProgressHUD.showHUDAddedTo(self.view, animated: true)
         loadingNotification.mode = MBProgressHUDModeIndeterminate
@@ -263,4 +257,11 @@ class BrowseViewController: UIViewController {
             }
         }
     }
+    
+    @IBAction func goToComments(){
+        let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
+        let submissionViewController: UIViewController! = storyBoard.instantiateViewControllerWithIdentifier("CommentViewController") as! UIViewController
+        self.presentViewController(submissionViewController, animated:true, completion:nil)
+    }
+    
 }
