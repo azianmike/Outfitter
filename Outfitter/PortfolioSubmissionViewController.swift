@@ -129,6 +129,15 @@ public class PortfolioSubmissionViewController: UIViewController {
             }
         }
     }
+    
+    @IBAction func goToComments(){
+        let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
+        let submissionViewController: UIViewController! = storyBoard.instantiateViewControllerWithIdentifier("CommentViewController") as! UIViewController
+        
+        submissionViewController.setValue(submissionObj.objectID!, forKey: "submissionID")
+        submissionViewController.setValue("true", forKey: "showDelete")
+        self.presentViewController(submissionViewController, animated:true, completion:nil)
+    }
 }
 
 

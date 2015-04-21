@@ -41,6 +41,7 @@ class CommentViewController: UIViewController, UITableViewDelegate, UITableViewD
         }else{
             cell.deleteButton.hidden=false
             cell.upvoteButton.hidden=true
+            cell.upvoteCount.hidden=true
         }
     }
     

@@ -442,6 +442,11 @@
                                                 <action selector="closePortfolio" destination="ZXv-PY-Ueb" id="4s5-M0-INU"/>
                                             </connections>
                                         </barButtonItem>
+                                        <barButtonItem key="rightBarButtonItem" title="Comments" id="X1G-nE-CyG">
+                                            <connections>
+                                                <action selector="goToComments" destination="ZXv-PY-Ueb" id="ywe-7P-fnd"/>
+                                            </connections>
+                                        </barButtonItem>
                                     </navigationItem>
                                 </items>
                                 <variation key="default">
