@@ -34,6 +34,7 @@
 		C19EFDF71AA55A2900D45421 /* SubmitPhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C19EFDF61AA55A2900D45421 /* SubmitPhotoViewController.swift */; };
 		C1CDB4C71AE48AD600AA4FDA /* CommentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1CDB4C61AE48AD600AA4FDA /* CommentViewController.swift */; };
 		C1E8DAA31AB8D21700DA1465 /* BrowsePhotosTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1E8DAA21AB8D21700DA1465 /* BrowsePhotosTests.swift */; };
+		C1FA3ECD1AE714540002014C /* BasicCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1FA3ECC1AE714540002014C /* BasicCell.swift */; };
 		E75B87FB3EEEF2BEC42B836D /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4FFABC43CED10E9BAEAEDC5D /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -74,6 +75,7 @@
 		C19EFDF61AA55A2900D45421 /* SubmitPhotoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SubmitPhotoViewController.swift; sourceTree = "<group>"; };
 		C1CDB4C61AE48AD600AA4FDA /* CommentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommentViewController.swift; sourceTree = "<group>"; };
 		C1E8DAA21AB8D21700DA1465 /* BrowsePhotosTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BrowsePhotosTests.swift; sourceTree = "<group>"; };
+		C1FA3ECC1AE714540002014C /* BasicCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BasicCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -158,6 +160,7 @@
 				C19A09151A806CC00013997B /* LaunchScreen.xib */,
 				C19A090A1A806CC00013997B /* Supporting Files */,
 				20D1CCD11A93E2A500E072B8 /* Outfitter-Bridging-Header.h */,
+				C1FA3ECC1AE714540002014C /* BasicCell.swift */,
 			);
 			path = Outfitter;
 			sourceTree = "<group>";
@@ -367,6 +370,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C1CDB4C71AE48AD600AA4FDA /* CommentViewController.swift in Sources */,
+				C1FA3ECD1AE714540002014C /* BasicCell.swift in Sources */,
 				C13A122D1AD44DC000C3C2E3 /* PortfolioSubmissionViewController.swift in Sources */,
 				2045B0B61AB78BDB00ADEC20 /* BrowseViewController.swift in Sources */,
 				C19A090F1A806CC00013997B /* HomeViewController.swift in Sources */,
