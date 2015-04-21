@@ -1543,6 +1543,9 @@
                                                     <state key="normal" title="↑">
                                                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                                     </state>
+                                                    <connections>
+                                                        <action selector="upvoteComment" destination="536-Q4-MLT" eventType="touchUpInside" id="PdJ-1x-q3W"/>
+                                                    </connections>
                                                 </button>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="750" verticalHuggingPriority="750" text="Subtitle" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UCb-Vu-fFe">
                                                     <rect key="frame" x="20" y="40" width="280" height="21.5"/>
@@ -1620,6 +1623,7 @@
                                             <outlet property="subtitleLabel" destination="Oa4-MS-ImD" id="Z9E-tr-mzp"/>
                                             <outlet property="titleLabel" destination="DaK-Nh-8cj" id="ZX3-5s-Jah"/>
                                             <outlet property="upvoteButton" destination="ZRt-82-MKz" id="sC7-XC-P60"/>
+                                            <outlet property="upvoteCount" destination="UCb-Vu-fFe" id="oc0-1o-n0B"/>
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ImageCell" rowHeight="141" id="sMc-QQ-HXg" customClass="ImageCell" customModule="Outfitter" customModuleProvider="target">
