@@ -1489,16 +1489,51 @@
                                                     <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gDY-qe-bPc">
+                                                    <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                                    <state key="normal" title="Delete">
+                                                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                    </state>
+                                                    <connections>
+                                                        <action selector="deleteComment" destination="536-Q4-MLT" eventType="touchUpInside" id="bdq-qh-7aJ"/>
+                                                    </connections>
+                                                </button>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstAttribute="bottom" secondItem="Oa4-MS-ImD" secondAttribute="bottom" constant="19.5" id="BkC-lM-QOe"/>
                                                 <constraint firstItem="Oa4-MS-ImD" firstAttribute="leading" secondItem="z7Z-T3-s5z" secondAttribute="leading" constant="20" id="CfG-0D-qe1"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="gDY-qe-bPc" secondAttribute="trailing" constant="-8" id="WxA-0a-RdS"/>
                                                 <constraint firstItem="Oa4-MS-ImD" firstAttribute="top" secondItem="DaK-Nh-8cj" secondAttribute="bottom" id="X5L-81-6gS"/>
+                                                <constraint firstItem="gDY-qe-bPc" firstAttribute="top" secondItem="z7Z-T3-s5z" secondAttribute="topMargin" constant="18" id="azz-i8-gpb"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="gDY-qe-bPc" secondAttribute="bottom" constant="17" id="cfc-n1-8t1"/>
                                                 <constraint firstAttribute="trailing" secondItem="Oa4-MS-ImD" secondAttribute="trailing" constant="20" id="hq3-c7-JP2"/>
+                                                <constraint firstItem="gDY-qe-bPc" firstAttribute="leading" secondItem="z7Z-T3-s5z" secondAttribute="leadingMargin" constant="298" id="jXv-Lb-JcH"/>
                                                 <constraint firstAttribute="trailing" secondItem="DaK-Nh-8cj" secondAttribute="trailing" constant="20" id="jrK-fl-6Rs"/>
                                                 <constraint firstItem="DaK-Nh-8cj" firstAttribute="top" secondItem="z7Z-T3-s5z" secondAttribute="top" constant="20" id="nt4-Bh-6Pm"/>
                                                 <constraint firstItem="DaK-Nh-8cj" firstAttribute="leading" secondItem="z7Z-T3-s5z" secondAttribute="leading" constant="20" id="vTR-8W-AyW"/>
                                             </constraints>
+                                            <variation key="default">
+                                                <mask key="subviews">
+                                                    <exclude reference="gDY-qe-bPc"/>
+                                                </mask>
+                                                <mask key="constraints">
+                                                    <exclude reference="WxA-0a-RdS"/>
+                                                    <exclude reference="azz-i8-gpb"/>
+                                                    <exclude reference="cfc-n1-8t1"/>
+                                                    <exclude reference="jXv-Lb-JcH"/>
+                                                </mask>
+                                            </variation>
+                                            <variation key="heightClass=regular-widthClass=compact">
+                                                <mask key="subviews">
+                                                    <include reference="gDY-qe-bPc"/>
+                                                </mask>
+                                                <mask key="constraints">
+                                                    <include reference="WxA-0a-RdS"/>
+                                                    <include reference="azz-i8-gpb"/>
+                                                    <include reference="cfc-n1-8t1"/>
+                                                    <include reference="jXv-Lb-JcH"/>
+                                                </mask>
+                                            </variation>
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="subtitleLabel" destination="Oa4-MS-ImD" id="Z9E-tr-mzp"/>

@@ -8,32 +8,18 @@
 
 import UIKit
 
-class CommentTableViewCell : UITableViewCell {
-    @IBOutlet var commentLabel: UILabel!
-    @IBOutlet var titleLabel: UILabel!
-    
-    func loadItem(title: String, comment: String) {
-        commentLabel.text = comment
-        titleLabel.text = title
-    }
-    
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
-    }
-    
-    override func setSelected(selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-        
-        // Configure the view for the selected state
-    }
-}
-
 
 class BasicCell: UITableViewCell {
     
     @IBOutlet var titleLabel: UILabel!
     @IBOutlet var subtitleLabel: UILabel!
+    var commentID: String!
+    
+    
+    @IBAction func deleteComment()
+    {
+        println("Clicked delete")
+    }
     
     
     override func awakeFromNib() {
