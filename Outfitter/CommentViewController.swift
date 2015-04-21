@@ -30,11 +30,31 @@ class CommentTableViewCell : UITableViewCell {
 }
 
 
+class BasicCell: UITableViewCell {
+    
+    @IBOutlet var titleLabel: UILabel!
+    @IBOutlet var subtitleLabel: UILabel!
+    
+    
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        // Initialization code
+    }
+    
+    override func setSelected(selected: Bool, animated: Bool) {
+        super.setSelected(selected, animated: animated)
+        
+        // Configure the view for the selected state
+    }
+    
+}
+
 class CommentViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UIAlertViewDelegate {
 
     @IBOutlet var tableView: UITableView!
     var items: [String] = ["We", "Heart", "Swift"]
     var items2: [String] = ["I", "am", "poop"]
+    let basicCellIdentifier = "BasicCell"
     
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(false)
@@ -62,13 +82,24 @@ class CommentViewController: UIViewController, UITableViewDelegate, UITableViewD
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return self.items.count;
     }
-    
+    /*
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         var cell:CommentTableViewCell = self.tableView.dequeueReusableCellWithIdentifier("CommentCell") as! CommentTableViewCell
         
         cell.commentLabel.text = self.items2[indexPath.row]
         cell.titleLabel?.text = self.items[indexPath.row]
         
+        return cell
+    }*/
+    
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+            return basicCellAtIndexPath(indexPath)
+    }
+    
+    func basicCellAtIndexPath(indexPath:NSIndexPath) -> BasicCell {
+        let cell = tableView.dequeueReusableCellWithIdentifier(basicCellIdentifier) as! BasicCell
+        cell.subtitleLabel.text = self.items2[indexPath.row]
+        cell.titleLabel?.text = self.items[indexPath.row]
         return cell
     }
     
