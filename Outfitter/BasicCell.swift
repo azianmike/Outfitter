@@ -16,6 +16,7 @@ class BasicCell: UITableViewCell {
     @IBOutlet var upvoteButton:UIButton!
     @IBOutlet var upvoteCount:UILabel!
     var commentID: String!
+    var upvoteNumber:Int!
     
     func deleteComment(commentId:String){
         var query = PFQuery(className:"Comment")
@@ -61,6 +62,21 @@ class BasicCell: UITableViewCell {
             }
         }
         
+    }
+    
+    func getUpvoteNumber(){
+        var query = PFQuery(className: "CommentActivity")
+        query.whereKey("commentId", equalTo: commentID)
+        upvoteNumber = 0
+        
+        query.findObjectsInBackgroundWithBlock {
+            (objects: [AnyObject]!, error: NSError!) -> Void in
+            if let objects = objects as? [PFObject] {
+                for object in objects {
+                    self.upvoteNumber = self.upvoteNumber + 1
+                }
+            }
+        }
     }
     
     @IBAction func deleteComment()

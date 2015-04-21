@@ -150,6 +150,7 @@
 				C19A090C1A806CC00013997B /* AppDelegate.swift */,
 				C19A090E1A806CC00013997B /* HomeViewController.swift */,
 				C1CDB4C61AE48AD600AA4FDA /* CommentViewController.swift */,
+				C1FA3ECC1AE714540002014C /* BasicCell.swift */,
 				C19EFDF61AA55A2900D45421 /* SubmitPhotoViewController.swift */,
 				3C2025041AA7689D0080222F /* PortfolioViewController.swift */,
 				3C7AA0D91AA7958D00EEA3EE /* PortfolioCell.swift */,
@@ -160,7 +161,6 @@
 				C19A09151A806CC00013997B /* LaunchScreen.xib */,
 				C19A090A1A806CC00013997B /* Supporting Files */,
 				20D1CCD11A93E2A500E072B8 /* Outfitter-Bridging-Header.h */,
-				C1FA3ECC1AE714540002014C /* BasicCell.swift */,
 			);
 			path = Outfitter;
 			sourceTree = "<group>";
