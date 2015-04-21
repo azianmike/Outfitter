@@ -64,7 +64,16 @@ class BasicCell: UITableViewCell {
         
     }
     
-    func getUpvoteNumber(){
+    func getAndSetUpvote(){
+        getUpvoteNumber(setUpvoteLabel)
+    }
+    
+    func setUpvoteLabel()
+    {
+        upvoteCount.text = String(upvoteNumber)
+    }
+    
+    func getUpvoteNumber(callback:(()->Void)){
         var query = PFQuery(className: "CommentActivity")
         query.whereKey("commentId", equalTo: commentID)
         upvoteNumber = 0
@@ -76,6 +85,7 @@ class BasicCell: UITableViewCell {
                     self.upvoteNumber = self.upvoteNumber + 1
                 }
             }
+            callback()
         }
     }
     

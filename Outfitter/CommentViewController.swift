@@ -76,6 +76,7 @@ class CommentViewController: UIViewController, UITableViewDelegate, UITableViewD
         cell.subtitleLabel.text = self.comments[indexPath.row]["userId"] as? String
         cell.titleLabel?.text = self.comments[indexPath.row]["comment"] as? String
         cell.commentID = self.comments[indexPath.row].objectId
+        cell.getAndSetUpvote()
         hideButtons(cell)
         return cell
     }
