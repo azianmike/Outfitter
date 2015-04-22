@@ -117,9 +117,7 @@ public class PortfolioSubmissionViewController: UIViewController {
             (objects: [AnyObject]!, error: NSError!) -> Void in
             if error == nil {
                 if let objects = objects as? [PFObject] {
-                    for object in objects {
-                        self.ratings.append(object)
-                    }
+                    Global.mergeLists(&self.ratings, listToMerge: objects)
                 }
                 callback()
             } else {

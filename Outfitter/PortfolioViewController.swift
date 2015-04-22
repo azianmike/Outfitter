@@ -48,9 +48,7 @@ public class PortfolioViewController: UIViewController, UICollectionViewDelegate
             (objects: [AnyObject]!, error: NSError!) -> Void in
             if error == nil {
                 if let objects = objects as? [PFObject] {
-                    for object in objects {
-                        self.submissions.append(object)
-                    }
+                    Global.mergeLists(&self.submissions, listToMerge: objects)
                 }
                 callback()
             } else {
