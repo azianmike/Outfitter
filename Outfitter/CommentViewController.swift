@@ -20,12 +20,14 @@ class CommentViewController: UIViewController, UITableViewDelegate, UITableViewD
     var showDelete:String!
     var comments=[PFObject]()
     var submissionID:String!
+    var filterDict:NSDictionary!
     
     
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(false)
         // Do any additional setup after loading the view, typically from a nib.
         //comments=[PFObject]()
+        filterDict = ["fuck":"f**k", "cunt":"c**t", "ass":"@$$", "Boobs":"80085", "cock":"penis", "dick":"penis", "pussy":"vagina", "faggot":"nice person", "fag":"nice person", "slut":"sexually popular woman"]
         submissionID = self.valueForKey("submissionID") as! String
         showDelete = self.valueForKey("showDelete") as! String
         getComments(callback)
@@ -146,7 +148,7 @@ class CommentViewController: UIViewController, UITableViewDelegate, UITableViewD
         println("enter alertview")
         if (buttonIndex == 1)
         {
-            addComment(alertView.textFieldAtIndex(0)!.text!, submissionId: submissionID, userId: PFUser.currentUser().objectId, callback: nil, filterDictionary: NSDictionary())
+            addComment(alertView.textFieldAtIndex(0)!.text!, submissionId: submissionID, userId: PFUser.currentUser().objectId, callback: nil, filterDictionary: filterDict)
         }
     }
     
