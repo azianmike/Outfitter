@@ -101,27 +101,42 @@ class BasicCell: UITableViewCell {
     }
     
     func upvoteComment(commentId:String, userId:String, callback:((objectId: String)->Void)! = nil){
-        var vote = PFObject(className: "CommentActivity")
-        vote.setObject(commentId, forKey: "commentId")
-        vote.setObject(userId, forKey: "userId")
+        var query = PFQuery(className: "CommentActivity")
+        query.whereKey("userId", equalTo: userId)
+        query.whereKey("commentId", equalTo: commentId)
         
-        //let loadingNotification = MBProgressHUD.showHUDAddedTo(self.view, animated: true)
-        //loadingNotification.mode = MBProgressHUDModeIndeterminate
-        //loadingNotification.labelText = "Upvoting Comment"
-        
-        
-        vote.saveInBackgroundWithBlock{
-            (success: Bool, error: NSError?) -> Void in
-            if (success) {
-                if ((callback) != nil){
-                    callback(objectId: vote.objectId)
+        query.findObjectsInBackgroundWithBlock {
+            (objects: [AnyObject]!, error: NSError!) -> Void in
+            var count = 0
+            if let objects = objects as? [PFObject] {
+                for object in objects {
+                    count = count + 1
                 }
-                //MBProgressHUD.hideAllHUDsForView(self.view, animated: true)
-            } else {
-                NSLog("%@", error!)
-                //MBProgressHUD.hideAllHUDsForView(self.view, animated: true)
-                let alert = UIAlertController(title: "Error", message: "There was an error when submitting your upvote...Please try again soon!", preferredStyle: UIAlertControllerStyle.Alert)
-                alert.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.Default, handler: nil))
+            }
+            if (count == 0){
+                var vote = PFObject(className: "CommentActivity")
+                vote.setObject(commentId, forKey: "commentId")
+                vote.setObject(userId, forKey: "userId")
+                
+                //let loadingNotification = MBProgressHUD.showHUDAddedTo(self.view, animated: true)
+                //loadingNotification.mode = MBProgressHUDModeIndeterminate
+                //loadingNotification.labelText = "Upvoting Comment"
+                
+                
+                vote.saveInBackgroundWithBlock{
+                    (success: Bool, error: NSError?) -> Void in
+                    if (success) {
+                        if ((callback) != nil){
+                            callback(objectId: vote.objectId)
+                        }
+                        //MBProgressHUD.hideAllHUDsForView(self.view, animated: true)
+                    } else {
+                        NSLog("%@", error!)
+                        //MBProgressHUD.hideAllHUDsForView(self.view, animated: true)
+                        let alert = UIAlertController(title: "Error", message: "There was an error when submitting your upvote...Please try again soon!", preferredStyle: UIAlertControllerStyle.Alert)
+                        alert.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.Default, handler: nil))
+                    }
+                }
             }
         }
     }
