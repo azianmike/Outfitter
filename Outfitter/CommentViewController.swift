@@ -82,7 +82,7 @@ class CommentViewController: UIViewController, UITableViewDelegate, UITableViewD
         cell.commentID = self.comments[indexPath.row].objectId
         cell.getAndSetUpvote()
         cell.parentViewController=self
-        //cell.getAndSetUsername()
+        cell.getAndSetUsername()
         hideButtons(cell)
         return cell
     }

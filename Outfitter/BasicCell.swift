@@ -73,7 +73,6 @@ class BasicCell: UITableViewCell, UIAlertViewDelegate{
     }
     
     func getAndSetUsername(){
-        println("enter username")
         getUserName(subtitleLabel.text!, callback:setUsername)
     }
     
@@ -104,23 +103,21 @@ class BasicCell: UITableViewCell, UIAlertViewDelegate{
     }
     
     func getUserName(userId:String, callback:(()->Void)){
-        var query = PFQuery(className: "User")
+        var query = PFQuery(className: "_User")
         query.whereKey("objectId", equalTo: userId)
         
         query.findObjectsInBackgroundWithBlock {
             (objects: [AnyObject]!, error: NSError!) -> Void in
-            if let objects = objects as? PFObject {
+            if let objects = objects[0] as? PFObject {
                 println("objects is not null")
-                println(objects.objectId as! String)
+                println(objects.objectId)
                 //for object in objects {
                     self.userName = objects.valueForKey("username") as! String
-                    println("enter getUserName")
-                    println(self.userName)
+
                     callback()
                     //break
                 //}
             }else{
-                println("objects is null")
             }
             
         }
