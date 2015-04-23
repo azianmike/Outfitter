@@ -18,7 +18,7 @@ class CommentViewController: UIViewController, UITableViewDelegate, UITableViewD
     var items2: [String] = ["I", "am", "poop"]
     let basicCellIdentifier = "BasicCell"
     var showDelete:String!
-    var comments=[PFObject]()
+    var comments = [PFObject]()
     var submissionID:String!
     var filterDict:NSDictionary!
     
@@ -26,7 +26,7 @@ class CommentViewController: UIViewController, UITableViewDelegate, UITableViewD
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(false)
         // Do any additional setup after loading the view, typically from a nib.
-        //comments=[PFObject]()
+        //self.comments=[PFObject]()
         filterDict = ["fuck":"f**k", "cunt":"c**t", "ass":"@$$", "Boobs":"80085", "cock":"penis", "dick":"penis", "pussy":"vagina", "faggot":"nice person", "fag":"nice person", "slut":"sexually popular woman"]
         submissionID = self.valueForKey("submissionID") as! String
         showDelete = self.valueForKey("showDelete") as! String
@@ -117,9 +117,7 @@ class CommentViewController: UIViewController, UITableViewDelegate, UITableViewD
             (objects: [AnyObject]!, error: NSError!) -> Void in
             if error == nil {
                 if let objects = objects as? [PFObject] {
-                    for object in objects {
-                        self.comments.append(object)
-                    }
+                    Global.mergeLists(&self.comments, listToMerge: objects)
                 }
                 callback()
             } else {
