@@ -12,7 +12,7 @@ import UIKit
 class CommentViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UIAlertViewDelegate {
 
     @IBOutlet var tableView: UITableView!
-    
+    @IBOutlet var addCommentButton:UIBarButtonItem!
     
     var items: [String] = ["We", "Heart", "Swift"]
     var items2: [String] = ["I", "am", "poop"]
@@ -44,6 +44,8 @@ class CommentViewController: UIViewController, UITableViewDelegate, UITableViewD
             cell.deleteButton.hidden=false
             cell.upvoteButton.hidden=true
             cell.upvoteCount.hidden=true
+            addCommentButton.enabled=false
+            addCommentButton.title = nil
         }
     }
     
@@ -79,6 +81,8 @@ class CommentViewController: UIViewController, UITableViewDelegate, UITableViewD
         cell.titleLabel?.text = self.comments[indexPath.row]["comment"] as? String
         cell.commentID = self.comments[indexPath.row].objectId
         cell.getAndSetUpvote()
+        cell.parentViewController=self
+        //cell.getAndSetUsername()
         hideButtons(cell)
         return cell
     }
@@ -136,7 +140,7 @@ class CommentViewController: UIViewController, UITableViewDelegate, UITableViewD
         var addCommentView = UIAlertView(title: "Add comment", message: "Type comment here", delegate: self,
             cancelButtonTitle: "Cancel",
             otherButtonTitles: "Add")
-        //var addCommentView = UIAlertView(title: "Add comment", message: "Type comment here", delegate: self, cancelButtonTitle: "Cancel", otherButtonTitles: "Submit")
+
 
         addCommentView.alertViewStyle = UIAlertViewStyle.PlainTextInput
 
@@ -145,15 +149,26 @@ class CommentViewController: UIViewController, UITableViewDelegate, UITableViewD
     }
     
     func alertView(alertView: UIAlertView, clickedButtonAtIndex buttonIndex: Int) {
-        println("enter alertview")
+        if (buttonIndex == 0 && alertView.title == "Successfully added comment!")
+        {
+            self.dismissViewControllerAnimated(true, completion: nil)
+        }
         if (buttonIndex == 1)
         {
-            addComment(alertView.textFieldAtIndex(0)!.text!, submissionId: submissionID, userId: PFUser.currentUser().objectId, callback: nil, filterDictionary: filterDict)
+            addComment(alertView.textFieldAtIndex(0)!.text!, submissionId: submissionID, userId: PFUser.currentUser().objectId, callback: dismissViewAddComment, filterDictionary: filterDict)
         }
     }
     
+    func dismissViewAddComment()
+    {
+        var addCommentView = UIAlertView(title: "Successfully added comment!", message: "Success!", delegate: self,
+            cancelButtonTitle: "Cancel")
+        addCommentView.show()
+        
+    }
+    
     // The callback function is optional, it will be called when the comment is finally saved and it will be passed the new comments objectId
-    func addComment(commentString:String, submissionId:String, userId:String, callback:((objectId: String)->Void)! = nil, filterDictionary:NSDictionary){
+    func addComment(commentString:String, submissionId:String, userId:String, callback:(()->Void)!, filterDictionary:NSDictionary){
 
         var newCommentString = filterBadWords(commentString, filterDictionary: filterDictionary)
 
@@ -172,7 +187,7 @@ class CommentViewController: UIViewController, UITableViewDelegate, UITableViewD
             (success: Bool, error: NSError?) -> Void in
             if (success) {
                 if ((callback) != nil){
-                    callback(objectId: comment.objectId)
+                    callback()
                 }
                 MBProgressHUD.hideAllHUDsForView(self.view, animated: true)
             } else {

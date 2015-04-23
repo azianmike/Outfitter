@@ -8,8 +8,9 @@
 
 import UIKit
 
-class BasicCell: UITableViewCell {
+class BasicCell: UITableViewCell, UIAlertViewDelegate{
     
+    var parentViewController:UIViewController!
     @IBOutlet var subtitleLabel: UILabel!
     @IBOutlet var titleLabel: UILabel!
     @IBOutlet var deleteButton:UIButton!
@@ -19,7 +20,7 @@ class BasicCell: UITableViewCell {
     var upvoteNumber:Int!
     var userName:String!
     
-    func deleteComment(commentId:String){
+    func deleteComment(commentId:String, callback:(()->Void)){
         var query = PFQuery(className:"Comment")
         query.whereKey("objectId", equalTo: commentId)
         
@@ -42,9 +43,11 @@ class BasicCell: UITableViewCell {
                                 if let objects2 = objects2 as? [PFObject] {
                                     for object2 in objects2 {
                                         object2.delete()
+                                        
                                     }
                                 }
                                 object.delete()
+                                callback()
                                 //MBProgressHUD.hideAllHUDsForView(self.view, animated: true)
                             } else {
                                 NSLog("%@", error!)
@@ -67,6 +70,16 @@ class BasicCell: UITableViewCell {
     
     func getAndSetUpvote(){
         getUpvoteNumber(setUpvoteLabel)
+    }
+    
+    func getAndSetUsername(){
+        println("enter username")
+        getUserName(subtitleLabel.text!, callback:setUsername)
+    }
+    
+    func setUsername()
+    {
+        subtitleLabel.text=userName
     }
     
     func setUpvoteLabel()
@@ -96,28 +109,56 @@ class BasicCell: UITableViewCell {
         
         query.findObjectsInBackgroundWithBlock {
             (objects: [AnyObject]!, error: NSError!) -> Void in
-            if let objects = objects as? [PFObject] {
-                for object in objects {
-                    self.userName = object.valueForKey("username") as! String
-                    break
-                }
+            if let objects = objects as? PFObject {
+                println("objects is not null")
+                println(objects.objectId as! String)
+                //for object in objects {
+                    self.userName = objects.valueForKey("username") as! String
+                    println("enter getUserName")
+                    println(self.userName)
+                    callback()
+                    //break
+                //}
+            }else{
+                println("objects is null")
             }
-            callback()
+            
         }
     }
     
     @IBAction func deleteComment()
     {
-        println("Clicked delete")
-        deleteComment(commentID)
+        deleteComment(commentID, callback: dismissView)
     }
+    
+    func alertView(alertView: UIAlertView, clickedButtonAtIndex buttonIndex: Int) {
+        if (buttonIndex == 0 && alertView.title == "Successfully deleted comment!")
+        {
+            parentViewController.dismissViewControllerAnimated(true, completion: nil)
+        }
+
+    }
+    
+    func dismissView()
+    {
+        var addCommentView = UIAlertView(title: "Successfully deleted comment!", message: "Success!", delegate: self,
+            cancelButtonTitle: "Cancel")
+        addCommentView.show()
+            }
     
     @IBAction func upvoteComment()
     {
-        upvoteComment(commentID, userId: PFUser.currentUser().objectId, callback: nil)
+        upvoteComment(commentID, userId: PFUser.currentUser().objectId, callback: showUpvoteAlert)
     }
     
-    func upvoteComment(commentId:String, userId:String, callback:((objectId: String)->Void)! = nil){
+    func showUpvoteAlert()
+    {
+        var addCommentView = UIAlertView(title: "Successfully upvoted comment!", message: "Success!", delegate: self,
+            cancelButtonTitle: "Cancel")
+        addCommentView.show()
+    }
+    
+    func upvoteComment(commentId:String, userId:String, callback:(()->Void)! = nil){
         var query = PFQuery(className: "CommentActivity")
         query.whereKey("userId", equalTo: userId)
         query.whereKey("commentId", equalTo: commentId)
@@ -144,7 +185,7 @@ class BasicCell: UITableViewCell {
                     (success: Bool, error: NSError?) -> Void in
                     if (success) {
                         if ((callback) != nil){
-                            callback(objectId: vote.objectId)
+                            callback()
                         }
                         //MBProgressHUD.hideAllHUDsForView(self.view, animated: true)
                     } else {
