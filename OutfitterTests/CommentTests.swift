@@ -193,6 +193,108 @@ class CommentTests: BaseTests {
         XCTAssertTrue(newStr == cleanedStr,"clean word filtered")
     }
     
+    
+    func testDeleteComment() {
+        let v = viewController
+        
+        let expectation = self.expectationWithDescription("Delete comment")
+
+        func submissionsCallBack() {
+            
+            func commentsCallBack(){
+                
+                let oldCount = v.commentController.comments.count
+
+                func deleteCommentCallback(){
+                    
+                    func reloadCommentsFinal(){
+                        XCTAssertTrue(v.commentController.comments.count == oldCount-1,"Comment was deleted")
+                        expectation.fulfill()
+                    }
+                    v.commentController.comments = [PFObject]()
+                    v.commentController.getComments(reloadCommentsFinal)
+
+                }
+                
+                let curComment = v.commentController.comments.first!
+                let basicCell = BasicCell.new()
+                basicCell.deleteComment(curComment.objectId, callback: deleteCommentCallback)
+            }
+            
+            v.storyBoard = storyBoard
+            v.currentSubmissionIndex = 0
+            v.setupCommentController()
+            v.commentController.getComments(commentsCallBack)
+        }
+        
+        v.submissions = [PFObject]()
+        v.getSubmissions(submissionsCallBack)
+
+        
+        self.waitForExpectationsWithTimeout(5.0) { (error) in
+            if(error != nil) {
+                XCTFail("FAILED due to " + error.description)
+            }
+        }
+    }
+    
+    func testUpvote() {
+        let v = viewController
+        
+        let expectation = self.expectationWithDescription("Upvoted")
+        
+        func submissionsCallBack() {
+            
+            func commentsCallBack(){
+                
+                let curComment = v.commentController.comments.first!
+                let basicCell = BasicCell.new()
+                basicCell.commentID = curComment.objectId
+
+                func gotUpVoteNumber() {
+                 
+                    let oldCount = basicCell.upvoteNumber
+                    
+                    func upvotedComment(){
+                        
+                        func getFinalUpvote() {
+                            XCTAssertTrue(basicCell.upvoteNumber == oldCount + 1,"Upvoted")
+                            expectation.fulfill()
+                        }
+                        
+                        basicCell.getUpvoteNumber(getFinalUpvote)
+
+                    }
+                    
+                    basicCell.upvoteComment(curComment.objectId, userId: PFUser.currentUser().objectId, callback: upvotedComment)
+                }
+                
+                
+                basicCell.getUpvoteNumber(gotUpVoteNumber)
+            }
+            
+            v.storyBoard = storyBoard
+            v.currentSubmissionIndex = 0
+            v.setupCommentController()
+            v.commentController.getComments(commentsCallBack)
+        }
+        
+        v.submissions = [PFObject]()
+        v.getSubmissions(submissionsCallBack)
+        
+        
+        self.waitForExpectationsWithTimeout(10.0) { (error) in
+            if(error != nil) {
+                XCTFail("FAILED due to " + error.description)
+            }
+        }
+    }
+
+    func testUpVoteComment() {
+        
+    }
+
+    
 }
 
 
