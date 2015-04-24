@@ -138,10 +138,16 @@ class BasicCell: UITableViewCell, UIAlertViewDelegate{
     
     func dismissView()
     {
-        var addCommentView = UIAlertView(title: "Successfully deleted comment!", message: "Success!", delegate: self,
-            cancelButtonTitle: "Cancel")
-        addCommentView.show()
+        showAlertView("Successfully deleted comment!")
+
             }
+    
+    func showAlertView(titleString: String)
+    {
+        var tempAlertView = UIAlertView(title: titleString, message: "Success!", delegate: self,
+            cancelButtonTitle: "Cancel")
+        tempAlertView.show()
+    }
     
     @IBAction func upvoteComment()
     {
@@ -150,9 +156,7 @@ class BasicCell: UITableViewCell, UIAlertViewDelegate{
     
     func showUpvoteAlert()
     {
-        var addCommentView = UIAlertView(title: "Successfully upvoted comment!", message: "Success!", delegate: self,
-            cancelButtonTitle: "Cancel")
-        addCommentView.show()
+        showAlertView("Successfully upvoted comment!")
     }
     
     func upvoteComment(commentId:String, userId:String, callback:(()->Void)! = nil){
