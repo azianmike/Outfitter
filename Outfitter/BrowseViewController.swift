@@ -16,7 +16,9 @@ class BrowseViewController: UIViewController {
     var genderPickerSelectedIndex:Int!
     var articlePickerSelectedIndex:Int!
     var currentSubmissionIndex:Int!
-    
+    var commentController:CommentViewController!
+    var storyBoard:UIStoryboard!
+
     enum ArticleValues: Int {
         case fullOutfit = 0, top, bottom, shoes, accessories
     }
@@ -28,6 +30,8 @@ class BrowseViewController: UIViewController {
         genderPickerSelectedIndex = 0
         articlePickerSelectedIndex = 0
         
+        storyBoard = UIStoryboard(name: "Main", bundle:nil)
+
         //Setup swipe
         var swipeRight = UISwipeGestureRecognizer(target: self, action: "userSwiped:")
         swipeRight.direction = UISwipeGestureRecognizerDirection.Right
@@ -231,13 +235,20 @@ class BrowseViewController: UIViewController {
 
     
     @IBAction func goToComments(){
-        let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
-        let submissionViewController: UIViewController! = storyBoard.instantiateViewControllerWithIdentifier("CommentViewController") as! UIViewController
         
-        submissionViewController.setValue(submissions[currentSubmissionIndex].objectId!, forKey: "submissionID")
-        submissionViewController.setValue("false", forKey: "showDelete")
-        self.presentViewController(submissionViewController, animated:true, completion:nil)
+        setupCommentController()
+        
+        self.presentViewController(self.commentController, animated:true, completion:nil)
+        
     }
     
+    func setupCommentController() {
+        
+        self.commentController = storyBoard.instantiateViewControllerWithIdentifier("CommentViewController") as! CommentViewController
+        
+        self.commentController.setValue(submissions[currentSubmissionIndex].objectId!, forKey: "submissionID")
+        
+        self.commentController.setValue("false", forKey: "showDelete")
+    }
     
 }

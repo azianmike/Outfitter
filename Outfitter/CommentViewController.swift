@@ -167,7 +167,7 @@ class CommentViewController: UIViewController, UITableViewDelegate, UITableViewD
     
     // The callback function is optional, it will be called when the comment is finally saved and it will be passed the new comments objectId
     func addComment(commentString:String, submissionId:String, userId:String, callback:(()->Void)!, filterDictionary:NSDictionary){
-
+        
         var newCommentString = filterBadWords(commentString, filterDictionary: filterDictionary)
 
         var comment = PFObject(className: "Comment")

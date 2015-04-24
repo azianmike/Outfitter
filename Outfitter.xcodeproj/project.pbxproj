@@ -14,6 +14,9 @@
 		203F87D21AAB4692005F8A60 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C19A09131A806CC00013997B /* Images.xcassets */; };
 		203F87D41AAB5219005F8A60 /* PortfolioCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C7AA0D91AA7958D00EEA3EE /* PortfolioCell.swift */; };
 		2045B0B61AB78BDB00ADEC20 /* BrowseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2045B0B51AB78BDB00ADEC20 /* BrowseViewController.swift */; };
+		205F51C61AE9C16F00D0ECDC /* CommentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1CDB4C61AE48AD600AA4FDA /* CommentViewController.swift */; };
+		205F51C71AE9C20800D0ECDC /* BasicCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1FA3ECC1AE714540002014C /* BasicCell.swift */; };
+		20AB5CD11AE98D1400AA916E /* CommentTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20AB5CD01AE98D1400AA916E /* CommentTests.swift */; };
 		20D1CCD41A94062300E072B8 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C19A090E1A806CC00013997B /* HomeViewController.swift */; };
 		3C2025051AA7689D0080222F /* PortfolioViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C2025041AA7689D0080222F /* PortfolioViewController.swift */; };
 		3C332DD31AE7F675008570C8 /* Global.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C332DD21AE7F675008570C8 /* Global.swift */; };
@@ -53,6 +56,7 @@
 /* Begin PBXFileReference section */
 		0BEE8D65BB0A721D365B2DB0 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		2045B0B51AB78BDB00ADEC20 /* BrowseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BrowseViewController.swift; sourceTree = "<group>"; };
+		20AB5CD01AE98D1400AA916E /* CommentTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommentTests.swift; sourceTree = "<group>"; };
 		20D1CCD11A93E2A500E072B8 /* Outfitter-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Outfitter-Bridging-Header.h"; sourceTree = "<group>"; };
 		3C2025041AA7689D0080222F /* PortfolioViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PortfolioViewController.swift; sourceTree = "<group>"; };
 		3C332DD21AE7F675008570C8 /* Global.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Global.swift; sourceTree = "<group>"; };
@@ -180,6 +184,7 @@
 		C19A091F1A806CC00013997B /* OutfitterTests */ = {
 			isa = PBXGroup;
 			children = (
+				20AB5CD01AE98D1400AA916E /* CommentTests.swift */,
 				3C3EE9891AD6FE240068B45E /* PortfolioSubmissionViewControllerTests.swift */,
 				C1E8DAA21AB8D21700DA1465 /* BrowsePhotosTests.swift */,
 				C19A09221A806CC00013997B /* OutfitterTests.swift */,
@@ -395,11 +400,14 @@
 				20D1CCD41A94062300E072B8 /* HomeViewController.swift in Sources */,
 				C1E8DAA31AB8D21700DA1465 /* BrowsePhotosTests.swift in Sources */,
 				203F87D41AAB5219005F8A60 /* PortfolioCell.swift in Sources */,
+				205F51C71AE9C20800D0ECDC /* BasicCell.swift in Sources */,
 				3C332DD41AE7FBDA008570C8 /* PortfolioViewController.swift in Sources */,
 				3C332DD51AE7FBDD008570C8 /* BrowseViewController.swift in Sources */,
 				203F87D11AAB4270005F8A60 /* SubmitPhotoViewController.swift in Sources */,
+				205F51C61AE9C16F00D0ECDC /* CommentViewController.swift in Sources */,
 				3C332DD61AE7FC14008570C8 /* Global.swift in Sources */,
 				3C3EE98A1AD6FE240068B45E /* PortfolioSubmissionViewControllerTests.swift in Sources */,
+				20AB5CD11AE98D1400AA916E /* CommentTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
