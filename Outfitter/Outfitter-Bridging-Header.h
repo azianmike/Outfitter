@@ -14,5 +14,6 @@
 #import <ParseFacebookUtils/PFFacebookUtils.h>
 #import "MBProgressHUD.h"
 #import "ActionSheetStringPicker.h"
+#import <MDCSwipeToChoose/MDCSwipeToChoose.h>
 
 #endif

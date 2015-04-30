@@ -8,10 +8,11 @@
 
 import UIKit
 
-class BrowseViewController: UIViewController {
+class BrowseViewController: UIViewController, MDCSwipeToChooseDelegate {
     @IBOutlet var genderButton:UIButton!
     @IBOutlet var articleButton:UIButton!
     @IBOutlet var currentImageView:UIImageView!
+    @IBOutlet var currView:UIView!
     var submissions:[PFObject]!
     var genderPickerSelectedIndex:Int!
     var articlePickerSelectedIndex:Int!
@@ -74,11 +75,6 @@ class BrowseViewController: UIViewController {
             }, cancelBlock: { ActionStringCancelBlock in return }, origin: sender)
     }
     
-    /*func filterByGender()
-    {
-        submissions.removeAll(keepCapacity: false)
-        getSubmissions(doneGettingSubmissions,articleId: articlePickerSelectedIndex)
-    }*/
     
     func filterByArticle(article: String) {
         
@@ -118,13 +114,91 @@ class BrowseViewController: UIViewController {
             let url = NSURL(string: imageURL as String)
             let data = NSData(contentsOfURL: url!)
             let image = UIImage(data: data!)
-            currentImageView.image = image!
+            createNewImageView(image!)
+            //currentImageView.image = image!
         } else {
-            currentImageView.image = nil
+            //currentImageView.image = nil
             
             let alert = UIAlertController(title: "Error", message: "No submissions Available", preferredStyle: UIAlertControllerStyle.Alert)
             alert.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.Default, handler: nil))
             self.presentViewController(alert, animated: true, completion: nil)
+        }
+    }
+    
+    func createNewImageView(currImage:UIImage)
+    {
+        
+        
+        var options = MDCSwipeToChooseViewOptions()
+        options.delegate = self
+        options.likedText = "Like"
+        options.likedColor = UIColor.blueColor()
+        options.nopeText = "Dislike"
+        options.onPan = { state -> Void in
+            if state.thresholdRatio == 1 && state.direction == MDCSwipeDirection.Left {
+                println("Photo deleted!")
+            }
+            if state.thresholdRatio == 1 && state.direction == MDCSwipeDirection.Right {
+                println("Photo liked!")
+            }
+        }
+        let mainView = MDCSwipeToChooseView(frame: currView.bounds, options: options)
+        mainView.imageView.image = currImage
+        //mainView.imageView.image = loadData()
+        //view.imageView = temp
+        MBProgressHUD.hideAllHUDsForView(self.view, animated: true)
+        
+        self.currView.addSubview(mainView)
+        
+        
+    }
+    
+    // Sent before a choice is made. Cancel the choice by returning `false`. Otherwise return `true`.
+    func view(view: UIView, shouldBeChosenWithDirection: MDCSwipeDirection) -> Bool{
+        if (shouldBeChosenWithDirection == MDCSwipeDirection.Left || shouldBeChosenWithDirection == MDCSwipeDirection.Right) {
+            let loadingNotification = MBProgressHUD.showHUDAddedTo(self.view, animated: true)
+            //loadingNotification.mode = MBProgressHUDModeIndeterminate
+            loadingNotification.labelText = "Loading Submissions"
+            return true;
+        } else {
+            // Snap the view back and cancel the choice.
+            UIView.animateWithDuration(0.16, animations: { () -> Void in
+                view.transform = CGAffineTransformIdentity
+                view.center = view.superview!.center
+            })
+            return false;
+        }
+    }
+    
+    // This is called then a user swipes the view fully left or right.
+    func view(view: UIView, wasChosenWithDirection: MDCSwipeDirection) -> Void{
+        if wasChosenWithDirection == MDCSwipeDirection.Left {
+            //userSwiped(UISwipeGestureRecognizerDirection.Left)
+            userSwiped2(false)
+        }else{
+            //userSwiped(UISwipeGestureRecognizerDirection.Right)
+            userSwiped2(true)
+        }
+        println("added new image")
+        //loadCurrentPicture()
+    }
+    
+    func viewDidCancelSwipe(view: UIView) -> Void{
+        println("Couldn't decide, huh?")
+    }
+    
+    
+    func userSwiped2(gesture: Bool) {
+        if currentSubmissionIndex >= 0 && currentSubmissionIndex < submissions.count {
+            var curObj = submissions[currentSubmissionIndex]
+            
+            if gesture {
+                self.submitRatingActivity(curObj.objectId, userId: PFUser.currentUser().objectId, votedYes: true, completionHandler: nil)
+            }else{
+                self.submitRatingActivity(curObj.objectId, userId: PFUser.currentUser().objectId, votedYes: false, completionHandler: nil)
+            }
+            currentSubmissionIndex = currentSubmissionIndex + 1
+            loadCurrentPicture()
         }
     }
     
@@ -172,6 +246,7 @@ class BrowseViewController: UIViewController {
         
         //query where there is no rating activity associated with submission
         query.whereKey("objectId", doesNotMatchKey: "submissionId", inQuery: ratingQuery)
+        //query.whereKey("userId")
         
         if let gender = PFUser.currentUser().objectForKey("gender") as? String {
             if(gender == "male") {
