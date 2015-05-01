@@ -29,6 +29,12 @@
 		3C58D6901A9694CE009C86B1 /* FacebookLoginTest.js in Resources */ = {isa = PBXBuildFile; fileRef = 3C58D68F1A9694CE009C86B1 /* FacebookLoginTest.js */; };
 		3C58D6921A969527009C86B1 /* IncorrectLoginTest.js in Resources */ = {isa = PBXBuildFile; fileRef = 3C58D6911A969527009C86B1 /* IncorrectLoginTest.js */; };
 		3C7AA0DA1AA7958D00EEA3EE /* PortfolioCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C7AA0D91AA7958D00EEA3EE /* PortfolioCell.swift */; };
+		3C9B477F1AF2EC7800C2E373 /* PortfolioSubmitViewControllerTest.js in Resources */ = {isa = PBXBuildFile; fileRef = 3C9B477E1AF2EC7800C2E373 /* PortfolioSubmitViewControllerTest.js */; };
+		3C9B47801AF2EC7800C2E373 /* PortfolioSubmitViewControllerTest.js in Resources */ = {isa = PBXBuildFile; fileRef = 3C9B477E1AF2EC7800C2E373 /* PortfolioSubmitViewControllerTest.js */; };
+		3C9B47821AF2F37500C2E373 /* AddCommentTest.js in Resources */ = {isa = PBXBuildFile; fileRef = 3C9B47811AF2F37500C2E373 /* AddCommentTest.js */; };
+		3C9B47831AF2F37500C2E373 /* AddCommentTest.js in Resources */ = {isa = PBXBuildFile; fileRef = 3C9B47811AF2F37500C2E373 /* AddCommentTest.js */; };
+		3C9B47851AF2F37F00C2E373 /* DeleteCommentTest.js in Resources */ = {isa = PBXBuildFile; fileRef = 3C9B47841AF2F37F00C2E373 /* DeleteCommentTest.js */; };
+		3C9B47861AF2F37F00C2E373 /* DeleteCommentTest.js in Resources */ = {isa = PBXBuildFile; fileRef = 3C9B47841AF2F37F00C2E373 /* DeleteCommentTest.js */; };
 		C13A122D1AD44DC000C3C2E3 /* PortfolioSubmissionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C13A122C1AD44DC000C3C2E3 /* PortfolioSubmissionViewController.swift */; };
 		C19A090D1A806CC00013997B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C19A090C1A806CC00013997B /* AppDelegate.swift */; };
 		C19A090F1A806CC00013997B /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C19A090E1A806CC00013997B /* HomeViewController.swift */; };
@@ -62,10 +68,13 @@
 		3C332DD21AE7F675008570C8 /* Global.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Global.swift; sourceTree = "<group>"; };
 		3C347C1B1A95464F00B5B830 /* LoginUIAutomationTest.trace */ = {isa = PBXFileReference; lastKnownFileType = folder; path = LoginUIAutomationTest.trace; sourceTree = "<group>"; };
 		3C3EE9891AD6FE240068B45E /* PortfolioSubmissionViewControllerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PortfolioSubmissionViewControllerTests.swift; sourceTree = "<group>"; };
-		3C58D68D1A969424009C86B1 /* SignupAndLoginTest.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = SignupAndLoginTest.js; sourceTree = "<group>"; };
-		3C58D68F1A9694CE009C86B1 /* FacebookLoginTest.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = FacebookLoginTest.js; sourceTree = "<group>"; };
-		3C58D6911A969527009C86B1 /* IncorrectLoginTest.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = IncorrectLoginTest.js; sourceTree = "<group>"; };
+		3C58D68D1A969424009C86B1 /* SignupAndLoginTest.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; name = SignupAndLoginTest.js; path = OutfitterTests/SignupAndLoginTest.js; sourceTree = "<group>"; };
+		3C58D68F1A9694CE009C86B1 /* FacebookLoginTest.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; name = FacebookLoginTest.js; path = OutfitterTests/FacebookLoginTest.js; sourceTree = "<group>"; };
+		3C58D6911A969527009C86B1 /* IncorrectLoginTest.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; name = IncorrectLoginTest.js; path = OutfitterTests/IncorrectLoginTest.js; sourceTree = "<group>"; };
 		3C7AA0D91AA7958D00EEA3EE /* PortfolioCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PortfolioCell.swift; sourceTree = "<group>"; };
+		3C9B477E1AF2EC7800C2E373 /* PortfolioSubmitViewControllerTest.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; name = PortfolioSubmitViewControllerTest.js; path = OutfitterTests/PortfolioSubmitViewControllerTest.js; sourceTree = "<group>"; };
+		3C9B47811AF2F37500C2E373 /* AddCommentTest.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; name = AddCommentTest.js; path = OutfitterTests/AddCommentTest.js; sourceTree = "<group>"; };
+		3C9B47841AF2F37F00C2E373 /* DeleteCommentTest.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; name = DeleteCommentTest.js; path = OutfitterTests/DeleteCommentTest.js; sourceTree = "<group>"; };
 		453069873DB8EB6020AEB58F /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		4FFABC43CED10E9BAEAEDC5D /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		C13A122C1AD44DC000C3C2E3 /* PortfolioSubmissionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PortfolioSubmissionViewController.swift; sourceTree = "<group>"; };
@@ -117,6 +126,12 @@
 		3C347C1A1A95461500B5B830 /* UI Automation Tests */ = {
 			isa = PBXGroup;
 			children = (
+				3C9B47841AF2F37F00C2E373 /* DeleteCommentTest.js */,
+				3C9B47811AF2F37500C2E373 /* AddCommentTest.js */,
+				3C9B477E1AF2EC7800C2E373 /* PortfolioSubmitViewControllerTest.js */,
+				3C58D68D1A969424009C86B1 /* SignupAndLoginTest.js */,
+				3C58D68F1A9694CE009C86B1 /* FacebookLoginTest.js */,
+				3C58D6911A969527009C86B1 /* IncorrectLoginTest.js */,
 				3C347C1B1A95464F00B5B830 /* LoginUIAutomationTest.trace */,
 			);
 			name = "UI Automation Tests";
@@ -189,9 +204,6 @@
 				C1E8DAA21AB8D21700DA1465 /* BrowsePhotosTests.swift */,
 				C19A09221A806CC00013997B /* OutfitterTests.swift */,
 				C19A09201A806CC00013997B /* Supporting Files */,
-				3C58D68D1A969424009C86B1 /* SignupAndLoginTest.js */,
-				3C58D68F1A9694CE009C86B1 /* FacebookLoginTest.js */,
-				3C58D6911A969527009C86B1 /* IncorrectLoginTest.js */,
 			);
 			path = OutfitterTests;
 			sourceTree = "<group>";
@@ -289,7 +301,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3C9B47851AF2F37F00C2E373 /* DeleteCommentTest.js in Resources */,
+				3C9B47821AF2F37500C2E373 /* AddCommentTest.js in Resources */,
 				3C347C1C1A95464F00B5B830 /* LoginUIAutomationTest.trace in Resources */,
+				3C9B477F1AF2EC7800C2E373 /* PortfolioSubmitViewControllerTest.js in Resources */,
 				C19A09121A806CC00013997B /* Main.storyboard in Resources */,
 				C19A09171A806CC00013997B /* LaunchScreen.xib in Resources */,
 				C19A09141A806CC00013997B /* Images.xcassets in Resources */,
@@ -302,8 +317,11 @@
 			files = (
 				3C58D6901A9694CE009C86B1 /* FacebookLoginTest.js in Resources */,
 				203F87D21AAB4692005F8A60 /* Images.xcassets in Resources */,
+				3C9B47801AF2EC7800C2E373 /* PortfolioSubmitViewControllerTest.js in Resources */,
 				3C58D68E1A969424009C86B1 /* SignupAndLoginTest.js in Resources */,
 				3C58D6921A969527009C86B1 /* IncorrectLoginTest.js in Resources */,
+				3C9B47861AF2F37F00C2E373 /* DeleteCommentTest.js in Resources */,
+				3C9B47831AF2F37500C2E373 /* AddCommentTest.js in Resources */,
 				203F87CF1AAB3D34005F8A60 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
