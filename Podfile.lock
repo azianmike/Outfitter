@@ -23,8 +23,8 @@ DEPENDENCIES:
 
 SPEC CHECKSUMS:
   ActionSheetPicker-3.0: c95dca3dde5e593adb53a3362e255f29751b4286
-  Bolts: e431c88fd02115d4a34016c2100bbfa4d2d5b146
-  Facebook-iOS-SDK: fcb0fd5bcdb50f1fe9ce27bf6b8cdf1aa5b2b0ed
+  Bolts: 3db0a875235e0c9042b013af13af0f00f79b102c
+  Facebook-iOS-SDK: 3d65f685348b789e46a9aacf92bfa85b60b63755
   MBProgressHUD: 2038dbcf3dce73215abed6001657043d53aa79a8
   MDCSwipeToChoose: b14f3becc0011634d2f0a37f488b768b824a643d
   Parse: 60d65108fe39da77ec16c9e51d74b4d296b21424

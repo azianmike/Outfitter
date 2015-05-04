@@ -243,11 +243,10 @@ class BrowseViewController: UIViewController, MDCSwipeToChooseDelegate {
         query.whereKey("submittedByUser", notEqualTo:PFUser.currentUser().username)
         
         var ratingQuery = PFQuery(className:"RatingActivity")
-        ratingQuery.whereKey("userId", equalTo: PFUser.currentUser().username)
+        ratingQuery.whereKey("userId", equalTo: PFUser.currentUser().objectId)
         
         //query where there is no rating activity associated with submission
         query.whereKey("objectId", doesNotMatchKey: "submissionId", inQuery: ratingQuery)
-        //query.whereKey("userId")
         
         if let gender = PFUser.currentUser().objectForKey("gender") as? String {
             if(gender == "male") {
